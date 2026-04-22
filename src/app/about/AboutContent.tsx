@@ -67,8 +67,8 @@ export function AboutContent() {
               <p className="text-lg text-dark-light leading-relaxed mb-4">
                 I&apos;m an Educational Psychologist, and over the last eight years I&apos;ve sat
                 across from people from very different walks of life, all quietly asking the same
-                question: <em>why is change so hard, even when I really want it?</em> The honest
-                answer isn&apos;t willpower. It&apos;s support, the right kind of it. Not someone
+                question: why is change so hard, even when I really want it? The honest answer
+                isn&apos;t willpower. It&apos;s support, the right kind of it. Not someone
                 cheerleading from the sidelines, and not only talking about feelings without ever
                 changing what you actually do. There&apos;s a space between those two, and
                 Saantvanaa is my attempt at building it.
@@ -80,7 +80,7 @@ export function AboutContent() {
                 quiet self doubt that hums under everything. The ADHD programme here is one I
                 genuinely wanted for myself, and now, for you.
               </p>
-              <p className="text-lg text-dark-light leading-relaxed mb-8 italic">
+              <p className="text-lg text-dark-light leading-relaxed mb-8">
                 Whatever brought you here, you&apos;re welcome. There&apos;s no script, no
                 judgment, no right way to begin. Just a conversation, when you&apos;re ready.
               </p>

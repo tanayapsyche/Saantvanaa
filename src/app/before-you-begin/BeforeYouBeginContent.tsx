@@ -17,7 +17,7 @@ export function BeforeYouBeginContent() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/journaling.jpg"
+            src="/images/autumn-window.jpg"
             alt=""
             fill
             className="object-cover object-center"

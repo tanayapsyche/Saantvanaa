@@ -16,7 +16,7 @@ export function ContactContent() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/plant-shadow.jpg"
+            src="/images/flowers-shadow.jpg"
             alt=""
             fill
             className="object-cover object-center"
