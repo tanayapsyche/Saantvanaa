@@ -223,8 +223,8 @@ export const PRICING_TIERS = [
 // Replace with your actual Calendly URL
 export const CALENDLY_URL = "https://calendly.com/your-link-here";
 
-// Replace with your actual Formspree endpoint
-export const FORMSPREE_ENDPOINT = "https://formspree.io/f/your-form-id";
+// Formcarry endpoint — handles contact form submissions
+export const FORMCARRY_ENDPOINT = "https://formcarry.com/s/G4JLN9Wu2NU";
 
 export const CONTACT_EMAIL = "hello@saantvanaa.com";
 export const CONTACT_PHONE = "+91 XXXXX XXXXX";

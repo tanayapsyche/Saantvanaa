@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { Send } from "lucide-react";
-import { FORMSPREE_ENDPOINT } from "@/lib/constants";
+import { FORMCARRY_ENDPOINT } from "@/lib/constants";
 
 interface FormData {
   name: string;
@@ -20,12 +20,16 @@ export function ContactForm() {
   const onSubmit = async (data: FormData) => {
     setStatus("sending");
     try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
+      const res = await fetch(FORMCARRY_ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(data),
       });
-      if (res.ok) {
+      const result = await res.json().catch(() => ({}));
+      if (res.ok && (result.code === 200 || result.status === "success")) {
         setStatus("success");
         reset();
       } else {
