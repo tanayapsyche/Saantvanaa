@@ -226,5 +226,5 @@ export const CALENDLY_URL = "https://calendly.com/your-link-here";
 // Formcarry endpoint — handles contact form submissions
 export const FORMCARRY_ENDPOINT = "https://formcarry.com/s/G4JLN9Wu2NU";
 
-export const CONTACT_EMAIL = "hello@saantvanaa.com";
-export const CONTACT_PHONE = "+91 XXXXX XXXXX";
+export const CONTACT_EMAIL = "tanayapsyche@gmail.com";
+export const CONTACT_PHONE = "+91 77440 37076";
