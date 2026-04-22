@@ -17,13 +17,13 @@ export function BeforeYouBeginContent() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/morning-nook.jpg"
+            src="/images/journaling.jpg"
             alt=""
             fill
             className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-light/88 via-light/60 to-light/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-light/92 via-light/65 to-light/25" />
         </div>
 
         <LeafDecoration className="absolute top-10 right-10 w-28 h-28 text-accent opacity-25 hidden lg:block" />

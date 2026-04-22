@@ -59,28 +59,30 @@ export function AboutContent() {
                 <span className="text-accent">Tanaya.</span>
               </h1>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                I&apos;m an Educational Psychologist with over eight years of studying and
-                practising psychology, working with diverse people across diverse settings.
-                Somewhere along the way, I realised something that still bothers me: psychology
-                is often seen as a place you only go to &ldquo;fix&rdquo; what&apos;s wrong with you.
-                I don&apos;t believe that&apos;s what it&apos;s for.
+                If you&apos;re reading this, something in your life is probably not quite where
+                you&apos;d like it to be. Maybe you&apos;ve read the books. Tried the apps. Made
+                the lists. And still, nothing is sticking. I&apos;ve been there too. That&apos;s
+                actually why this exists.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                Saantvanaa is my attempt at reframing that. It&apos;s a space where psychology is
-                used to help you <em>manage</em> your life, not fix yourself. That&apos;s why I blend
-                habit coaching with therapeutic support. In my experience, that&apos;s the honest
-                way to create change that actually lasts, not the kind that fades by week three.
+                I&apos;m an Educational Psychologist, and over the last eight years I&apos;ve sat
+                across from people from very different walks of life, all quietly asking the same
+                question: <em>why is change so hard, even when I really want it?</em> The honest
+                answer isn&apos;t willpower. It&apos;s support, the right kind of it. Not someone
+                cheerleading from the sidelines, and not only talking about feelings without ever
+                changing what you actually do. There&apos;s a space between those two, and
+                Saantvanaa is my attempt at building it.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-6">
-                On a personal note, I was diagnosed with ADHD at age five, and I&apos;ve been
-                living with it long enough to know exactly what it feels like from the inside.
-                The last minute scrambles, the guilt, the overwhelm, the quiet self doubt. I
-                built the ADHD programme because I genuinely wanted a space like this to exist,
-                one that offers knowledge, expertise, and real support for the parts of ADHD no
-                one talks about.
+                I&apos;ll share something personal too: I was diagnosed with ADHD when I was
+                five. So I know from the inside what it&apos;s like to live with a brain that
+                doesn&apos;t always follow the rules. The last minute scrambles. The guilt. The
+                quiet self doubt that hums under everything. The ADHD programme here is one I
+                genuinely wanted for myself, and now, for you.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-8 italic">
-                Whatever brought you here, I&apos;m glad you came. Let&apos;s figure it out together.
+                Whatever brought you here, you&apos;re welcome. There&apos;s no script, no
+                judgment, no right way to begin. Just a conversation, when you&apos;re ready.
               </p>
 
               <div className="flex flex-wrap gap-2 mb-8">
