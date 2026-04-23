@@ -65,7 +65,7 @@ export function AboutContent() {
                 actually why this exists.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                I&apos;m an Educational Psychologist, and over the last eight years I&apos;ve sat
+                I&apos;m an Educational Psychologist, and over the last five years I&apos;ve sat
                 across from people from very different walks of life, all quietly asking the same
                 question: why is change so hard, even when I really want it? The honest answer
                 isn&apos;t willpower. It&apos;s support, the right kind of it. Not someone
@@ -74,11 +74,11 @@ export function AboutContent() {
                 Saantvanaa is my attempt at building it.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-6">
-                I&apos;ll share something personal too: I was diagnosed with ADHD when I was
-                five. So I know from the inside what it&apos;s like to live with a brain that
-                doesn&apos;t always follow the rules. The last minute scrambles. The guilt. The
-                quiet self doubt that hums under everything. The ADHD programme here is one I
-                genuinely wanted for myself, and now, for you.
+                As someone who was diagnosed with ADHD at the age of five, I know from the
+                inside what it&apos;s like to live with a brain that doesn&apos;t always follow
+                the rules. The last minute scrambles. The guilt. The quiet self doubt that hums
+                under everything. The ADHD programme here is one I genuinely wanted for myself,
+                and now, for you.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-8">
                 Whatever brought you here, you&apos;re welcome. There&apos;s no script, no
@@ -183,10 +183,10 @@ export function AboutContent() {
                   citation: "Lally et al. (2010), European Journal of Social Psychology; Time to Form a Habit meta-analysis (2024)",
                 },
                 {
-                  stat: "g = 0.59",
-                  unit: "effect size",
+                  stat: "2 in 3",
+                  unit: "clients",
                   headline: "Coaching works, measurably",
-                  text: "A meta analysis of 39 randomised controlled trials found coaching has a moderate, statistically significant positive effect on behaviour change, performance, and wellbeing, regardless of context.",
+                  text: "Across 39 randomised controlled trials, roughly two in three people who received coaching showed better outcomes on behaviour change, wellbeing, and performance than those who didn't. Support isn't a nice to have, it's what tips the odds.",
                   citation: "Theeboom et al., Academy of Management Learning & Education",
                 },
                 {
@@ -210,15 +210,15 @@ export function AboutContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-warm-bg rounded-2xl p-6 border border-secondary/25"
+                  className="bg-accent-dark rounded-2xl p-6 border border-accent-dark shadow-md"
                 >
                   <div className="flex items-baseline gap-2 mb-3">
-                    <span className="font-serif text-3xl font-bold text-accent">{item.stat}</span>
-                    <span className="text-sm text-dark-light font-medium">{item.unit}</span>
+                    <span className="font-serif text-3xl font-bold text-white">{item.stat}</span>
+                    <span className="text-sm text-white/80 font-medium">{item.unit}</span>
                   </div>
-                  <h4 className="font-semibold text-dark mb-2">{item.headline}</h4>
-                  <p className="text-sm text-dark-light leading-relaxed mb-3">{item.text}</p>
-                  <p className="text-[11px] text-primary italic leading-snug">{item.citation}</p>
+                  <h4 className="font-semibold text-white mb-2">{item.headline}</h4>
+                  <p className="text-sm text-white/85 leading-relaxed mb-3">{item.text}</p>
+                  <p className="text-[11px] text-white/60 italic leading-snug">{item.citation}</p>
                 </motion.div>
               ))}
             </div>

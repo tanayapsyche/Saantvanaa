@@ -10,12 +10,9 @@ export function CalendlyEmbed() {
       <div className="max-w-2xl mx-auto bg-white rounded-2xl p-10 text-center border border-primary/10">
         <Calendar size={48} className="text-accent mx-auto mb-4" />
         <h3 className="font-serif text-xl font-bold text-dark mb-2">Booking Coming Soon</h3>
-        <p className="text-dark-light mb-4">
+        <p className="text-dark-light">
           Online booking will be available here shortly. In the meantime, use the contact form
           above or reach out directly.
-        </p>
-        <p className="text-sm text-dark-light/60">
-          (Replace the CALENDLY_URL in constants.ts with your Calendly link to activate this)
         </p>
       </div>
     );

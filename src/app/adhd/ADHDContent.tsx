@@ -183,7 +183,7 @@ export function ADHDContent() {
           <SectionHeading
             label="Through the Lens of Science"
             title="Your ADHD Brain, Explored"
-            subtitle="Click any region to discover what leading neuroscientists have found. Real research, told warmly."
+            subtitle="Click any region to discover what leading neuroscientists have found."
           />
           <ADHDBrainDiagram />
         </div>

@@ -28,7 +28,7 @@ export function ContactContent() {
         <LeafDecoration className="absolute top-10 right-10 w-28 h-28 text-accent opacity-25 hidden lg:block" />
         <Sprig className="absolute top-20 left-8 w-24 h-36 text-accent opacity-25 hidden lg:block" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-36">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
           <div className="max-w-2xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
