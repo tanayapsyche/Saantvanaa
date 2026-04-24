@@ -7,13 +7,6 @@ import { Button } from "@/components/ui/Button";
 import { Target, Heart, Shield, GraduationCap } from "lucide-react";
 import { LeafDecoration, DotsPattern } from "@/components/ui/Decorations";
 
-const credentials = [
-  "Educational Psychologist",
-  "Certified Habit Coach",
-  "Specialisation in ADHD Management",
-  "Eclectic Therapeutic Practitioner",
-];
-
 const values = [
   {
     icon: Target,
@@ -84,17 +77,6 @@ export function AboutContent() {
                 Whatever brought you here, you&apos;re welcome. There&apos;s no script, no
                 judgment, no right way to begin. Just a conversation, when you&apos;re ready.
               </p>
-
-              <div className="flex flex-wrap gap-2 mb-8">
-                {credentials.map((c) => (
-                  <span
-                    key={c}
-                    className="px-3 py-1.5 bg-accent/10 text-dark text-sm rounded-full font-medium"
-                  >
-                    {c}
-                  </span>
-                ))}
-              </div>
 
               <Button href="/contact">Book a Free Discovery Call</Button>
             </motion.div>
