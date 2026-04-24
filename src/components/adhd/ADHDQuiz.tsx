@@ -183,7 +183,7 @@ export function ADHDQuiz() {
               )}
               <p className="text-xs text-dark-light/60 mt-4 max-w-md mx-auto italic">
                 This is a self reflection exercise based on themes from validated screening frameworks.
-                It is not a diagnosis. Only a qualified professional can diagnose ADHD.
+                It is not a diagnosis.
               </p>
             </div>
           </motion.div>
