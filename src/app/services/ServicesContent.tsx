@@ -77,8 +77,8 @@ export function ServicesContent() {
         <LeafDecoration className="absolute top-16 left-8 w-24 h-24 text-accent opacity-30 hidden md:block" />
         <LeafDecoration className="absolute bottom-10 right-16 w-24 h-24 text-accent opacity-25 hidden md:block rotate-180" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
-          <div className="max-w-2xl">
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+          <div className="max-w-2xl text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
