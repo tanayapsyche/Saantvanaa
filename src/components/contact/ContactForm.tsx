@@ -90,13 +90,14 @@ export function ContactForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label className="block text-sm font-medium text-dark mb-1.5">Phone</label>
+          <label className="block text-sm font-medium text-dark mb-1.5">Phone *</label>
           <input
-            {...register("phone")}
+            {...register("phone", { required: "Phone is required" })}
             type="tel"
             className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-light focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
             placeholder="+91 XXXXX XXXXX"
           />
+          {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
         </div>
 
         <div>

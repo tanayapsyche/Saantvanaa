@@ -103,6 +103,48 @@ const REGIONS: Region[] = [
       "Time really does feel different for you. External timers, visual time aids, and accountability check ins work because they replace the internal signal.",
     citation: "Barkley on temporal processing; Valera et al. meta-analyses",
   },
+  {
+    id: "reward",
+    name: "Reward System (Nucleus Accumbens)",
+    cx: 215,
+    cy: 240,
+    researcher: "Dr. Nora Volkow",
+    researcherInitials: "NV",
+    researcherTitle: "Director, US National Institute on Drug Abuse",
+    finding:
+      "Volkow's imaging studies show the ADHD brain has reduced dopamine receptors in the reward pathway. The result: rewards that feel motivating to neurotypical brains feel dull or distant to an ADHD brain, unless they're immediate, novel, or emotionally vivid.",
+    takeaway:
+      "It's not that you lack willpower. Your brain literally registers reward differently. Building immediate rewards into long tasks isn't a hack, it's neuroscience working with you.",
+    citation: "Volkow et al. (2009), JAMA; Reward Deficiency in ADHD",
+  },
+  {
+    id: "working-memory",
+    name: "Working Memory (Frontoparietal Network)",
+    cx: 145,
+    cy: 215,
+    researcher: "Dr. Adele Diamond",
+    researcherInitials: "AD",
+    researcherTitle: "Developmental cognitive neuroscientist, UBC",
+    finding:
+      "Working memory, the brain's mental sticky note, is consistently weaker in ADHD brains compared to neurotypical peers. This explains why you walk into rooms and forget why, lose your train of thought mid sentence, or read a page and remember none of it.",
+    takeaway:
+      "Forgetfulness isn't carelessness. Your brain has a smaller mental notepad, so writing things down, breaking tasks into steps, and externalising memory isn't a weakness, it's the strategy your brain needs.",
+    citation: "Diamond (2013), Annual Review of Psychology; Executive Functions",
+  },
+  {
+    id: "insula",
+    name: "Insula (Interoception)",
+    cx: 320,
+    cy: 285,
+    researcher: "Dr. Sahib Khalsa",
+    researcherInitials: "SK",
+    researcherTitle: "Interoception researcher, Laureate Institute",
+    finding:
+      "The insula helps you sense what's happening inside your body, hunger, thirst, fatigue, tension. ADHD brains often have reduced interoceptive awareness, which is why you forget to eat, don't notice you're tired until you crash, or can't tell when you need a break.",
+    takeaway:
+      "If your body's signals feel quiet, it's not your fault. External cues, like meal alarms or scheduled breaks, become your body's volume knob until your awareness catches up.",
+    citation: "Khalsa et al. (2018), Biological Psychiatry; Interoception and Mental Health",
+  },
 ];
 
 export function ADHDBrainDiagram() {

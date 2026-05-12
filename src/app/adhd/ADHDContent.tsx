@@ -45,11 +45,36 @@ const topSymptoms = [
 ];
 
 const stats = [
-  { number: "6%", label: "of US adults have ADHD", source: "CDC, 2025" },
-  { number: "<20%", label: "ever receive a formal diagnosis", source: "CHADD" },
-  { number: "55.9%", label: "are first diagnosed in adulthood", source: "CDC, 2025" },
-  { number: "21.6", label: "extra days of lost productivity per year", source: "WHO Survey" },
-  { number: "60%+", label: "have lost or changed a job due to symptoms", source: "ADDA" },
+  {
+    number: "6%",
+    label: "of US adults have ADHD",
+    source: "CDC, 2025",
+    href: "https://www.cdc.gov/adhd/data/index.html",
+  },
+  {
+    number: "<20%",
+    label: "ever receive a formal diagnosis",
+    source: "CHADD",
+    href: "https://chadd.org/about-adhd/general-prevalence/",
+  },
+  {
+    number: "55.9%",
+    label: "are first diagnosed in adulthood",
+    source: "CDC, 2025",
+    href: "https://www.cdc.gov/mmwr/volumes/74/wr/mm7440a3.htm",
+  },
+  {
+    number: "21.6",
+    label: "extra days of lost productivity per year",
+    source: "WHO Survey",
+    href: "https://www.who.int/news-room/fact-sheets/detail/mental-disorders",
+  },
+  {
+    number: "60%+",
+    label: "have lost or changed a job due to symptoms",
+    source: "ADDA",
+    href: "https://add.org/adhd-facts/",
+  },
 ];
 
 const howWeHelp = [
@@ -163,7 +188,14 @@ export function ADHDContent() {
               >
                 <p className="text-3xl sm:text-4xl font-bold text-accent mb-1">{stat.number}</p>
                 <p className="text-light/80 text-sm leading-snug">{stat.label}</p>
-                <p className="text-light/40 text-[11px] mt-1">{stat.source}</p>
+                <a
+                  href={stat.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-secondary/70 hover:text-secondary text-[11px] mt-1 underline underline-offset-2 decoration-secondary/30 hover:decoration-secondary transition-colors"
+                >
+                  {stat.source}
+                </a>
               </motion.div>
             ))}
           </div>
@@ -225,7 +257,7 @@ export function ADHDContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Our Approach"
-            title="How Saantvanaa Helps With ADHD"
+            title="How Saantwanaa Helps With ADHD"
             subtitle="Not generic advice. A personalised system with professional support, built for your brain."
           />
 

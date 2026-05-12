@@ -18,7 +18,7 @@ export function Navbar() {
             {SITE_NAME_DEVANAGARI}
           </span>
           <span className="hidden sm:inline text-xs text-accent font-semibold tracking-wide uppercase">
-            Saantvanaa
+            Saantwanaa
           </span>
         </Link>
 

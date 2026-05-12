@@ -97,9 +97,7 @@ export function ADHDQuiz() {
             Does This Sound Like You?
           </h3>
           <p className="text-dark-light leading-relaxed max-w-xl mx-auto text-[15px]">
-            Based on themes from validated ADHD screening frameworks (ASRS, DIVA-5). This is a
-            self reflection exercise, <strong>not a diagnosis</strong>. Tick the ones that feel
-            true for you.
+            A little just for fun self relatability checklist. Tick the ones that feel true for you and see how much resonates. Not a diagnosis, just a chance to feel a little more seen.
           </p>
         </div>
 

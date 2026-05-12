@@ -52,30 +52,19 @@ export function AboutContent() {
                 <span className="text-accent">Tanaya.</span>
               </h1>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                If you&apos;re reading this, something in your life is probably not quite where
-                you&apos;d like it to be. Maybe you&apos;ve read the books. Tried the apps. Made
-                the lists. And still, nothing is sticking. I&apos;ve been there too. That&apos;s
-                actually why this exists.
+                I&apos;m so glad you found your way here. Pull up a chair, take a breath; we&apos;re going to talk.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                I&apos;m an Educational Psychologist, and over the last five years I&apos;ve sat
-                across from people from very different walks of life, all quietly asking the same
-                question: why is change so hard, even when I really want it? The honest answer
-                isn&apos;t willpower. It&apos;s support, the right kind of it. Not someone
-                cheerleading from the sidelines, and not only talking about feelings without ever
-                changing what you actually do. There&apos;s a space between those two, and
-                Saantvanaa is my attempt at building it.
+                I&apos;m an Educational Psychologist with five years of practice, and somewhere along the way I realised something that wouldn&apos;t let me go: most of us are taught to come to therapy only when something is &ldquo;wrong&rdquo;. As if psychology is a hospital you visit for an emergency. I&apos;ve always believed it can be so much more than that. Psychology, used gently, can be the quiet hand on your shoulder as you build a life that feels like yours.
               </p>
-              <p className="text-lg text-dark-light leading-relaxed mb-6">
-                As someone who was diagnosed with ADHD at the age of five, I know from the
-                inside what it&apos;s like to live with a brain that doesn&apos;t always follow
-                the rules. The last minute scrambles. The guilt. The quiet self doubt that hums
-                under everything. The ADHD programme here is one I genuinely wanted for myself,
-                and now, for you.
+              <p className="text-lg text-dark-light leading-relaxed mb-4">
+                That&apos;s what Saantwanaa is. It&apos;s a space where you don&apos;t come to be fixed. You come to manage your lifestyle, with someone walking beside you. That&apos;s why I weave habit coaching together with emotional wellness, because real change needs both. The plan AND the feelings underneath it. One without the other rarely sticks.
+              </p>
+              <p className="text-lg text-dark-light leading-relaxed mb-4">
+                Here&apos;s the personal part. I was diagnosed with ADHD at the age of five, and I&apos;ve been making peace with my own beautifully chaotic brain ever since. The last minute scrambles, the overwhelm, the guilt loops, the quiet wondering of &ldquo;what is wrong with me?&rdquo;; I know them all. Which is why this isn&apos;t just professional for me. The ADHD programme here is the kind of support I wish someone had handed me, and I&apos;m so happy to be the one handing it to you.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-8">
-                Whatever brought you here, you&apos;re welcome. There&apos;s no script, no
-                judgment, no right way to begin. Just a conversation, when you&apos;re ready.
+                Whatever brought you here, you&apos;re very welcome. There&apos;s no perfect time to start, no right way to begin. Just a conversation, whenever you&apos;re ready.
               </p>
 
               <Button href="/contact">Book a Free Discovery Call</Button>
@@ -92,7 +81,7 @@ export function AboutContent() {
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-xl border-4 border-white">
                 <Image
                   src="/images/tanaya.jpg"
-                  alt="Tanaya, Educational Psychologist and founder of Saantvanaa"
+                  alt="Tanaya, Educational Psychologist and founder of Saantwanaa"
                   fill
                   className="object-cover"
                   priority
@@ -123,14 +112,12 @@ export function AboutContent() {
               <p>
                 Every week, people download habit trackers, buy planners, and make promises to
                 themselves. By week three, most have abandoned the plan. Not because they&apos;re
-                weak, but because nobody addressed <em>why</em> the old patterns existed in the
-                first place.
+                weak, but because nobody addressed why the old patterns existed in the first place.
               </p>
               <p>
-                Lifestyle Management bridges this gap. It pairs the <strong>structure</strong> of
-                habit coaching (planning, tracking, accountability) with the <strong>depth</strong>{" "}
-                of emotional wellness support (understanding resistance, building resilience, processing
-                the discomfort of change).
+                Lifestyle Management bridges this gap. It pairs the structure of habit coaching
+                (planning, tracking, accountability) with the depth of emotional wellness support
+                (understanding resistance, building resilience, processing the discomfort of change).
               </p>
               <p>
                 This is especially critical for people with ADHD, where the challenge isn&apos;t
@@ -162,28 +149,32 @@ export function AboutContent() {
                   unit: "days",
                   headline: "The real time it takes to form a habit",
                   text: "The popular \"21 days\" myth is wrong. Habit formation takes an average of 59 to 66 days, and sometimes up to 254 days, depending on the behaviour. That's why bi weekly tracking for months actually matters, and why willpower alone burns out.",
-                  citation: "Lally et al. (2010), European Journal of Social Psychology; Time to Form a Habit meta-analysis (2024)",
+                  citation: "Lally et al. (2010), European Journal of Social Psychology",
+                  href: "https://onlinelibrary.wiley.com/doi/10.1002/ejsp.674",
                 },
                 {
                   stat: "2 in 3",
                   unit: "clients",
                   headline: "Coaching works, measurably",
                   text: "Across 39 randomised controlled trials, roughly two in three people who received coaching showed better outcomes on behaviour change, wellbeing, and performance than those who didn't. Support isn't a nice to have, it's what tips the odds.",
-                  citation: "Theeboom et al., Academy of Management Learning & Education",
+                  citation: "Theeboom et al., Journal of Positive Psychology",
+                  href: "https://www.tandfonline.com/doi/abs/10.1080/17439760.2013.837499",
                 },
                 {
                   stat: "23",
                   unit: "techniques",
                   headline: "Goal setting + problem solving lead the way",
                   text: "Across health coaching RCTs, researchers identified 23 distinct behaviour change techniques. Goal setting and problem solving, the two most frequently used, are the exact backbone of our sessions.",
-                  citation: "Systematic review, Behaviour Change Techniques in Health Coaching (PMC9837922)",
+                  citation: "Behaviour Change Techniques in Health Coaching (PMC9837922)",
+                  href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9837922/",
                 },
                 {
                   stat: "CBT",
                   unit: "evidence base",
                   headline: "Therapeutic support has decades of data",
                   text: "Cognitive and behaviour based therapeutic approaches have among the strongest meta analytic support in mental health, for depression, anxiety, and behaviour change. Combining this with habit coaching addresses both the action and the emotion.",
-                  citation: "Hofmann et al., Efficacy of Cognitive Behavioral Therapy meta-review (PMC3584580)",
+                  citation: "Hofmann et al., Efficacy of CBT meta-review (PMC3584580)",
+                  href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3584580/",
                 },
               ].map((item, i) => (
                 <motion.div
@@ -200,7 +191,14 @@ export function AboutContent() {
                   </div>
                   <h4 className="font-semibold text-white mb-2">{item.headline}</h4>
                   <p className="text-sm text-white/85 leading-relaxed mb-3">{item.text}</p>
-                  <p className="text-[11px] text-white/60 italic leading-snug">{item.citation}</p>
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-[11px] text-secondary hover:text-white underline underline-offset-2 decoration-secondary/40 hover:decoration-white leading-snug transition-colors"
+                  >
+                    {item.citation}
+                  </a>
                 </motion.div>
               ))}
             </div>

@@ -1,8 +1,8 @@
-export const SITE_NAME = "Saantvanaa";
+export const SITE_NAME = "Saantwanaa";
 export const SITE_NAME_DEVANAGARI = "सांत्वना";
 export const SITE_TAGLINE = "Lifestyle Management Through Habit Coaching & Emotional Wellness";
 export const SITE_DESCRIPTION =
-  "Saantvanaa helps you build healthier habits, overcome emotional challenges, and manage ADHD symptoms through personalized lifestyle coaching and therapeutic guidance.";
+  "Saantwanaa helps you build healthier habits, overcome emotional challenges, and manage ADHD symptoms through personalized lifestyle coaching and therapeutic guidance.";
 
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -115,13 +115,37 @@ export const TESTIMONIALS = [
     name: "Neha S.",
     role: "Graduate Student",
   },
+  {
+    quote:
+      "Honestly, I came in just hoping to wake up earlier. I left three months later actually liking the person I was becoming. I didn't expect that.",
+    name: "Rhea T.",
+    role: "HR Manager",
+  },
+  {
+    quote:
+      "What I love is that nothing here is fake-positive. When I had a bad week, we talked about why. When I had a good week, we celebrated it. It just felt human.",
+    name: "Karan D.",
+    role: "Doctor",
+  },
+  {
+    quote:
+      "I came in convinced I was broken. I left understanding that my brain just needs different scaffolding than most people's. That alone changed how I talk to myself.",
+    name: "Aanya R.",
+    role: "Architect, ADHD",
+  },
+  {
+    quote:
+      "The bi-weekly sessions saved me. I always thought I needed motivation. Turns out I just needed someone in my corner who noticed when I was drifting.",
+    name: "Vikram S.",
+    role: "Entrepreneur",
+  },
 ] as const;
 
 export const FAQ_ITEMS = [
   {
     question: "Is this therapy or coaching?",
     answer:
-      "It's a thoughtful combination of both. Saantvanaa pairs structured habit coaching with professional therapeutic guidance. The coaching helps you build systems and accountability, while the emotional wellness component addresses the deeper patterns that often sabotage change.",
+      "It's a thoughtful combination of both. Saantwanaa pairs structured habit coaching with professional therapeutic guidance. The coaching helps you build systems and accountability, while the emotional wellness component addresses the deeper patterns that often sabotage change.",
   },
   {
     question: "Will this make me dependent on you?",
@@ -131,7 +155,7 @@ export const FAQ_ITEMS = [
   {
     question: "How is this different from a life coach?",
     answer:
-      "Unlike most life coaches, your Saantvanaa coach is a qualified Educational Psychologist. This means evidence based approaches, proper training, and the ability to address deeper psychological patterns, not just surface level motivation.",
+      "Unlike most life coaches, your Saantwanaa coach is a qualified Educational Psychologist. This means evidence based approaches, proper training, and the ability to address deeper psychological patterns, not just surface level motivation.",
   },
   {
     question: "Do I need an ADHD diagnosis to join?",
@@ -141,7 +165,7 @@ export const FAQ_ITEMS = [
   {
     question: "How long is the program?",
     answer:
-      "The core program runs in monthly cycles. Most members see meaningful change within 2 to 3 months. The goal is to make you self reliant, so you eventually won't need us at all. That's the real measure of success.",
+      "The core program runs in monthly cycles, and most members see meaningful change within 2 to 3 months. Our quiet hope is that, in time, you grow into someone who can carry these tools forward on your own, with us cheering you on from the sidelines.",
   },
   {
     question: "What happens in the free discovery call?",

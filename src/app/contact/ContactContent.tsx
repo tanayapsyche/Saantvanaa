@@ -13,7 +13,7 @@ export function ContactContent() {
   return (
     <>
       {/* Hero — Morning Nook aesthetic */}
-      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
+      <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/flowers-shadow.jpg"

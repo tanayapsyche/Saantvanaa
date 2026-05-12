@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { UserCheck, Eye, PartyPopper, LifeBuoy } from "lucide-react";
+import { UserCheck, Eye, PartyPopper, LifeBuoy, HelpingHand } from "lucide-react";
 import { FlowerInVase, Sprig } from "@/components/ui/Decorations";
 
 const aspects = [
@@ -29,6 +29,12 @@ const aspects = [
     title: "Someone who helps you recover",
     description:
       "Slipping up is part of the process, not the end of it. Accountability means having someone who helps you get back on track without judgment, guilt, or the \"I told you so\" attitude.",
+  },
+  {
+    icon: HelpingHand,
+    title: "Someone to lean on when you're unsure",
+    description:
+      "Some decisions feel too big to make alone. Whether it's a small wobble or a real fork in the road, you'll have a steady, judgement free voice to help you think it through and find your way.",
   },
 ];
 

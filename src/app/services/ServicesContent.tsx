@@ -12,7 +12,6 @@ import {
   Clock,
   Video,
   MessageSquare,
-  X,
   Handshake,
   Map as MapIcon,
   CalendarCheck,
@@ -62,7 +61,7 @@ export function ServicesContent() {
   return (
     <>
       {/* Hero — Morning Nook aesthetic */}
-      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
+      <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/morning-nook.jpg"
@@ -266,19 +265,6 @@ export function ServicesContent() {
                       </li>
                     ))}
                   </ul>
-
-                  {tier.notIncluded.length > 0 && (
-                    <ul className="space-y-2.5 mt-3 pt-3 border-t border-secondary/20">
-                      {tier.notIncluded.map((item) => (
-                        <li key={item} className="flex items-start gap-2.5">
-                          <div className="flex-shrink-0 w-4 h-4 rounded-full bg-dark/5 flex items-center justify-center mt-0.5">
-                            <X size={10} className="text-dark-light/50 stroke-[3]" />
-                          </div>
-                          <span className="text-sm text-dark-light/50 leading-snug line-through">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
                 </div>
 
                 <Button

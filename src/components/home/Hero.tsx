@@ -2,8 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Button } from "@/components/ui/Button";
-import { ArrowRight } from "lucide-react";
 import {
   LeafDecoration,
   FlowerInVase,
@@ -47,8 +45,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-dark leading-[1.1]"
           >
-            Let&apos;s build habits that stick.{" "}
-            <span className="text-accent">Let&apos;s heal what holds you back.</span>
+            Living well,{" "}
+            <span className="text-accent">by design.</span>
           </motion.h1>
 
           <motion.p
@@ -57,32 +55,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-8 text-lg sm:text-xl text-dark-light leading-relaxed"
           >
-            Saantvanaa combines personalised habit coaching with emotional wellness support
-            to help you transition from the life you have to the life you want, with
-            professional guidance every step of the way.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4"
-          >
-            <Button href="/contact" size="lg">
-              Book a Free Discovery Call <ArrowRight size={18} className="ml-2" />
-            </Button>
-            <Button href="/services" variant="outline" size="lg">
-              View Programs
-            </Button>
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-4 text-sm text-dark-light/70"
-          >
-            15 minutes. No commitment. Let&apos;s talk about what you need.
+            Saantwanaa is Lifestyle Management — a supervised, personalised approach
+            where habit coaching meets emotional wellness, designed around how you
+            actually live.
           </motion.p>
         </div>
       </div>
