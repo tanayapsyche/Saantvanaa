@@ -14,7 +14,7 @@ export function BeforeYouBeginContent() {
   return (
     <>
       {/* Hero — Morning Nook aesthetic */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
         <div className="absolute inset-0">
           <Image
             src="/images/autumn-window.jpg"

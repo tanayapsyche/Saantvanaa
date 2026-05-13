@@ -8,33 +8,28 @@ import { FlowerInVase, Sprig } from "@/components/ui/Decorations";
 const aspects = [
   {
     icon: UserCheck,
-    title: "Someone who checks in",
-    description:
-      "Regular, consistent sessions where someone genuinely asks how you're doing and means it. Not a generic \"how's it going?\" but a structured review of what worked, what didn't, and why.",
+    title: "Checks in on you",
+    line: "Real, structured sessions. Not generic.",
   },
   {
     icon: Eye,
-    title: "Someone who notices",
-    description:
-      "Your coach spots patterns you might miss yourself: the triggers that lead to procrastination, the time of day you lose momentum, the hidden wins you're not giving yourself credit for.",
+    title: "Notices what you don't",
+    line: "Patterns, triggers, small wins.",
   },
   {
     icon: PartyPopper,
-    title: "Someone who celebrates with you",
-    description:
-      "Small wins matter more than big ones. Waking up on time for three days straight? That's worth acknowledging. Choosing the healthier option even once? That counts.",
+    title: "Celebrates the small stuff",
+    line: "Three days of waking on time counts.",
   },
   {
     icon: LifeBuoy,
-    title: "Someone who helps you recover",
-    description:
-      "Slipping up is part of the process, not the end of it. Accountability means having someone who helps you get back on track without judgment, guilt, or the \"I told you so\" attitude.",
+    title: "Helps you bounce back",
+    line: "No guilt, no \"I told you so\".",
   },
   {
     icon: HelpingHand,
-    title: "Someone to lean on when you're unsure",
-    description:
-      "Some decisions feel too big to make alone. Whether it's a small wobble or a real fork in the road, you'll have a steady, judgement free voice to help you think it through and find your way.",
+    title: "Steady when you're unsure",
+    line: "A judgement free voice to think aloud.",
   },
 ];
 
@@ -48,35 +43,27 @@ export function Accountability() {
         <SectionHeading
           label="Accountability"
           title="What Does Accountability Actually Mean?"
-          subtitle="It's a word that gets thrown around a lot. Here's what it actually looks like when you work with us."
+          subtitle="Less of a watchdog, more of a workout partner for your life. Here's what it looks like in practice:"
         />
 
-        <div className="max-w-4xl mx-auto">
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center text-lg text-dark-light leading-relaxed mb-12 max-w-2xl mx-auto"
-          >
-            Think of it like having a workout partner for your life. Not someone watching over
-            your shoulder, but someone who&apos;s genuinely invested in seeing you grow.
-          </motion.p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
             {aspects.map((item, i) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white rounded-2xl p-7 border border-secondary/30 hover:border-accent/30 transition-all hover:shadow-md"
+                transition={{ duration: 0.4, delay: i * 0.07 }}
+                className="bg-white rounded-2xl p-5 sm:p-6 border border-secondary/25 hover:border-accent/35 transition-all hover:shadow-md flex flex-col items-center text-center h-full"
               >
-                <div className="w-11 h-11 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
                   <item.icon size={22} className="text-accent" />
                 </div>
-                <h3 className="font-semibold text-dark mb-2">{item.title}</h3>
-                <p className="text-dark-light leading-relaxed text-[15px]">{item.description}</p>
+                <h3 className="font-semibold text-dark text-[15px] mb-2 leading-snug">
+                  {item.title}
+                </h3>
+                <p className="text-dark-light text-sm leading-relaxed">{item.line}</p>
               </motion.div>
             ))}
           </div>

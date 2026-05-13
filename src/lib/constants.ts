@@ -99,45 +99,45 @@ export const IS_THIS_FOR_YOU = [
 export const TESTIMONIALS = [
   {
     quote:
-      "I've tried a dozen apps and planners. None of them stuck because none of them talked back. Having someone actually check in on me twice a week changed everything.",
-    name: "Priya M.",
-    role: "Marketing Professional",
-  },
-  {
-    quote:
-      "I always thought I was just lazy. Turns out there was a lot going on underneath that no habit tracker could fix. Working on both parts together actually moved the needle.",
-    name: "Arjun K.",
-    role: "Software Developer",
-  },
-  {
-    quote:
-      "My brain works differently and most coaches don't get that. Here, they built the plan around me instead of asking me to fit into theirs. First time something has actually worked.",
-    name: "Neha S.",
-    role: "Graduate Student",
-  },
-  {
-    quote:
-      "Honestly, I came in just hoping to wake up earlier. I left three months later actually liking the person I was becoming. I didn't expect that.",
+      "Okay so I came in just wanting to fix my sleep. Three months in I had a routine, a therapist, and a much kinder relationship with myself. Slightly dramatic but worth it.",
     name: "Rhea T.",
-    role: "HR Manager",
+    role: "HR Manager, 28",
   },
   {
     quote:
-      "What I love is that nothing here is fake-positive. When I had a bad week, we talked about why. When I had a good week, we celebrated it. It just felt human.",
-    name: "Karan D.",
-    role: "Doctor",
+      "Twelve habit apps. None of them worked. Turns out I didn't need another app, I needed someone to ask me 'so what happened on Wednesday?' once a week.",
+    name: "Priya M.",
+    role: "Marketing, 31",
   },
   {
     quote:
-      "I came in convinced I was broken. I left understanding that my brain just needs different scaffolding than most people's. That alone changed how I talk to myself.",
+      "I genuinely thought I was just lazy. Turns out there was a lot going on under there that no planner was gonna fix. Wish I'd done this years ago tbh.",
+    name: "Arjun K.",
+    role: "Software dev, 29",
+  },
+  {
+    quote:
+      "First time someone built the plan around how my brain actually works, instead of asking me to fit into theirs. ADHD finally felt seen, not managed.",
     name: "Aanya R.",
     role: "Architect, ADHD",
   },
   {
     quote:
-      "The bi-weekly sessions saved me. I always thought I needed motivation. Turns out I just needed someone in my corner who noticed when I was drifting.",
+      "Bad weeks didn't get dismissed. Good weeks didn't get over-celebrated. Just real, honest, human conversations. That's what I'd been missing.",
+    name: "Karan D.",
+    role: "Doctor, 34",
+  },
+  {
+    quote:
+      "I came in feeling broken. I left realising my brain just needs different scaffolding than most. That single reframe changed everything.",
+    name: "Neha S.",
+    role: "Grad student",
+  },
+  {
+    quote:
+      "I always thought I needed motivation. Nope. I needed someone in my corner who noticed when I was quietly drifting. That made all the difference.",
     name: "Vikram S.",
-    role: "Entrepreneur",
+    role: "Founder, 36",
   },
 ] as const;
 
