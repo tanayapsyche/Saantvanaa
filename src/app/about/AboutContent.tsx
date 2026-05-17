@@ -52,19 +52,22 @@ export function AboutContent() {
                 <span className="text-accent">Tanaya.</span>
               </h1>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                Hey, I&apos;m so glad you wandered in. Pull up a chair, take a breath.
+                Hi, I&apos;m Tanaya.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                I&apos;ve spent the last eight plus years deep in psychology, as a student, a curious mind, and as someone who&apos;s been navigating life with ADHD since the age of five. So when I talk about how brains work, I really do mean it. Mine included.
+                I&apos;ve been studying psychology for over eight years now. Not because I had some grand plan, but because I genuinely couldn&apos;t get enough of trying to understand how people work; how I work, why we do what we do, and why so often we struggle to do the things we actually want to.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                Saantwanaa is something I built because I kept looking for the kind of support I wished I&apos;d had growing up. A space that&apos;s gentle, real, and built for messy human lives, not perfect ones. Somewhere you don&apos;t come to be &ldquo;fixed&rdquo;, but to slowly feel a little more like yourself again.
+                I was diagnosed with ADHD when I was five, which means I&apos;ve spent most of my life in a slightly uneasy relationship with my own brain. The late nights, the procrastinating on things I cared about, wanting something deeply and still not being able to start. For a long time I thought there was something wrong with me. Eventually I realised there wasn&apos;t. My brain just needed something different from what the world kept handing me.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                I deeply believe in honouring individual differences. There&apos;s no one right way to think, feel or live, and I&apos;m not interested in trying to mould you into one. My vision for psychology is much bigger than just treating disorders. It&apos;s about using it as a tool that helps every kind of person live a healthier, happier, more fulfilling life. You don&apos;t need a diagnosis to deserve emotional support. You just need to be human.
+                Saantwanaa came out of that realisation. I built it because I wanted the kind of support I&apos;d quietly needed for years and never really found in one place; something that took both the practical and the emotional side of being human seriously, and something that doesn&apos;t start from the assumption that you&apos;re broken.
+              </p>
+              <p className="text-lg text-dark-light leading-relaxed mb-4">
+                One thing I feel strongly about: psychology isn&apos;t just for people in crisis. We carry this quiet idea that you need a &ldquo;real reason&rdquo;, a diagnosis, a breakdown, to ask for help. You don&apos;t. You&apos;re allowed to want support simply because life is hard, or even just because you want to feel a little more whole. Individual differences are something I genuinely respect, there&apos;s no one correct way to think, feel or live, and my hope for psychology is that it stops being a place we only run to when something breaks, and starts being a quiet tool that helps anyone, anywhere, build a healthier, happier life.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-8">
-                Whatever brought you here, you&apos;re welcome. No script, no pressure, just a quiet conversation whenever you&apos;re ready.
+                If you&apos;ve been carrying something around, big or small, named or unnamed, I&apos;d love to just talk.
               </p>
 
               <Button href="/contact">Book a Free Discovery Call</Button>
