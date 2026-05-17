@@ -52,19 +52,13 @@ export function AboutContent() {
                 <span className="text-accent">Tanaya.</span>
               </h1>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                I&apos;m so glad you found your way here. Pull up a chair, take a breath; we&apos;re going to talk.
+                I&apos;ve spent over eight years deep in psychology, both as a student and as someone who&apos;s been diagnosed with ADHD since the age of five. So this work isn&apos;t just professional for me. It&apos;s personal.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                I&apos;m an Educational Psychologist with five years of practice, and somewhere along the way I realised something that wouldn&apos;t let me go: most of us are taught to come to therapy only when something is &ldquo;wrong&rdquo;. As if psychology is a hospital you visit for an emergency. I&apos;ve always believed it can be so much more than that. Psychology, used gently, can be the quiet hand on your shoulder as you build a life that feels like yours.
-              </p>
-              <p className="text-lg text-dark-light leading-relaxed mb-4">
-                That&apos;s what Saantwanaa is. It&apos;s a space where you don&apos;t come to be fixed. You come to manage your lifestyle, with someone walking beside you. That&apos;s why I weave habit coaching together with emotional wellness, because real change needs both. The plan AND the feelings underneath it. One without the other rarely sticks.
-              </p>
-              <p className="text-lg text-dark-light leading-relaxed mb-4">
-                Here&apos;s the personal part. I was diagnosed with ADHD at the age of five, and I&apos;ve been making peace with my own beautifully chaotic brain ever since. The last minute scrambles, the overwhelm, the guilt loops, the quiet wondering of &ldquo;what is wrong with me?&rdquo;; I know them all. Which is why this isn&apos;t just professional for me. The ADHD programme here is the kind of support I wish someone had handed me, and I&apos;m so happy to be the one handing it to you.
+                Saantwanaa is the kind of support I always wished existed: a gentle, structured space where you don&apos;t come to be fixed. You come to manage your lifestyle, with someone walking beside you. That&apos;s why I weave habit coaching together with emotional wellness; because real change needs both.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-8">
-                Whatever brought you here, you&apos;re very welcome. There&apos;s no perfect time to start, no right way to begin. Just a conversation, whenever you&apos;re ready.
+                Whatever brought you here, you&apos;re very welcome. No script, no judgement, just a conversation whenever you&apos;re ready.
               </p>
 
               <Button href="/contact">Book a Free Discovery Call</Button>

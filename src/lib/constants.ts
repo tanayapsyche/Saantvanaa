@@ -188,8 +188,8 @@ export const PRICING_TIERS = [
   {
     name: "Essentials",
     subtitle: "Habit Coaching",
-    priceUSD: "$99",
-    priceINR: "₹7,999",
+    priceUSD: "$59",
+    priceINR: "₹4,999",
     period: "/month",
     description: "For when you need structure, not emotional deep dives",
     bestFor: "You already know what you want to change. You just need a plan, accountability, and someone to keep you consistent.",
@@ -207,8 +207,8 @@ export const PRICING_TIERS = [
   {
     name: "Complete",
     subtitle: "Coaching + Emotional Wellness",
-    priceUSD: "$199",
-    priceINR: "₹16,999",
+    priceUSD: "$129",
+    priceINR: "₹10,999",
     period: "/month",
     description: "For when habits keep slipping and you don't know why",
     bestFor: "You've tried planning before but emotional patterns like guilt, resistance, or self doubt keep pulling you back. You want both the plan AND the inner work.",
@@ -226,8 +226,8 @@ export const PRICING_TIERS = [
   {
     name: "ADHD Focus",
     subtitle: "Tailored for ADHD",
-    priceUSD: "$149",
-    priceINR: "₹12,499",
+    priceUSD: "$99",
+    priceINR: "₹7,999",
     period: "/month",
     description: "For when your brain works differently and you're tired of fighting it",
     bestFor: "You have ADHD (diagnosed or suspected) and need strategies designed for how your brain actually works, plus emotional support for the guilt, overwhelm, and masking that comes with it.",
