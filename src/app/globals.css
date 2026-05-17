@@ -17,8 +17,8 @@
   --color-warm-bg: #f3ede4;
 
   --font-sans: var(--font-inter);
-  --font-serif: var(--font-inknut);
-  --font-display: var(--font-inknut);
+  --font-serif: var(--font-playfair);
+  --font-display: var(--font-playfair);
   --font-brand: var(--font-amita);
 }
 

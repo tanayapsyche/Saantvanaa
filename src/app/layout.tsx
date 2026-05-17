@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Inknut_Antiqua, Amita } from "next/font/google";
+import { Inter, Playfair_Display, Amita } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -10,13 +10,9 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-// Indo-Latin display & serif font.
-// Inknut Antiqua is a warm, antique-feeling serif drawn for both
-// Devanagari and Latin scripts — perfect bridge for the Saantwanaa brand.
-const inknut = Inknut_Antiqua({
-  variable: "--font-inknut",
-  subsets: ["devanagari", "latin"],
-  weight: ["400", "500", "600", "700"],
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
 });
 
 const amita = Amita({
@@ -44,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${inknut.variable} ${amita.variable} h-full`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} ${amita.variable} h-full`}>
       <body className="min-h-full flex flex-col font-sans antialiased">
         <Navbar />
         <main className="flex-1">{children}</main>

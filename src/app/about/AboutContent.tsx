@@ -52,13 +52,16 @@ export function AboutContent() {
                 <span className="text-accent">Tanaya.</span>
               </h1>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                I&apos;ve spent over eight years deep in psychology, both as a student and as someone who&apos;s been diagnosed with ADHD since the age of five. So this work isn&apos;t just professional for me. It&apos;s personal.
+                Hey, I&apos;m so glad you wandered in. Pull up a chair, take a breath.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                Saantwanaa is the kind of support I always wished existed: a gentle, structured space where you don&apos;t come to be fixed. You come to manage your lifestyle, with someone walking beside you. That&apos;s why I weave habit coaching together with emotional wellness; because real change needs both.
+                I&apos;ve spent the last eight plus years deep in psychology, as a student, a curious mind, and as someone who&apos;s been navigating life with ADHD since the age of five. So when I talk about how brains work, I really do mean it. Mine included.
+              </p>
+              <p className="text-lg text-dark-light leading-relaxed mb-4">
+                Saantwanaa is something I built because I kept looking for the kind of support I wished I&apos;d had growing up. A space that&apos;s gentle, real, and built for messy human lives, not perfect ones. Somewhere you don&apos;t come to be &ldquo;fixed&rdquo;, but to slowly feel a little more like yourself again.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-8">
-                Whatever brought you here, you&apos;re very welcome. No script, no judgement, just a conversation whenever you&apos;re ready.
+                Whatever brought you here, you&apos;re welcome. No script, no pressure, just a quiet conversation whenever you&apos;re ready.
               </p>
 
               <Button href="/contact">Book a Free Discovery Call</Button>
