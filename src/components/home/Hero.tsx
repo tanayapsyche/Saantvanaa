@@ -45,8 +45,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-dark leading-[1.1]"
           >
-            Living well,{" "}
-            <span className="text-accent">by design.</span>
+            The life you keep promising yourself,{" "}
+            <span className="text-accent">let&apos;s actually build it.</span>
           </motion.h1>
 
           <motion.p
@@ -55,9 +55,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-8 text-lg sm:text-xl text-dark-light leading-relaxed"
           >
-            Saantwanaa is Lifestyle Management — a supervised, personalised approach
-            where habit coaching meets emotional wellness, designed around how you
-            actually live.
+            You&apos;ve tried the planners. You&apos;ve made the lists. By week three,
+            something always slips. Saantwanaa is where habit coaching meets emotional
+            wellness, the grounded, personal support that helps real change actually stay.
           </motion.p>
         </div>
       </div>

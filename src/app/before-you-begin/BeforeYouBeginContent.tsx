@@ -14,7 +14,7 @@ export function BeforeYouBeginContent() {
   return (
     <>
       {/* Hero — Morning Nook aesthetic */}
-      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
+      <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/autumn-window.jpg"
@@ -40,10 +40,10 @@ export function BeforeYouBeginContent() {
                 Before You Begin
               </span>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-dark leading-[1.1]">
-                The Honest Answers to What You&apos;re Probably Wondering
+                The questions you&apos;re afraid to ask, answered honestly.
               </h1>
               <p className="mt-6 text-lg text-dark-light leading-relaxed max-w-xl">
-                Starting something new, especially something that asks you to look inward, brings up real worries. Here are the questions people most often hesitate to ask, answered without sugar coating.
+                Before you commit to anything, here&apos;s space to address the worries that usually go unspoken. The &ldquo;what if I&apos;m not ready&rdquo; ones. The &ldquo;what if I quit&rdquo; ones. No sugar coating, no scripts.
               </p>
             </motion.div>
           </div>

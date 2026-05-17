@@ -11,7 +11,7 @@ export function ProcessTimeline() {
         <SectionHeading
           label="The Process"
           title="How It Works"
-          subtitle="A clear, structured path from where you are to where you want to be. No guesswork, just a plan built for you."
+          subtitle="From the messiness of where you are now to where you'd quietly like to be. No guesswork. Just a path we walk together, one honest step at a time."
           light
         />
 

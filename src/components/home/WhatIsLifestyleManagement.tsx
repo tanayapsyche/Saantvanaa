@@ -8,17 +8,17 @@ const highlights = [
   {
     icon: BookOpen,
     title: "Habit Coaching",
-    text: "We co-design a realistic routine built around your life, using frameworks from Atomic Habits and mindfulness. Then we track it twice a week and keep adjusting until it sticks. Not motivation. A system.",
+    text: "You've made the plans. You've broken them too. This time we co-design a routine that's built around your real life, drawing from Atomic Habits and mindfulness, and we keep tweaking until it actually fits.",
   },
   {
     icon: Heart,
-    title: "Emotional Wellness Support",
-    text: "When guilt, resistance, or self doubt show up (and they will), we work through them with personalised therapeutic techniques. The emotional patterns stop running the show.",
+    title: "Emotional Wellness",
+    text: "When the guilt, the self doubt, the why-can't-I-just-do-this voice shows up, we meet it. Real change touches real things, and you won't be navigating any of it alone.",
   },
   {
     icon: Users,
-    title: "Ongoing Accountability",
-    text: "A real person checking in twice a week. Noticing when you're slipping before you do. Helping you recover without judgment. Not an app. Not a notification. A human in your corner.",
+    title: "Steady Accountability",
+    text: "Not an app. Not a streak. A real person checking in twice a week, noticing you before you notice yourself slipping. Someone whose only job is to be in your corner.",
   },
 ];
 
@@ -29,7 +29,7 @@ export function WhatIsLifestyleManagement() {
         <SectionHeading
           label="What We Do"
           title="More Than Coaching. More Than Therapy."
-          subtitle="Lifestyle Management is a supervised approach that combines structured habit coaching with emotional wellness support, so you don't just plan better, you feel better doing it."
+          subtitle="Most coaching gives you a plan. Most therapy gives you understanding. Lifestyle Management is the rare space that gives you both, with someone walking beside you the whole way."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

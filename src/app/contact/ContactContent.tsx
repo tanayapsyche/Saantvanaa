@@ -13,7 +13,7 @@ export function ContactContent() {
   return (
     <>
       {/* Hero — Morning Nook aesthetic */}
-      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
+      <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/flowers-shadow.jpg"
@@ -39,11 +39,11 @@ export function ContactContent() {
                 Get In Touch
               </span>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-dark leading-tight">
-                Let&apos;s Start With a{" "}
-                <span className="text-accent">Conversation</span>
+                Some things shouldn&apos;t be{" "}
+                <span className="text-accent">carried alone.</span>
               </h1>
               <p className="mt-6 text-lg text-dark-light max-w-xl leading-relaxed">
-                Book a free 15 minute discovery call or send a message. No pressure, no commitment, just a safe space to talk about what you need.
+                Whatever&apos;s been sitting heavy on you, start by saying it out loud. The first conversation is free, gentle, and entirely on your terms.
               </p>
             </motion.div>
           </div>

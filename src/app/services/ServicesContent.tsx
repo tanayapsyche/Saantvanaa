@@ -61,7 +61,7 @@ export function ServicesContent() {
   return (
     <>
       {/* Hero — Morning Nook aesthetic */}
-      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
+      <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/morning-nook.jpg"
@@ -87,12 +87,11 @@ export function ServicesContent() {
                 Services
               </span>
               <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-dark leading-[1.1]">
-                A Programme Built Around{" "}
-                <span className="text-accent">Your Life</span>
+                Not another programme.{" "}
+                <span className="text-accent">Yours.</span>
               </h1>
               <p className="mt-8 text-lg sm:text-xl text-dark-light leading-relaxed">
-                Not a template. Not a self help course. A supervised, personalised approach to
-                building the life you want, step by step.
+                You&apos;ve already tried the one size fits all method. It didn&apos;t fit. This is built around your routine, your patterns, your real life, with someone walking beside you the whole way.
               </p>
             </motion.div>
           </div>

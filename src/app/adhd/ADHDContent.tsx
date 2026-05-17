@@ -119,8 +119,7 @@ export function ADHDContent() {
                 <span className="text-accent">How Your Brain Actually Works</span>
               </h1>
               <p className="text-lg text-dark-light leading-relaxed mb-8 max-w-2xl">
-                You don&apos;t need more willpower. You need a system built for how your brain
-                actually works, and support for the parts nobody else sees.
+                You&apos;ve spent a lifetime translating yourself for everyone else. Here, you don&apos;t have to. This is built for your brain, not against it, with real support for the parts no one else sees.
               </p>
               <Button href="/contact" size="lg">
                 Book a Free Discovery Call <ArrowRight size={18} className="ml-2" />

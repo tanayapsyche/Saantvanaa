@@ -12,8 +12,8 @@ export function IsThisForYou() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Self Check"
-          title="Sound Familiar?"
-          subtitle="If you relate to even a few of these, this program might be exactly what you need."
+          title="Does any of this sound a little too familiar?"
+          subtitle="If even a few of these feel like they were written about you, take that as a quiet sign. You're in the right place."
         />
 
         <div className="max-w-2xl mx-auto">
