@@ -60,6 +60,9 @@ export function AboutContent() {
               <p className="text-lg text-dark-light leading-relaxed mb-4">
                 Saantwanaa is something I built because I kept looking for the kind of support I wished I&apos;d had growing up. A space that&apos;s gentle, real, and built for messy human lives, not perfect ones. Somewhere you don&apos;t come to be &ldquo;fixed&rdquo;, but to slowly feel a little more like yourself again.
               </p>
+              <p className="text-lg text-dark-light leading-relaxed mb-4">
+                I deeply believe in honouring individual differences. There&apos;s no one right way to think, feel or live, and I&apos;m not interested in trying to mould you into one. My vision for psychology is much bigger than just treating disorders. It&apos;s about using it as a tool that helps every kind of person live a healthier, happier, more fulfilling life. You don&apos;t need a diagnosis to deserve emotional support. You just need to be human.
+              </p>
               <p className="text-lg text-dark-light leading-relaxed mb-8">
                 Whatever brought you here, you&apos;re welcome. No script, no pressure, just a quiet conversation whenever you&apos;re ready.
               </p>

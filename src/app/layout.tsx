@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Amita } from "next/font/google";
+import { Inter, Playfair_Display, Tiro_Devanagari_Hindi } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -15,10 +15,15 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
 });
 
-const amita = Amita({
-  variable: "--font-amita",
+// Brand font: Tiro Devanagari Hindi is a digital revival drawn for
+// printing modern editions of classical Sanskrit/Hindi texts. It carries
+// both the Devanagari script and matching Latin characters with a
+// scholarly, timeless feel — literally a new font rooted in ancient practice.
+const tiroDevanagari = Tiro_Devanagari_Hindi({
+  variable: "--font-brand",
   subsets: ["devanagari", "latin"],
-  weight: ["400", "700"],
+  weight: "400",
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -40,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable} ${amita.variable} h-full`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} ${tiroDevanagari.variable} h-full`}>
       <body className="min-h-full flex flex-col font-sans antialiased">
         <Navbar />
         <main className="flex-1">{children}</main>
