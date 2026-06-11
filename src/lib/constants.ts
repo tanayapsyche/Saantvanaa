@@ -199,7 +199,6 @@ export const PRICING_TIERS = [
       "8 bi weekly tracking sessions per month (30 min each)",
       "Monthly self reflection & feedback report",
       "WhatsApp & email support between sessions",
-      "Habit framework based on Atomic Habits principles",
     ],
     notIncluded: ["Emotional wellness sessions", "ADHD specific strategies"],
     addon: {
@@ -222,7 +221,6 @@ export const PRICING_TIERS = [
       "Emotional resilience and self regulation work",
       "Consistency and motivation coaching",
       "Priority scheduling for urgent support",
-      "Guidance drawn from Joe Hudson's work and mindfulness practices",
     ],
     notIncluded: ["ADHD specific strategies"],
     addon: null,
