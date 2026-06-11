@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import { ADHDQuiz } from "@/components/adhd/ADHDQuiz";
 import { ADHDBrainDiagram } from "@/components/adhd/ADHDBrainDiagram";
-import { BrainComparison } from "@/components/adhd/BrainComparison";
 
 // "What you might call it / What it actually is" — real adult ADHD experiences
 // that most people quietly chalk up to personal failings.
@@ -254,25 +253,13 @@ export function ADHDContent() {
         </div>
       </section>
 
-      {/* Brain Comparison */}
+      {/* Interactive Brain Diagram */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Through the Lens of Science"
-            title="Two Brains, Side by Side."
-            subtitle="A neurotypical brain and an ADHD brain are doing genuinely different things on the inside. Here's what changes, and why so much of your daily experience makes more sense once you see it."
-          />
-          <BrainComparison />
-        </div>
-      </section>
-
-      {/* Interactive Brain Diagram */}
-      <section className="py-20 lg:py-28 bg-warm-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            label="Go Deeper"
             title="Your ADHD Brain, Explored"
-            subtitle="Click any region below to read what leading neuroscientists have found."
+            subtitle="Click any region to discover what leading neuroscientists have found."
           />
           <ADHDBrainDiagram />
         </div>

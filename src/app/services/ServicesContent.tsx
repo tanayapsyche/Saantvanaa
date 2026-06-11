@@ -191,47 +191,6 @@ export function ServicesContent() {
         </div>
       </section>
 
-      {/* A note on Emotional Wellness */}
-      <section className="py-20 lg:py-24 bg-white relative overflow-hidden">
-        <Sprig className="absolute top-10 right-8 w-20 h-32 text-accent opacity-20 hidden lg:block" />
-        <FlowerInVase className="absolute bottom-10 left-8 w-20 h-32 text-accent opacity-20 hidden lg:block" />
-
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <span className="inline-block text-sm font-semibold tracking-wider uppercase mb-3 text-accent">
-              A note on emotional wellness
-            </span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-dark leading-tight">
-              Change doesn&apos;t just happen in your calendar. It happens in you.
-            </h2>
-          </div>
-
-          <div className="space-y-5 text-dark-light text-lg leading-relaxed">
-            <p>
-              The plans, the systems, the routines, those are the visible side of change.
-              But underneath all that, there&apos;s a quieter layer that almost no one talks about.
-              The emotional side.
-            </p>
-            <p>
-              When you start building something new, old feelings tend to surface. Guilt for
-              the times you tried before and stopped. Doubt about whether this time will really
-              be any different. Quiet resistance from the parts of you that found comfort in the
-              old patterns. Even unexpected grief for the version of you that you&apos;re slowly
-              leaving behind.
-            </p>
-            <p>
-              The emotional wellness component of Saantwanaa is built for exactly these moments.
-              It&apos;s the steady, unhurried space where we work through whatever shows up while
-              you&apos;re changing, so the change doesn&apos;t quietly get sabotaged by feelings
-              no one made room for.
-            </p>
-            <p className="text-dark font-medium">
-              You don&apos;t have to navigate that part on your own. That&apos;s the whole point.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Pricing */}
       <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
         <SunburstDecoration className="absolute -top-20 -right-20 w-[400px] h-[400px] text-accent opacity-15" />

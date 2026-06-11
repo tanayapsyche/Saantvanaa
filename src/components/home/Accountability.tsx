@@ -2,51 +2,34 @@
 
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { UserCheck, Eye, PartyPopper, LifeBuoy, HelpingHand } from "lucide-react";
 import { FlowerInVase, Sprig } from "@/components/ui/Decorations";
 
-// A mock conversation showing what accountability actually looks like,
-// rather than describing it in cards.
-type Bubble = {
-  from: "coach" | "you";
-  text: string;
-  time: string;
-};
-
-const conversation: Bubble[] = [
+const aspects = [
   {
-    from: "coach",
-    text: "Hey, how did the new morning routine feel this week?",
-    time: "Mon · 9:14 AM",
+    icon: UserCheck,
+    title: "Checks in on you",
+    line: "Real, structured sessions. Not generic.",
   },
   {
-    from: "you",
-    text: "Honestly, Monday and Tuesday went well. Wednesday I slept through the alarm.",
-    time: "Mon · 9:18 AM",
+    icon: Eye,
+    title: "Notices what you don't",
+    line: "Patterns, triggers, small wins.",
   },
   {
-    from: "coach",
-    text: "Totally okay. What was different about Tuesday night?",
-    time: "Mon · 9:19 AM",
+    icon: PartyPopper,
+    title: "Celebrates the small stuff",
+    line: "Three days of waking on time counts.",
   },
   {
-    from: "you",
-    text: "I scrolled till 1am. I think I was a little wired from work stuff.",
-    time: "Mon · 9:22 AM",
+    icon: LifeBuoy,
+    title: "Helps you bounce back",
+    line: "No guilt, no \"I told you so\".",
   },
   {
-    from: "coach",
-    text: "Got it. Let's not change the morning yet, let's protect the wind down. One small swap to try, want to chat through it on Wednesday?",
-    time: "Mon · 9:24 AM",
-  },
-  {
-    from: "you",
-    text: "Yes please. Also I noticed I actually wanted to journal last night. Small win.",
-    time: "Mon · 9:25 AM",
-  },
-  {
-    from: "coach",
-    text: "Not small. That's the inner shift starting to show up. I see you.",
-    time: "Mon · 9:26 AM",
+    icon: HelpingHand,
+    title: "Steady when you're unsure",
+    line: "A judgement free voice to think aloud.",
   },
 ];
 
@@ -59,88 +42,31 @@ export function Accountability() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Accountability"
-          title="What Does Accountability Actually Look Like?"
-          subtitle="Less of a watchdog, more of a steady voice that knows your story. Here's a glimpse of what a week in your inbox might feel like."
+          title="What Does Accountability Actually Mean?"
+          subtitle="Less of a watchdog, more of a workout partner for your life. Here's what it looks like in practice:"
         />
 
-        <div className="max-w-2xl mx-auto">
-          {/* Chat window */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-white rounded-3xl border border-secondary/25 shadow-md overflow-hidden"
-          >
-            {/* Chat header */}
-            <div className="bg-accent text-white px-5 py-4 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-sm font-bold">
-                T
-              </div>
-              <div>
-                <p className="text-sm font-semibold leading-tight">Tanaya · Your coach</p>
-                <p className="text-[11px] text-white/80 leading-tight mt-0.5">
-                  online · usually replies the same day
-                </p>
-              </div>
-            </div>
-
-            {/* Messages */}
-            <div className="px-4 sm:px-6 py-6 space-y-4 bg-gradient-to-b from-warm-bg/30 to-white">
-              {conversation.map((bubble, i) => {
-                const isCoach = bubble.from === "coach";
-                return (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.35, delay: i * 0.08 }}
-                    className={`flex ${isCoach ? "justify-start" : "justify-end"}`}
-                  >
-                    <div className={`max-w-[80%] ${isCoach ? "" : "items-end"} flex flex-col`}>
-                      <div
-                        className={`px-4 py-3 rounded-2xl text-[14.5px] leading-relaxed ${
-                          isCoach
-                            ? "bg-warm-bg text-dark rounded-tl-sm"
-                            : "bg-accent text-white rounded-tr-sm"
-                        }`}
-                      >
-                        {bubble.text}
-                      </div>
-                      <p
-                        className={`text-[10.5px] text-dark-light/60 mt-1 ${
-                          isCoach ? "ml-1" : "mr-1"
-                        }`}
-                      >
-                        {bubble.time}
-                      </p>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-
-            {/* Footer note */}
-            <div className="px-5 py-3 bg-warm-bg/60 border-t border-secondary/20 text-center">
-              <p className="text-[11px] text-dark-light italic">
-                A small example. Real conversations stay private, of course.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Tagline below */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="text-center mt-8 text-dark-light text-[15px] leading-relaxed max-w-xl mx-auto"
-          >
-            Accountability isn&apos;t about being watched. It&apos;s about being noticed,
-            celebrated, gently redirected, and steadied by someone who knows your story
-            and is genuinely on your side.
-          </motion.p>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
+            {aspects.map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.07 }}
+                className="bg-white rounded-2xl p-5 sm:p-6 border border-secondary/25 hover:border-accent/35 transition-all hover:shadow-md flex flex-col items-center text-center h-full"
+              >
+                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+                  <item.icon size={22} className="text-accent" />
+                </div>
+                <h3 className="font-semibold text-dark text-[15px] mb-2 leading-snug">
+                  {item.title}
+                </h3>
+                <p className="text-dark-light text-sm leading-relaxed">{item.line}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
