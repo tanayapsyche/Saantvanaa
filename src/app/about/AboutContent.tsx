@@ -52,19 +52,22 @@ export function AboutContent() {
                 <span className="text-accent">Tanaya.</span>
               </h1>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                Hi, I&apos;m Tanaya. Whatever brought you here, you&apos;re so welcome.
+                Hi, I&apos;m Tanaya.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                I&apos;ve been studying psychology for over eight years now. Not because I had some grand plan, but because I genuinely couldn&apos;t get enough of trying to understand how people work; how I work, why we do what we do, and why so often we struggle to do the things we actually want to.
+                Whatever quietly brought you here, whether it&apos;s a stuck feeling, a vague heaviness, or a habit that just won&apos;t shift, I&apos;m so glad you came.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                I was diagnosed with ADHD when I was five, so I&apos;ve spent most of my life in a slightly uneasy relationship with my own brain. For a long time, I thought something was wrong with me. Eventually I realised it wasn&apos;t. My brain just needed something different.
+                I&apos;ve been studying psychology for over eight years, and I&apos;ve had ADHD since I was five. So this work isn&apos;t theoretical for me. It&apos;s the lens I&apos;ve been looking through my whole life. I built Saantwanaa because I spent years searching for the kind of support I needed and couldn&apos;t quite find it anywhere. Somewhere that took both the doing and the feeling parts of being human seriously. Somewhere that didn&apos;t ask me to choose between structure and softness.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                Saantwanaa came out of that realisation. I built it because I wanted the kind of support I&apos;d never quite found in one place; something that takes both the practical and the emotional sides of being human seriously, and doesn&apos;t start from the assumption that you&apos;re broken.
+                What I want you to know is this. You don&apos;t need a diagnosis to deserve care. You don&apos;t need to be in crisis to ask for help. Wanting to feel a little more like yourself is a perfectly good reason to be here, even if you can&apos;t explain it in a tidy sentence. You&apos;re allowed to just be human, having a hard time, and want someone in your corner for a while.
+              </p>
+              <p className="text-lg text-dark-light leading-relaxed mb-4">
+                That&apos;s exactly what Saantwanaa is here for. Not to fix you, because you aren&apos;t broken, but to walk beside you while you figure out the next, gentler version of yourself.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-8">
-                One thing I feel strongly about: psychology isn&apos;t just for people in crisis. We carry this quiet idea that you need a &ldquo;real reason&rdquo;, a diagnosis, a breakdown, to ask for help. You don&apos;t. You&apos;re allowed to want support simply because life is hard, or even just because you want to feel a little more whole. Individual differences are something I genuinely respect, there&apos;s no one correct way to think, feel or live, and my hope is that psychology stops being a place we only run to when something breaks, and starts becoming a quiet tool that anyone can use to build a healthier, happier life. So if you&apos;ve been carrying something around, big or small, named or unnamed, I&apos;d love to just talk.
+                If any of that sounds like what you&apos;ve been quietly looking for, let&apos;s just talk.
               </p>
 
               <Button href="/contact">Book a Free Discovery Call</Button>
