@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { ADHDQuiz } from "@/components/adhd/ADHDQuiz";
 import { ADHDBrainDiagram } from "@/components/adhd/ADHDBrainDiagram";
+import { SymptomFlipCard } from "@/components/adhd/SymptomFlipCard";
 
 // "What you might call it / What it actually is" — real adult ADHD experiences
 // that most people quietly chalk up to personal failings.
@@ -161,44 +162,19 @@ export function ADHDContent() {
             subtitle="Most adults with ADHD spend years quietly diagnosing themselves with personality flaws. Here are some of the most common experiences, with the actual neurological names they go by."
           />
 
-          <div className="max-w-4xl mx-auto space-y-4">
+          <p className="text-center text-sm text-dark-light italic mb-8 max-w-md mx-auto">
+            Tap any card to flip and see what it&apos;s actually called.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
             {reframedSymptoms.map((item, i) => (
-              <motion.div
+              <SymptomFlipCard
                 key={item.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: (i % 5) * 0.06 }}
-                className="bg-warm-bg rounded-2xl border border-secondary/25 overflow-hidden hover:shadow-md transition-shadow"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr]">
-                  {/* Left: what you thought it was */}
-                  <div className="bg-dark/5 px-5 py-5 md:py-6 md:px-6 flex items-center border-b md:border-b-0 md:border-r border-secondary/20">
-                    <div>
-                      <p className="text-[10.5px] font-bold tracking-wider uppercase text-dark-light/70 mb-1">
-                        What you thought it was
-                      </p>
-                      <p
-                        className="font-display text-lg sm:text-xl text-dark italic leading-snug"
-                        dangerouslySetInnerHTML={{ __html: item.label }}
-                      />
-                    </div>
-                  </div>
-                  {/* Right: what it actually is */}
-                  <div className="px-5 py-5 md:py-6 md:px-6">
-                    <p className="text-[10.5px] font-bold tracking-wider uppercase text-accent mb-1">
-                      What it actually is
-                    </p>
-                    <h3 className="font-display text-lg sm:text-xl font-bold text-dark mb-2 leading-snug">
-                      {item.name}
-                    </h3>
-                    <p
-                      className="text-dark-light leading-relaxed text-[14.5px]"
-                      dangerouslySetInnerHTML={{ __html: item.text }}
-                    />
-                  </div>
-                </div>
-              </motion.div>
+                index={i}
+                label={item.label}
+                name={item.name}
+                text={item.text}
+              />
             ))}
           </div>
 
