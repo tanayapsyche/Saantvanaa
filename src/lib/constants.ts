@@ -203,8 +203,8 @@ export const PRICING_TIERS = [
     ],
     notIncluded: ["Emotional wellness sessions", "ADHD specific strategies"],
     addon: {
-      title: "Need a therapy session along the way?",
-      text: "You can book one whenever life calls for it, billed as a one off only when you use it. No bundled commitment, no awkward upgrade conversations.",
+      title: "Need a therapy session sometimes?",
+      text: "You can book one whenever you need it, and only pay for the sessions you use. No big commitment, no plan upgrade required.",
     },
     highlighted: false,
   },
