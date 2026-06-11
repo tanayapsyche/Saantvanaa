@@ -6,41 +6,65 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import {
   Brain,
-  Clock,
-  Zap,
-  Heart,
-  Shuffle,
-  Layers,
   ArrowRight,
   Check,
 } from "lucide-react";
 import { ADHDQuiz } from "@/components/adhd/ADHDQuiz";
 import { ADHDBrainDiagram } from "@/components/adhd/ADHDBrainDiagram";
+import { BrainComparison } from "@/components/adhd/BrainComparison";
 
-const topSymptoms = [
+// "What you might call it / What it actually is" — real adult ADHD experiences
+// that most people quietly chalk up to personal failings.
+const reframedSymptoms = [
   {
-    icon: Clock, title: "Time Blindness",
-    text: "Five minutes and two hours feel the same. You're always late, always underestimating, always scrambling, and people think you don't care. You do.",
+    label: "&ldquo;I&apos;m so lazy.&rdquo;",
+    name: "Task Initiation Paralysis",
+    text: "You want to start. You know exactly how to start. You can&apos;t make yourself start. Your brain treats &ldquo;activation energy&rdquo; like a wall, especially for boring or low-stimulation tasks. It&apos;s not a willpower issue, it&apos;s an executive function one.",
   },
   {
-    icon: Zap, title: "Task Paralysis",
-    text: "Twenty things to do and you can't start any. It's not laziness, your brain is overwhelmed by the sheer number of choices and can't pick one.",
+    label: "&ldquo;I&apos;m a slob.&rdquo;",
+    name: "The Doom Pile",
+    text: "Mail on the counter. Clothes on the chair. The bag you haven&apos;t unpacked in days. ADHD brains struggle with the micro-decisions of putting things &ldquo;away&rdquo;, so they pile in plain sight. It&apos;s not messiness, it&apos;s decision overload.",
   },
   {
-    icon: Heart, title: "Rejection Sensitivity",
-    text: "A slightly off tone in a message can ruin your whole day. Criticism feels like a physical blow. Your emotions hit harder and faster than others.",
+    label: "&ldquo;I have no sense of time.&rdquo;",
+    name: "Time Blindness",
+    text: "Five minutes and forty minutes can feel identical from the inside. You routinely underestimate, get hyperfocused, lose hours, and run late even when you tried very hard not to. The brain&apos;s internal clock is genuinely different in ADHD.",
   },
   {
-    icon: Shuffle, title: "Transition Struggles",
-    text: "Switching from one task to another feels impossibly hard. Getting off the couch to do something you actually want to do can take enormous effort.",
+    label: "&ldquo;I&apos;m so forgetful.&rdquo;",
+    name: "Working Memory Glitches",
+    text: "Walking into a room and immediately forgetting why. Losing your train of thought mid sentence. Reading a paragraph and remembering none of it. Working memory is one of the most consistently affected areas in adult ADHD.",
   },
   {
-    icon: Layers, title: "All or Nothing",
-    text: "You either hyperfocus for 10 hours or can't bring yourself to spend 10 minutes. Consistent middle ground feels like it belongs to someone else.",
+    label: "&ldquo;I&apos;m flaky.&rdquo;",
+    name: "Object Permanence Issues",
+    text: "Out of sight really is out of mind. Friends you adore can vanish for weeks. The leftovers in the fridge no longer exist once the door closes. It&apos;s not that you don&apos;t care, it&apos;s that your brain doesn&apos;t hold onto things that aren&apos;t in front of you.",
   },
   {
-    icon: Brain, title: "The \"What's Wrong With Me\" Loop",
-    text: "You know you're capable. The gap between what you could do and what you actually do creates a painful daily loop of self doubt.",
+    label: "&ldquo;I&apos;m too sensitive.&rdquo;",
+    name: "Rejection Sensitive Dysphoria",
+    text: "A mildly off text. A look from your boss. A friend taking longer than usual to reply. Your nervous system reads it as catastrophic, you replay it for hours. RSD is one of the most under recognised ADHD experiences in adults.",
+  },
+  {
+    label: "&ldquo;I work best under pressure.&rdquo;",
+    name: "Interest-Based Nervous System",
+    text: "Translation: you can really only get going when something is interesting, novel, urgent, or challenging. Without one of those four, your brain just doesn&apos;t produce enough dopamine to start. It&apos;s not a quirk, it&apos;s wiring.",
+  },
+  {
+    label: "&ldquo;I&apos;m a procrastinator.&rdquo;",
+    name: "The Wall of Awful",
+    text: "Calling the dentist. Replying to that email. A two minute task that&apos;s been on your list for three months. It&apos;s not that the task is big, it&apos;s that emotional residue (avoidance, shame, overwhelm) has built a wall around it.",
+  },
+  {
+    label: "&ldquo;I can&apos;t sleep, I just keep scrolling.&rdquo;",
+    name: "Revenge Bedtime Procrastination",
+    text: "The day didn&apos;t feel like yours, so you stay up to claim some of it back. Common in adults with ADHD because of dopamine seeking, time blindness at night, and a quietly tired nervous system trying to feel a little freedom.",
+  },
+  {
+    label: "&ldquo;I get overwhelmed in stores.&rdquo;",
+    name: "Sensory Overwhelm",
+    text: "Lights, sounds, crowds, fluorescent tubes, music in shops, the smell aisle of a supermarket. Many adults with ADHD have a lower threshold for sensory input, and it&apos;s exhausting. The need to leave isn&apos;t dramatic, it&apos;s neurological.",
   },
 ];
 
@@ -129,30 +153,52 @@ export function ADHDContent() {
         </div>
       </section>
 
-      {/* Symptoms */}
+      {/* Symptoms — reframed */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="The Reality"
-            title="What Adult ADHD Actually Feels Like"
-            subtitle="Beyond the stereotypes. These are the experiences that rarely get talked about."
+            title="The Things You Thought Were Just &ldquo;You&rdquo;"
+            subtitle="Most adults with ADHD spend years quietly diagnosing themselves with personality flaws. Here are some of the most common experiences, with the actual neurological names they go by."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {topSymptoms.map((item, i) => (
+          <div className="max-w-4xl mx-auto space-y-4">
+            {reframedSymptoms.map((item, i) => (
               <motion.div
-                key={item.title}
+                key={item.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
-                className="bg-warm-bg rounded-2xl p-7 border border-secondary/25 hover:shadow-md transition-shadow"
+                transition={{ duration: 0.4, delay: (i % 5) * 0.06 }}
+                className="bg-warm-bg rounded-2xl border border-secondary/25 overflow-hidden hover:shadow-md transition-shadow"
               >
-                <div className="w-11 h-11 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
-                  <item.icon size={22} className="text-accent" />
+                <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr]">
+                  {/* Left: what you thought it was */}
+                  <div className="bg-dark/5 px-5 py-5 md:py-6 md:px-6 flex items-center border-b md:border-b-0 md:border-r border-secondary/20">
+                    <div>
+                      <p className="text-[10.5px] font-bold tracking-wider uppercase text-dark-light/70 mb-1">
+                        What you thought it was
+                      </p>
+                      <p
+                        className="font-display text-lg sm:text-xl text-dark italic leading-snug"
+                        dangerouslySetInnerHTML={{ __html: item.label }}
+                      />
+                    </div>
+                  </div>
+                  {/* Right: what it actually is */}
+                  <div className="px-5 py-5 md:py-6 md:px-6">
+                    <p className="text-[10.5px] font-bold tracking-wider uppercase text-accent mb-1">
+                      What it actually is
+                    </p>
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-dark mb-2 leading-snug">
+                      {item.name}
+                    </h3>
+                    <p
+                      className="text-dark-light leading-relaxed text-[14.5px]"
+                      dangerouslySetInnerHTML={{ __html: item.text }}
+                    />
+                  </div>
                 </div>
-                <h3 className="font-display text-lg font-bold text-dark mb-2">{item.title}</h3>
-                <p className="text-dark-light leading-relaxed text-[15px]">{item.text}</p>
               </motion.div>
             ))}
           </div>
@@ -208,13 +254,25 @@ export function ADHDContent() {
         </div>
       </section>
 
-      {/* Interactive Brain Diagram */}
+      {/* Brain Comparison */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Through the Lens of Science"
+            title="Two Brains, Side by Side."
+            subtitle="A neurotypical brain and an ADHD brain are doing genuinely different things on the inside. Here's what changes, and why so much of your daily experience makes more sense once you see it."
+          />
+          <BrainComparison />
+        </div>
+      </section>
+
+      {/* Interactive Brain Diagram */}
+      <section className="py-20 lg:py-28 bg-warm-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            label="Go Deeper"
             title="Your ADHD Brain, Explored"
-            subtitle="Click any region to discover what leading neuroscientists have found."
+            subtitle="Click any region below to read what leading neuroscientists have found."
           />
           <ADHDBrainDiagram />
         </div>

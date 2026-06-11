@@ -123,21 +123,9 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "Bad weeks didn't get dismissed. Good weeks didn't get over-celebrated. Just real, honest, human conversations. That's what I'd been missing.",
+      "Bad weeks didn't get dismissed. Good weeks didn't get over celebrated. Just real, honest, human conversations. That's what I'd been missing.",
     name: "Karan D.",
     role: "Doctor, 34",
-  },
-  {
-    quote:
-      "I came in feeling broken. I left realising my brain just needs different scaffolding than most. That single reframe changed everything.",
-    name: "Neha S.",
-    role: "Grad student",
-  },
-  {
-    quote:
-      "I always thought I needed motivation. Nope. I needed someone in my corner who noticed when I was quietly drifting. That made all the difference.",
-    name: "Vikram S.",
-    role: "Founder, 36",
   },
 ] as const;
 
