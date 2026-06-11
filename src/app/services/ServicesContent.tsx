@@ -17,6 +17,7 @@ import {
   CalendarCheck,
   HeartHandshake,
   NotebookPen,
+  Sparkles,
 } from "lucide-react";
 import {
   LeafDecoration,
@@ -264,6 +265,24 @@ export function ServicesContent() {
                       </li>
                     ))}
                   </ul>
+
+                  {tier.addon && (
+                    <div className="mt-5 pt-5 border-t border-dashed border-accent/25">
+                      <div className="flex items-start gap-2.5">
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center mt-0.5">
+                          <Sparkles size={12} className="text-accent" />
+                        </div>
+                        <div>
+                          <p className="text-[13px] font-semibold text-dark mb-1 leading-snug">
+                            {tier.addon.title}
+                          </p>
+                          <p className="text-[12.5px] text-dark-light leading-relaxed">
+                            {tier.addon.text}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <Button

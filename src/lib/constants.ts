@@ -202,6 +202,10 @@ export const PRICING_TIERS = [
       "Habit framework based on Atomic Habits principles",
     ],
     notIncluded: ["Emotional wellness sessions", "ADHD specific strategies"],
+    addon: {
+      title: "Need a therapy session along the way?",
+      text: "You can book one whenever life calls for it, billed as a one off only when you use it. No bundled commitment, no awkward upgrade conversations.",
+    },
     highlighted: false,
   },
   {
@@ -221,6 +225,7 @@ export const PRICING_TIERS = [
       "Guidance drawn from Joe Hudson's work and mindfulness practices",
     ],
     notIncluded: ["ADHD specific strategies"],
+    addon: null,
     highlighted: true,
   },
   {
@@ -240,6 +245,7 @@ export const PRICING_TIERS = [
       "Environment design for ADHD brains",
     ],
     notIncluded: [],
+    addon: null,
     highlighted: false,
   },
 ] as const;

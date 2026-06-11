@@ -52,7 +52,7 @@ export function AboutContent() {
                 <span className="text-accent">Tanaya.</span>
               </h1>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                Hi, I&apos;m Tanaya.
+                Hi, I&apos;m Tanaya. Whatever brought you here, you&apos;re so welcome.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
                 I&apos;ve been studying psychology for over eight years now. Not because I had some grand plan, but because I genuinely couldn&apos;t get enough of trying to understand how people work; how I work, why we do what we do, and why so often we struggle to do the things we actually want to.
@@ -63,11 +63,8 @@ export function AboutContent() {
               <p className="text-lg text-dark-light leading-relaxed mb-4">
                 Saantwanaa came out of that realisation. I built it because I wanted the kind of support I&apos;d quietly needed for years and never really found in one place; something that took both the practical and the emotional side of being human seriously, and something that doesn&apos;t start from the assumption that you&apos;re broken.
               </p>
-              <p className="text-lg text-dark-light leading-relaxed mb-4">
-                One thing I feel strongly about: psychology isn&apos;t just for people in crisis. We carry this quiet idea that you need a &ldquo;real reason&rdquo;, a diagnosis, a breakdown, to ask for help. You don&apos;t. You&apos;re allowed to want support simply because life is hard, or even just because you want to feel a little more whole. Individual differences are something I genuinely respect, there&apos;s no one correct way to think, feel or live, and my hope for psychology is that it stops being a place we only run to when something breaks, and starts being a quiet tool that helps anyone, anywhere, build a healthier, happier life.
-              </p>
               <p className="text-lg text-dark-light leading-relaxed mb-8">
-                If you&apos;ve been carrying something around, big or small, named or unnamed, I&apos;d love to just talk.
+                One thing I feel strongly about: psychology isn&apos;t just for people in crisis. We carry this quiet idea that you need a &ldquo;real reason&rdquo;, a diagnosis, a breakdown, to ask for help. You don&apos;t. You&apos;re allowed to want support simply because life is hard, or even just because you want to feel a little more whole. Individual differences are something I genuinely respect, there&apos;s no one correct way to think, feel or live, and my hope is that psychology stops being a place we only run to when something breaks, and starts becoming a quiet tool that anyone can use to build a healthier, happier life. So if you&apos;ve been carrying something around, big or small, named or unnamed, I&apos;d love to just talk.
               </p>
 
               <Button href="/contact">Book a Free Discovery Call</Button>
