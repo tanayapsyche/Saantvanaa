@@ -63,7 +63,7 @@ export function AboutContent() {
                 rest="No diagnosis, no ailment, just a desire to improve their quality of life. While working as a psychotherapist and a habit coach, I came across multiple people who did not have any major complaints but they simply wanted to strike a balance between all the parts of themselves that mattered. This brought a whole new perspective into my therapist journey. These experiences strengthened my belief that you don't need a diagnosis to deserve care. You don't need to be in crisis to ask for help. You don't need a deliberate reason to want to explore yourself."
               />
               <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4">
-                That&apos;s exactly what Santwanaa is here for. Wanting to feel a little more like yourself is a wonderful starting point for change. I&apos;m not here to fix you, because you aren&apos;t broken, but to walk beside you while you figure out the next, gentler version of yourself.
+                That&apos;s exactly what Santwanaa is here for. Wanting to feel a little more like yourself is a wonderful starting point for change. I&apos;m here to walk beside you with care and curiosity, helping you grow, with intention, into the next, gentler version of yourself.
               </p>
               <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-8">
                 If any of that sounds like what you&apos;ve been quietly looking for, let&apos;s just talk.
