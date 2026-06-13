@@ -52,7 +52,7 @@ export function AboutContent() {
                 Hello, I am{" "}
                 <span className="text-accent">Tanaya.</span>
               </h1>
-              <p className="text-[11px] sm:text-xs font-semibold tracking-[0.18em] uppercase text-accent/90 mb-6">
+              <p className="text-[12px] sm:text-sm font-semibold tracking-wide text-accent/90 mb-6">
                 An Educational Psychologist · A Neurodivergent Psychotherapist · Your Lifestyle Coach
               </p>
               <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4">
@@ -60,7 +60,7 @@ export function AboutContent() {
               </p>
               <ExpandableParagraph
                 intro="I built Santwanaa with a vision to address the side of change which often goes unnoticed. It was born out of working with several people who just wanted to make their lives happier."
-                rest="No diagnosis, no ailment, just a desire to improve their quality of life. While working as a psychotherapist and a habit coach serving a diverse range of people, I came across many who didn't have anything severe going on in their lives, but who quietly wanted to strike a balance between all the parts of themselves that mattered. That brought a whole new perspective into my therapist journey. These experiences strengthened my belief that you don't need a diagnosis to deserve care. You don't need to be in crisis to ask for help. You don't need a deliberate reason to want to explore yourself."
+                rest="No diagnosis, no ailment, just a desire to improve their quality of life. While working as a psychotherapist and a habit coach, I came across multiple people who did not have any major complaints but they simply wanted to strike a balance between all the parts of themselves that mattered. This brought a whole new perspective into my therapist journey. These experiences strengthened my belief that you don't need a diagnosis to deserve care. You don't need to be in crisis to ask for help. You don't need a deliberate reason to want to explore yourself."
               />
               <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4">
                 That&apos;s exactly what Santwanaa is here for. Wanting to feel a little more like yourself is a wonderful starting point for change. I&apos;m not here to fix you, because you aren&apos;t broken, but to walk beside you while you figure out the next, gentler version of yourself.
