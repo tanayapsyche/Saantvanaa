@@ -56,7 +56,7 @@ export function Hero() {
             className="mt-8 text-lg sm:text-xl text-dark-light leading-relaxed"
           >
             You&apos;ve tried the planners. You&apos;ve made the lists. By week three,
-            something always slips. Saantwanaa is where habit coaching meets emotional
+            something always slips. Santwanaa is where habit coaching meets emotional
             wellness, the grounded, personal support that helps real change actually stay.
           </motion.p>
         </div>

@@ -11,7 +11,7 @@ export function Footer() {
             <h3 className="font-brand text-3xl font-bold text-secondary mb-1">
               {SITE_NAME_DEVANAGARI}
             </h3>
-            <p className="text-xs text-accent-light tracking-wider uppercase mb-3">Saantwanaa</p>
+            <p className="text-xs text-accent-light tracking-wider uppercase mb-3">Santwanaa</p>
             <p className="text-sm leading-relaxed text-light/60 max-w-xs">
               Lifestyle management through habit coaching and emotional wellness.
               Helping you build a life that works for you.
@@ -52,7 +52,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-light/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-light/40">
-          <p>&copy; {new Date().getFullYear()} Saantwanaa. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Santwanaa. All rights reserved.</p>
           <p className="flex items-center gap-1">
             Made with <Heart size={12} className="text-accent fill-accent" /> for healthier lives
           </p>

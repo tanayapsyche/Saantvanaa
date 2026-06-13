@@ -22,9 +22,9 @@ const reframedSymptoms = [
     text: "You want to start. You know exactly how to start. You can&apos;t make yourself start. Your brain treats &ldquo;activation energy&rdquo; like a wall, especially for boring or low-stimulation tasks. It&apos;s not a willpower issue, it&apos;s an executive function one.",
   },
   {
-    label: "&ldquo;I&apos;m a slob.&rdquo;",
-    name: "The Doom Pile",
-    text: "Mail on the counter. Clothes on the chair. The bag you haven&apos;t unpacked in days. ADHD brains struggle with the micro-decisions of putting things &ldquo;away&rdquo;, so they pile in plain sight. It&apos;s not messiness, it&apos;s decision overload.",
+    label: "&ldquo;I get overwhelmed in stores.&rdquo;",
+    name: "Sensory Overwhelm",
+    text: "Lights, sounds, crowds, fluorescent tubes, music in shops, the smell aisle of a supermarket. Many adults with ADHD have a lower threshold for sensory input, and it&apos;s exhausting. The need to leave isn&apos;t dramatic, it&apos;s neurological.",
   },
   {
     label: "&ldquo;I have no sense of time.&rdquo;",
@@ -35,11 +35,6 @@ const reframedSymptoms = [
     label: "&ldquo;I&apos;m so forgetful.&rdquo;",
     name: "Working Memory Glitches",
     text: "Walking into a room and immediately forgetting why. Losing your train of thought mid sentence. Reading a paragraph and remembering none of it. Working memory is one of the most consistently affected areas in adult ADHD.",
-  },
-  {
-    label: "&ldquo;I&apos;m flaky.&rdquo;",
-    name: "Object Permanence Issues",
-    text: "Out of sight really is out of mind. Friends you adore can vanish for weeks. The leftovers in the fridge no longer exist once the door closes. It&apos;s not that you don&apos;t care, it&apos;s that your brain doesn&apos;t hold onto things that aren&apos;t in front of you.",
   },
   {
     label: "&ldquo;I&apos;m too sensitive.&rdquo;",
@@ -62,9 +57,9 @@ const reframedSymptoms = [
     text: "The day didn&apos;t feel like yours, so you stay up to claim some of it back. Common in adults with ADHD because of dopamine seeking, time blindness at night, and a quietly tired nervous system trying to feel a little freedom.",
   },
   {
-    label: "&ldquo;I get overwhelmed in stores.&rdquo;",
-    name: "Sensory Overwhelm",
-    text: "Lights, sounds, crowds, fluorescent tubes, music in shops, the smell aisle of a supermarket. Many adults with ADHD have a lower threshold for sensory input, and it&apos;s exhausting. The need to leave isn&apos;t dramatic, it&apos;s neurological.",
+    label: "&ldquo;I&apos;m messy and a bit flaky.&rdquo;",
+    name: "Out of Sight, Out of Mind",
+    text: "Mail piles up on the counter. Old friends slip out of mind. The leftovers in the fridge stop existing once the door closes. ADHD brains struggle to hold on to what isn&apos;t actively in front of them, both physically (the pile) and mentally (the friend, the task, the dentist appointment). It&apos;s not carelessness, it&apos;s how attention is wired.",
   },
 ];
 
@@ -145,7 +140,7 @@ export function ADHDContent() {
               <p className="text-lg text-dark-light leading-relaxed mb-8 max-w-2xl">
                 You&apos;ve spent a lifetime translating yourself for everyone else. Here, you don&apos;t have to. This is built for your brain, not against it, with real support for the parts no one else sees.
               </p>
-              <Button href="/contact" size="lg">
+              <Button href="/contact#contact-details" size="lg">
                 Book a Free Discovery Call <ArrowRight size={18} className="ml-2" />
               </Button>
             </motion.div>
@@ -277,7 +272,7 @@ export function ADHDContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Our Approach"
-            title="How Saantwanaa Helps With ADHD"
+            title="How Santwanaa Helps With ADHD"
             subtitle="Not generic advice. A personalised system with professional support, built for your brain."
           />
 
@@ -317,7 +312,7 @@ export function ADHDContent() {
               A 15 minute call is all it takes to start understanding what&apos;s possible. No
               diagnosis required. No commitment. Just a safe, warm conversation.
             </p>
-            <Button href="/contact" size="lg">
+            <Button href="/contact#contact-details" size="lg">
               Book Your Free Discovery Call <ArrowRight size={18} className="ml-2" />
             </Button>
           </motion.div>

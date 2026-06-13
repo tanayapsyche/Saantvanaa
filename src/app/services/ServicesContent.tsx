@@ -286,7 +286,7 @@ export function ServicesContent() {
                 </div>
 
                 <Button
-                  href="/contact"
+                  href="/contact#contact-details"
                   variant={tier.highlighted ? "primary" : "outline"}
                   className="w-full"
                 >
@@ -298,7 +298,7 @@ export function ServicesContent() {
 
           <p className="text-center text-sm text-dark-light mt-10 max-w-xl mx-auto">
             Still unsure which plan fits you? Start with a{" "}
-            <a href="/contact" className="text-accent font-semibold hover:underline">
+            <a href="/contact#contact-details" className="text-accent font-semibold hover:underline">
               free discovery call
             </a>{" "}
             and we&apos;ll figure it out together, no pressure.

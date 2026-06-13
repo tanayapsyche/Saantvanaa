@@ -18,7 +18,7 @@ export function Navbar() {
             {SITE_NAME_DEVANAGARI}
           </span>
           <span className="hidden sm:inline text-xs text-accent font-semibold tracking-wide uppercase">
-            Saantwanaa
+            Santwanaa
           </span>
         </Link>
 
@@ -37,7 +37,7 @@ export function Navbar() {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href="/contact#contact-details"
             className="ml-2 px-5 py-2.5 bg-accent text-white rounded-full text-sm font-semibold hover:bg-accent-dark transition-colors"
           >
             Book Free Call
@@ -71,7 +71,7 @@ export function Navbar() {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="/contact#contact-details"
               onClick={() => setMobileOpen(false)}
               className="block mt-2 px-4 py-3 bg-accent text-white rounded-lg text-center font-semibold"
             >

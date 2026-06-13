@@ -51,7 +51,7 @@ export function ContactContent() {
       </section>
 
       {/* Contact Info + Form */}
-      <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
+      <section id="contact-details" className="py-20 lg:py-28 bg-white relative overflow-hidden scroll-mt-24">
         <Sprig className="absolute top-10 right-4 w-20 h-32 text-accent opacity-20 hidden lg:block" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

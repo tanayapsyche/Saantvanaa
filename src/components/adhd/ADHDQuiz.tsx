@@ -176,7 +176,7 @@ export function ADHDQuiz() {
               </p>
               {result.showCta && (
                 <div className="mb-2">
-                  <Button href="/contact" size="lg">Let&apos;s Talk About It</Button>
+                  <Button href="/contact#contact-details" size="lg">Let&apos;s Talk About It</Button>
                 </div>
               )}
               <p className="text-xs text-dark-light/60 mt-4 max-w-md mx-auto italic">

@@ -36,7 +36,7 @@ export function IsThisForYou() {
           </div>
 
           <div className="text-center mt-10">
-            <Button href="/contact" size="lg">
+            <Button href="/contact#contact-details" size="lg">
               Let&apos;s Talk About It
             </Button>
           </div>

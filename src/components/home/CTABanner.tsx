@@ -21,7 +21,7 @@ export function CTABanner() {
           Fifteen minutes. No commitment. Just an honest conversation about what you&apos;ve been carrying, and whether we might be able to help you put it down.
         </p>
         <div className="mt-8">
-          <Button href="/contact" size="lg">
+          <Button href="/contact#contact-details" size="lg">
             Book Your Free Discovery Call <ArrowRight size={18} className="ml-2" />
           </Button>
         </div>

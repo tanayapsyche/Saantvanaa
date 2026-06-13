@@ -48,29 +48,26 @@ export function AboutContent() {
                 About
               </span>
               <h1 className="font-serif text-4xl sm:text-5xl font-bold text-dark leading-tight mb-6">
-                Hi, I&apos;m{" "}
+                Hello, I am{" "}
                 <span className="text-accent">Tanaya.</span>
               </h1>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                Hi, I&apos;m Tanaya.
+                An Educational Psychologist, a neurodivergent psychotherapist and your lifestyle coach.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                Whatever quietly brought you here, whether it&apos;s a stuck feeling, a vague heaviness, or a habit that just won&apos;t shift, I&apos;m so glad you came.
+                Whatever quietly brought you here, whether it&apos;s curiosity, a will to make a change but no plan, confusion about getting started, or a search for something different, I&apos;m so glad you came.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                I&apos;ve been studying psychology for over eight years, and I&apos;ve had ADHD since I was five. So this work isn&apos;t theoretical for me. It&apos;s the lens I&apos;ve been looking through my whole life. I built Saantwanaa because I spent years searching for the kind of support I needed and couldn&apos;t quite find it anywhere. Somewhere that took both the doing and the feeling parts of being human seriously. Somewhere that didn&apos;t ask me to choose between structure and softness.
+                I built Santwanaa with a vision to address the side of change which often goes unnoticed. It was born out of working with several people who just wanted to make their lives happier. No diagnosis, no ailment, just a desire to improve their quality of life. While working as a psychotherapist and a habit coach serving a diverse range of people, I came across many who didn&apos;t have anything severe going on in their lives, but who quietly wanted to strike a balance between all the parts of themselves that mattered. That brought a whole new perspective into my therapist journey. These experiences strengthened my belief that you don&apos;t need a diagnosis to deserve care. You don&apos;t need to be in crisis to ask for help. You don&apos;t need a deliberate reason to want to explore yourself.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-4">
-                What I want you to know is this. You don&apos;t need a diagnosis to deserve care. You don&apos;t need to be in crisis to ask for help. Wanting to feel a little more like yourself is a perfectly good reason to be here, even if you can&apos;t explain it in a tidy sentence. You&apos;re allowed to just be human, having a hard time, and want someone in your corner for a while.
-              </p>
-              <p className="text-lg text-dark-light leading-relaxed mb-4">
-                That&apos;s exactly what Saantwanaa is here for. Not to fix you, because you aren&apos;t broken, but to walk beside you while you figure out the next, gentler version of yourself.
+                That&apos;s exactly what Santwanaa is here for. Wanting to feel a little more like yourself is a wonderful starting point for change. I&apos;m not here to fix you, because you aren&apos;t broken, but to walk beside you while you figure out the next, gentler version of yourself.
               </p>
               <p className="text-lg text-dark-light leading-relaxed mb-8">
                 If any of that sounds like what you&apos;ve been quietly looking for, let&apos;s just talk.
               </p>
 
-              <Button href="/contact">Book a Free Discovery Call</Button>
+              <Button href="/contact#contact-details">Book a Free Discovery Call</Button>
             </motion.div>
 
             <motion.div
@@ -84,7 +81,7 @@ export function AboutContent() {
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-xl border-4 border-white">
                 <Image
                   src="/images/tanaya.jpg"
-                  alt="Tanaya, Educational Psychologist and founder of Saantwanaa"
+                  alt="Tanaya, Educational Psychologist and founder of Santwanaa"
                   fill
                   className="object-cover"
                   priority

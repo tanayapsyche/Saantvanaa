@@ -52,7 +52,7 @@ export function WhoIsThisFor() {
         <SectionHeading
           label="Who It's For"
           title="This Program Is For You If..."
-          subtitle="Whether you're trying to build new habits, break old ones, manage ADHD, or just need someone in your corner, Saantwanaa is designed for people who want real, lasting change."
+          subtitle="Whether you're trying to build new habits, break old ones, manage ADHD, or just need someone in your corner, Santwanaa is designed for people who want real, lasting change."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

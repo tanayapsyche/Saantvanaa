@@ -1,8 +1,8 @@
-export const SITE_NAME = "Saantwanaa";
+export const SITE_NAME = "Santwanaa";
 export const SITE_NAME_DEVANAGARI = "सांत्वना";
 export const SITE_TAGLINE = "Lifestyle Management Through Habit Coaching & Emotional Wellness";
 export const SITE_DESCRIPTION =
-  "Saantwanaa helps you build healthier habits, overcome emotional challenges, and manage ADHD symptoms through personalized lifestyle coaching and therapeutic guidance.";
+  "Santwanaa helps you build healthier habits, overcome emotional challenges, and manage ADHD symptoms through personalized lifestyle coaching and therapeutic guidance.";
 
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -133,7 +133,7 @@ export const FAQ_ITEMS = [
   {
     question: "Is this therapy or coaching?",
     answer:
-      "It's a thoughtful combination of both. Saantwanaa pairs structured habit coaching with professional therapeutic guidance. The coaching helps you build systems and accountability, while the emotional wellness component addresses the deeper patterns that often sabotage change.",
+      "It's a thoughtful combination of both. Santwanaa pairs structured habit coaching with professional therapeutic guidance. The coaching helps you build systems and accountability, while the emotional wellness component addresses the deeper patterns that often sabotage change.",
   },
   {
     question: "Will this make me dependent on you?",
@@ -143,7 +143,7 @@ export const FAQ_ITEMS = [
   {
     question: "How is this different from a life coach?",
     answer:
-      "Unlike most life coaches, your Saantwanaa coach is a qualified Educational Psychologist. This means evidence based approaches, proper training, and the ability to address deeper psychological patterns, not just surface level motivation.",
+      "Unlike most life coaches, your Santwanaa coach is a qualified Educational Psychologist. This means evidence based approaches, proper training, and the ability to address deeper psychological patterns, not just surface level motivation.",
   },
   {
     question: "Do I need an ADHD diagnosis to join?",
@@ -242,5 +242,5 @@ export const CALENDLY_URL = "https://calendly.com/your-link-here";
 // Formcarry endpoint — handles contact form submissions
 export const FORMCARRY_ENDPOINT = "https://formcarry.com/s/G4JLN9Wu2NU";
 
-export const CONTACT_EMAIL = "tanayapsyche@gmail.com";
-export const CONTACT_PHONE = "+91 77440 37076";
+export const CONTACT_EMAIL = "hellosantwanaa@gmail.com";
+export const CONTACT_PHONE = "+91 63610 31937";

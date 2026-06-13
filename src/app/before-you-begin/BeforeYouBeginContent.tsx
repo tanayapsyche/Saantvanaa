@@ -123,7 +123,7 @@ export function BeforeYouBeginContent() {
           <p className="font-serif text-xl sm:text-2xl text-dark leading-relaxed italic mb-8">
             &ldquo;If something else is on your mind, bring it to the free discovery call. There&apos;s no question too small or too personal to ask.&rdquo;
           </p>
-          <Button href="/contact" size="lg">
+          <Button href="/contact#contact-details" size="lg">
             Book a Free Discovery Call <ArrowRight size={18} className="ml-2" />
           </Button>
         </motion.div>
