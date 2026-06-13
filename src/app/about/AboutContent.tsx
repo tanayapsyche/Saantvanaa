@@ -48,12 +48,12 @@ export function AboutContent() {
               <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent text-sm font-semibold rounded-full mb-6">
                 About
               </span>
-              <h1 className="font-serif text-4xl sm:text-5xl font-bold text-dark leading-tight mb-6">
+              <h1 className="font-serif text-4xl sm:text-5xl font-bold text-dark leading-tight mb-2">
                 Hello, I am{" "}
                 <span className="text-accent">Tanaya.</span>
               </h1>
-              <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4">
-                An Educational Psychologist, a neurodivergent psychotherapist and your lifestyle coach.
+              <p className="text-[11px] sm:text-xs font-semibold tracking-[0.18em] uppercase text-accent/90 mb-6">
+                An Educational Psychologist · A Neurodivergent Psychotherapist · Your Lifestyle Coach
               </p>
               <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4">
                 Whatever quietly brought you here, whether it&apos;s curiosity, a will to make a change but no plan, confusion about getting started, or a search for something different, I&apos;m so glad you came.
