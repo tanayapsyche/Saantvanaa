@@ -83,7 +83,7 @@ const steps = [
 
 export function SelfReliance() {
   return (
-    <section className="py-20 lg:py-28 bg-gradient-to-br from-accent to-accent-dark relative overflow-hidden">
+    <section className="py-14 sm:py-20 lg:py-28 bg-gradient-to-br from-accent to-accent-dark relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_30%,rgba(255,255,255,0.08),transparent)]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

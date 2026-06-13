@@ -45,7 +45,7 @@ const items = [
 
 export function WhoIsThisFor() {
   return (
-    <section className="py-20 lg:py-28 bg-light relative overflow-hidden">
+    <section className="py-14 sm:py-20 lg:py-28 bg-light relative overflow-hidden">
       <LeafDecoration className="absolute top-10 right-10 w-24 h-24 text-green opacity-30 hidden lg:block" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

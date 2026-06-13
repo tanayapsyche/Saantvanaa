@@ -29,7 +29,7 @@ export function BeforeYouBeginContent() {
         <LeafDecoration className="absolute top-10 right-10 w-28 h-28 text-accent opacity-25 hidden lg:block" />
         <DotsPattern className="absolute bottom-12 right-1/3 w-28 h-28 text-accent opacity-30 hidden lg:block" />
 
-        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-28 lg:py-40">
           <div className="max-w-2xl text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -42,7 +42,7 @@ export function BeforeYouBeginContent() {
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-dark leading-[1.1]">
                 The questions you&apos;re afraid to ask, answered honestly.
               </h1>
-              <p className="mt-6 text-lg text-dark-light leading-relaxed max-w-xl">
+              <p className="mt-6 text-base sm:text-lg text-dark-light leading-relaxed max-w-xl">
                 Before you commit to anything, here&apos;s space to address the worries that usually go unspoken. The &ldquo;what if I&apos;m not ready&rdquo; ones. The &ldquo;what if I quit&rdquo; ones. No sugar coating, no scripts.
               </p>
             </motion.div>
@@ -51,7 +51,7 @@ export function BeforeYouBeginContent() {
       </section>
 
       {/* Worries / Q&A */}
-      <section className="py-20 lg:py-28 bg-warm-bg relative overflow-hidden">
+      <section className="py-14 sm:py-20 lg:py-28 bg-warm-bg relative overflow-hidden">
         <DotsPattern className="absolute top-20 right-10 w-32 h-32 text-accent opacity-35 hidden lg:block" />
         <LeafDecoration className="absolute bottom-20 left-0 w-28 h-28 text-accent opacity-15 hidden lg:block" />
 
@@ -111,7 +111,7 @@ export function BeforeYouBeginContent() {
       </section>
 
       {/* Closing CTA on white with warm accent */}
-      <section className="py-20 lg:py-24 bg-white relative overflow-hidden">
+      <section className="py-14 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
         <LeafDecoration className="absolute -top-6 left-1/2 -translate-x-1/2 w-20 h-20 text-accent opacity-20" />
 
         <motion.div

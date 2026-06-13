@@ -77,7 +77,7 @@ export function ServicesContent() {
         <LeafDecoration className="absolute top-16 left-8 w-24 h-24 text-accent opacity-30 hidden md:block" />
         <LeafDecoration className="absolute bottom-10 right-16 w-24 h-24 text-accent opacity-25 hidden md:block rotate-180" />
 
-        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-28 lg:py-40">
           <div className="max-w-2xl text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -91,7 +91,7 @@ export function ServicesContent() {
                 Not another programme.{" "}
                 <span className="text-accent">Yours.</span>
               </h1>
-              <p className="mt-8 text-lg sm:text-xl text-dark-light leading-relaxed">
+              <p className="mt-6 text-base sm:text-xl text-dark-light leading-relaxed">
                 You&apos;ve already tried the one size fits all method. It didn&apos;t fit. This is built around your routine, your patterns, your real life, with someone walking beside you the whole way.
               </p>
             </motion.div>
@@ -158,7 +158,7 @@ export function ServicesContent() {
       </section>
 
       {/* Typical Week */}
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-warm-bg to-light relative overflow-hidden">
+      <section className="py-14 sm:py-20 lg:py-28 bg-gradient-to-b from-warm-bg to-light relative overflow-hidden">
         <DotsPattern className="absolute bottom-10 right-10 w-36 h-36 text-accent hidden lg:block" />
         <LeafDecoration className="absolute top-10 left-10 w-24 h-24 text-accent opacity-25 hidden lg:block" />
         <GentleArc className="absolute top-0 left-0 w-full h-20 text-accent opacity-30" />
@@ -192,7 +192,7 @@ export function ServicesContent() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
+      <section className="py-14 sm:py-20 lg:py-28 bg-white relative overflow-hidden">
         <SunburstDecoration className="absolute -top-20 -right-20 w-[400px] h-[400px] text-accent opacity-15" />
         <BranchDecoration className="absolute -right-8 bottom-20 w-24 h-56 text-accent opacity-15 hidden lg:block rotate-180" />
         <FlowerInVase className="absolute top-20 left-4 w-20 h-32 text-accent opacity-20 hidden lg:block" />

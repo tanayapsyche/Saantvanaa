@@ -19,7 +19,7 @@ export function Testimonials() {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-light relative overflow-hidden">
+    <section className="py-14 sm:py-20 lg:py-28 bg-light relative overflow-hidden">
       <LeafDecoration className="absolute -bottom-5 left-10 w-20 h-20 text-accent opacity-20 hidden lg:block" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

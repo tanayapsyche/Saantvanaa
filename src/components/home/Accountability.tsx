@@ -35,7 +35,7 @@ const aspects = [
 
 export function Accountability() {
   return (
-    <section className="py-20 lg:py-28 bg-warm-bg relative overflow-hidden">
+    <section className="py-14 sm:py-20 lg:py-28 bg-warm-bg relative overflow-hidden">
       <FlowerInVase className="absolute top-10 right-4 w-24 h-36 text-accent opacity-20 hidden lg:block" />
       <Sprig className="absolute bottom-10 left-4 w-20 h-32 text-accent opacity-20 hidden lg:block" />
 

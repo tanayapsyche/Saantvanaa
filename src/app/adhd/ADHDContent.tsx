@@ -123,7 +123,7 @@ export function ADHDContent() {
           <div className="absolute inset-0 bg-gradient-to-r from-light/95 via-light/90 to-light/70" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-28 lg:py-40">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -137,7 +137,7 @@ export function ADHDContent() {
                 Finally, a Place That Gets{" "}
                 <span className="text-accent">How Your Brain Actually Works</span>
               </h1>
-              <p className="text-lg text-dark-light leading-relaxed mb-8 max-w-2xl">
+              <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-8 max-w-2xl">
                 You&apos;ve spent a lifetime translating yourself for everyone else. Here, you don&apos;t have to. This is built for your brain, not against it, with real support for the parts no one else sees.
               </p>
               <Button href="/contact#contact-details" size="lg">
@@ -149,7 +149,7 @@ export function ADHDContent() {
       </section>
 
       {/* Symptoms — reframed */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-14 sm:py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="The Reality"
@@ -186,7 +186,7 @@ export function ADHDContent() {
       </section>
 
       {/* Statistics */}
-      <section className="py-16 lg:py-20 bg-dark">
+      <section className="py-10 sm:py-16 lg:py-20 bg-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-secondary text-sm font-semibold uppercase tracking-wider mb-10">
             You are not alone
@@ -218,14 +218,14 @@ export function ADHDContent() {
       </section>
 
       {/* Quiz */}
-      <section className="py-20 lg:py-28 bg-light">
+      <section className="py-14 sm:py-20 lg:py-28 bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ADHDQuiz />
         </div>
       </section>
 
       {/* Interactive Brain Diagram */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-14 sm:py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Through the Lens of Science"
@@ -237,7 +237,7 @@ export function ADHDContent() {
       </section>
 
       {/* Manageable, not reversible */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-accent to-accent-dark relative overflow-hidden">
+      <section className="py-14 sm:py-20 lg:py-28 bg-gradient-to-br from-accent to-accent-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_30%,rgba(255,255,255,0.08),transparent)]" />
 
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -268,7 +268,7 @@ export function ADHDContent() {
       </section>
 
       {/* How We Help */}
-      <section className="py-20 lg:py-28 bg-warm-bg">
+      <section className="py-14 sm:py-20 lg:py-28 bg-warm-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Our Approach"
@@ -297,7 +297,7 @@ export function ADHDContent() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 lg:py-28 bg-light">
+      <section className="py-14 sm:py-20 lg:py-28 bg-light">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

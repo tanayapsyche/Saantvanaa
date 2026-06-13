@@ -27,7 +27,7 @@ export function Hero() {
       <LeafDecoration className="absolute top-20 right-10 w-28 h-28 text-accent opacity-25 hidden lg:block" />
       <FlowerInVase className="absolute bottom-10 right-20 w-28 h-40 text-accent opacity-25 hidden lg:block" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-28 lg:py-40">
         <div className="max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-8 text-lg sm:text-xl text-dark-light leading-relaxed"
+            className="mt-6 text-base sm:text-xl text-dark-light leading-relaxed"
           >
             You&apos;ve tried the planners. You&apos;ve made the lists. By week three,
             something always slips. Santwanaa is where habit coaching meets emotional

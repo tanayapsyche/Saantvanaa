@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { Target, Heart, Shield, GraduationCap } from "lucide-react";
 import { LeafDecoration, DotsPattern } from "@/components/ui/Decorations";
+import { ExpandableParagraph } from "@/components/ui/ExpandableParagraph";
 
 const values = [
   {
@@ -34,7 +35,7 @@ export function AboutContent() {
   return (
     <>
       {/* Hero */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-light to-secondary-light/20 relative overflow-hidden">
+      <section className="py-14 sm:py-20 lg:py-28 bg-gradient-to-br from-light to-secondary-light/20 relative overflow-hidden">
         <DotsPattern className="absolute top-10 left-10 w-32 h-32 text-accent hidden lg:block" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,19 +52,20 @@ export function AboutContent() {
                 Hello, I am{" "}
                 <span className="text-accent">Tanaya.</span>
               </h1>
-              <p className="text-lg text-dark-light leading-relaxed mb-4">
+              <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4">
                 An Educational Psychologist, a neurodivergent psychotherapist and your lifestyle coach.
               </p>
-              <p className="text-lg text-dark-light leading-relaxed mb-4">
+              <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4">
                 Whatever quietly brought you here, whether it&apos;s curiosity, a will to make a change but no plan, confusion about getting started, or a search for something different, I&apos;m so glad you came.
               </p>
-              <p className="text-lg text-dark-light leading-relaxed mb-4">
-                I built Santwanaa with a vision to address the side of change which often goes unnoticed. It was born out of working with several people who just wanted to make their lives happier. No diagnosis, no ailment, just a desire to improve their quality of life. While working as a psychotherapist and a habit coach serving a diverse range of people, I came across many who didn&apos;t have anything severe going on in their lives, but who quietly wanted to strike a balance between all the parts of themselves that mattered. That brought a whole new perspective into my therapist journey. These experiences strengthened my belief that you don&apos;t need a diagnosis to deserve care. You don&apos;t need to be in crisis to ask for help. You don&apos;t need a deliberate reason to want to explore yourself.
-              </p>
-              <p className="text-lg text-dark-light leading-relaxed mb-4">
+              <ExpandableParagraph
+                intro="I built Santwanaa with a vision to address the side of change which often goes unnoticed. It was born out of working with several people who just wanted to make their lives happier."
+                rest="No diagnosis, no ailment, just a desire to improve their quality of life. While working as a psychotherapist and a habit coach serving a diverse range of people, I came across many who didn't have anything severe going on in their lives, but who quietly wanted to strike a balance between all the parts of themselves that mattered. That brought a whole new perspective into my therapist journey. These experiences strengthened my belief that you don't need a diagnosis to deserve care. You don't need to be in crisis to ask for help. You don't need a deliberate reason to want to explore yourself."
+              />
+              <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4">
                 That&apos;s exactly what Santwanaa is here for. Wanting to feel a little more like yourself is a wonderful starting point for change. I&apos;m not here to fix you, because you aren&apos;t broken, but to walk beside you while you figure out the next, gentler version of yourself.
               </p>
-              <p className="text-lg text-dark-light leading-relaxed mb-8">
+              <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-8">
                 If any of that sounds like what you&apos;ve been quietly looking for, let&apos;s just talk.
               </p>
 
@@ -94,7 +96,7 @@ export function AboutContent() {
       </section>
 
       {/* Philosophy */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-14 sm:py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Philosophy"
@@ -207,7 +209,7 @@ export function AboutContent() {
       </section>
 
       {/* Values */}
-      <section className="py-20 lg:py-28 bg-light relative overflow-hidden">
+      <section className="py-14 sm:py-20 lg:py-28 bg-light relative overflow-hidden">
         <LeafDecoration className="absolute bottom-10 right-10 w-24 h-24 text-accent opacity-20 hidden lg:block" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -28,7 +28,7 @@ export function ContactContent() {
         <LeafDecoration className="absolute top-10 right-10 w-28 h-28 text-accent opacity-25 hidden lg:block" />
         <Sprig className="absolute top-20 left-8 w-24 h-36 text-accent opacity-25 hidden lg:block" />
 
-        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-28 lg:py-40">
           <div className="max-w-2xl text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -42,7 +42,7 @@ export function ContactContent() {
                 Some things shouldn&apos;t be{" "}
                 <span className="text-accent">carried alone.</span>
               </h1>
-              <p className="mt-6 text-lg text-dark-light max-w-xl leading-relaxed">
+              <p className="mt-5 text-base sm:text-lg text-dark-light max-w-xl leading-relaxed">
                 Whatever&apos;s been sitting heavy on you, start by saying it out loud. The first conversation is free, gentle, and entirely on your terms.
               </p>
             </motion.div>
@@ -51,7 +51,7 @@ export function ContactContent() {
       </section>
 
       {/* Contact Info + Form */}
-      <section id="contact-details" className="py-20 lg:py-28 bg-white relative overflow-hidden scroll-mt-24">
+      <section id="contact-details" className="py-14 sm:py-20 lg:py-28 bg-white relative overflow-hidden scroll-mt-24">
         <Sprig className="absolute top-10 right-4 w-20 h-32 text-accent opacity-20 hidden lg:block" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -130,7 +130,7 @@ export function ContactContent() {
       </section>
 
       {/* Calendly Section */}
-      <section className="py-20 lg:py-28 bg-warm-bg relative overflow-hidden">
+      <section className="py-14 sm:py-20 lg:py-28 bg-warm-bg relative overflow-hidden">
         <FlowerInVase className="absolute top-10 right-10 w-24 h-36 text-accent opacity-25 hidden lg:block" />
         <LeafDecoration className="absolute bottom-10 left-10 w-20 h-20 text-accent opacity-20 hidden lg:block rotate-180" />
 
