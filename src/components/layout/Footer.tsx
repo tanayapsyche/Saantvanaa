@@ -58,6 +58,10 @@ export function Footer() {
               Privacy Policy
             </Link>
             <span className="text-light/20">·</span>
+            <Link href="/terms" className="hover:text-secondary transition-colors">
+              Terms of Service
+            </Link>
+            <span className="text-light/20">·</span>
             <p className="flex items-center gap-1">
               Made with <Heart size={12} className="text-accent fill-accent" /> for healthier lives
             </p>
