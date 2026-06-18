@@ -1,12 +1,18 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { IS_THIS_FOR_YOU } from "@/lib/constants";
-import { Check } from "lucide-react";
+import { Check, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
+const MOBILE_CUTOFF = 5;
+
 export function IsThisForYou() {
+  const [mobileShowAll, setMobileShowAll] = useState(false);
+  const hiddenCount = IS_THIS_FOR_YOU.length - MOBILE_CUTOFF;
+
   return (
     <section className="py-14 sm:py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,7 +31,9 @@ export function IsThisForYou() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
-                className="flex items-start gap-4 p-4 rounded-xl bg-warm-bg border border-secondary/20 hover:border-accent/25 transition-colors"
+                className={`flex items-start gap-4 p-4 rounded-xl bg-warm-bg border border-secondary/20 hover:border-accent/25 transition-colors ${
+                  i >= MOBILE_CUTOFF && !mobileShowAll ? "hidden sm:flex" : "flex"
+                }`}
               >
                 <div className="flex-shrink-0 w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center mt-0.5">
                   <Check size={14} className="text-accent" />
@@ -34,6 +42,15 @@ export function IsThisForYou() {
               </motion.div>
             ))}
           </div>
+
+          {!mobileShowAll && hiddenCount > 0 && (
+            <button
+              onClick={() => setMobileShowAll(true)}
+              className="sm:hidden w-full mt-3 flex items-center justify-center gap-1.5 py-3 text-accent font-semibold text-sm hover:underline"
+            >
+              Show {hiddenCount} more <ChevronDown size={16} />
+            </button>
+          )}
 
           <div className="text-center mt-10">
             <Button href="/contact#contact-details" size="lg">

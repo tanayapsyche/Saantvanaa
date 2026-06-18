@@ -67,17 +67,20 @@ const steps = [
   {
     Icon: SeedlingIcon,
     title: "We walk with you",
-    text: "We guide closely at first: planning, tracking, working through the hard parts together.",
+    intro: "We guide closely at first: planning, tracking, working through the hard parts together.",
+    rest: "",
   },
   {
     Icon: SproutIcon,
     title: "You start leading",
-    text: "You take more ownership, and we're still right here. You start recognising your own triggers and making your own adjustments, but we're in your corner whenever you need a sounding board or a reality check.",
+    intro: "You take more ownership, and we're still right here.",
+    rest: "You start recognising your own triggers and making your own adjustments, but we're in your corner whenever you need a sounding board or a reality check.",
   },
   {
     Icon: BloomIcon,
     title: "You carry it forward",
-    text: "You have the habits, the self awareness, and the inner resilience to keep going on your own.",
+    intro: "You have the habits, the self-awareness, and the inner resilience to keep going on your own.",
+    rest: "",
   },
 ];
 
@@ -103,7 +106,11 @@ export function SelfReliance() {
             <p className="text-lg text-white/85 leading-relaxed mb-3">
               That moment is something we genuinely celebrate. It means the work we did together has truly taken root in you.
             </p>
-            <p className="text-white/75 leading-relaxed">
+            <p className="text-white/85 leading-relaxed sm:hidden">
+              Every session is gently designed to give you skills that stay long after we step back.{" "}
+              <span className="hidden sm:inline">We&apos;re not building a dependency. We&apos;re tending to your growth.</span>
+            </p>
+            <p className="text-white/75 leading-relaxed hidden sm:block">
               Every session, every check in, every conversation is gently designed to give you skills that stay with you long after we step back. We&apos;re not building a dependency. We&apos;re tending to your growth.
             </p>
           </motion.div>
@@ -123,7 +130,12 @@ export function SelfReliance() {
                 <step.Icon className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="font-display text-lg font-bold text-white mb-2">{step.title}</h3>
-              <p className="text-white/75 text-sm leading-relaxed">{step.text}</p>
+              <p className="text-white/75 text-sm leading-relaxed">
+                {step.intro}{" "}
+                {step.rest && (
+                  <span className="hidden sm:inline">{step.rest}</span>
+                )}
+              </p>
             </motion.div>
           ))}
         </div>

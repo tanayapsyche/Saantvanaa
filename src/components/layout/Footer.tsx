@@ -53,9 +53,15 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-light/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-light/40">
           <p>&copy; {new Date().getFullYear()} Santwanaa. All rights reserved.</p>
-          <p className="flex items-center gap-1">
-            Made with <Heart size={12} className="text-accent fill-accent" /> for healthier lives
-          </p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy-policy" className="hover:text-secondary transition-colors">
+              Privacy Policy
+            </Link>
+            <span className="text-light/20">·</span>
+            <p className="flex items-center gap-1">
+              Made with <Heart size={12} className="text-accent fill-accent" /> for healthier lives
+            </p>
+          </div>
         </div>
       </div>
     </footer>

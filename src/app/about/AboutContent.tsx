@@ -8,6 +8,45 @@ import { Target, Heart, Shield, GraduationCap } from "lucide-react";
 import { LeafDecoration, DotsPattern } from "@/components/ui/Decorations";
 import { ExpandableParagraph } from "@/components/ui/ExpandableParagraph";
 
+const researchItems = [
+  {
+    stat: "59–66",
+    unit: "days",
+    headline: "The real time it takes to form a habit",
+    intro: "The popular \"21 days\" myth is wrong.",
+    rest: "Habit formation takes an average of 59 to 66 days, and sometimes up to 254 days, depending on the behaviour. That's why bi weekly tracking for months actually matters, and why willpower alone burns out.",
+    citation: "Lally et al. (2010), European Journal of Social Psychology",
+    href: "https://onlinelibrary.wiley.com/doi/10.1002/ejsp.674",
+  },
+  {
+    stat: "2 in 3",
+    unit: "clients",
+    headline: "Coaching works, measurably",
+    intro: "Across 39 randomised controlled trials, roughly two in three people who received coaching showed better outcomes.",
+    rest: "Better outcomes on behaviour change, wellbeing, and performance than those who didn't. Support isn't a nice to have, it's what tips the odds.",
+    citation: "Theeboom et al., Journal of Positive Psychology",
+    href: "https://www.tandfonline.com/doi/abs/10.1080/17439760.2013.837499",
+  },
+  {
+    stat: "23",
+    unit: "techniques",
+    headline: "Goal setting + problem solving lead the way",
+    intro: "Across health coaching RCTs, researchers identified 23 distinct behaviour change techniques.",
+    rest: "Goal setting and problem solving, the two most frequently used, are the exact backbone of our sessions.",
+    citation: "Behaviour Change Techniques in Health Coaching (PMC9837922)",
+    href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9837922/",
+  },
+  {
+    stat: "CBT",
+    unit: "evidence base",
+    headline: "Therapeutic support has decades of data",
+    intro: "Cognitive and behaviour based therapeutic approaches have among the strongest meta analytic support in mental health.",
+    rest: "For depression, anxiety, and behaviour change. Combining this with habit coaching addresses both the action and the emotion.",
+    citation: "Hofmann et al., Efficacy of CBT meta-review (PMC3584580)",
+    href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3584580/",
+  },
+];
+
 const values = [
   {
     icon: Target,
@@ -111,16 +150,14 @@ export function AboutContent() {
               viewport={{ once: true }}
               className="prose prose-lg text-dark-light leading-relaxed space-y-5"
             >
-              <p>
-                Every week, people download habit trackers, buy planners, and make promises to
-                themselves. By week three, most have abandoned the plan. Not because they&apos;re
-                weak, but because nobody addressed why the old patterns existed in the first place.
-              </p>
-              <p>
-                Lifestyle Management bridges this gap. It pairs the structure of habit coaching
-                (planning, tracking, accountability) with the depth of emotional wellness support
-                (understanding resistance, building resilience, processing the discomfort of change).
-              </p>
+              <ExpandableParagraph
+                intro="Every week, people download habit trackers, buy planners, and make promises to themselves."
+                rest="By week three, most have abandoned the plan. Not because they're weak, but because nobody addressed why the old patterns existed in the first place."
+              />
+              <ExpandableParagraph
+                intro="Lifestyle Management bridges this gap."
+                rest="It pairs the structure of habit coaching (planning, tracking, accountability) with the depth of emotional wellness support (understanding resistance, building resilience, processing the discomfort of change)."
+              />
               <p>
                 This is especially critical for people with ADHD, where the challenge isn&apos;t
                 knowing what to do; it&apos;s getting your brain to cooperate when it matters most.
@@ -145,40 +182,7 @@ export function AboutContent() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                {
-                  stat: "59–66",
-                  unit: "days",
-                  headline: "The real time it takes to form a habit",
-                  text: "The popular \"21 days\" myth is wrong. Habit formation takes an average of 59 to 66 days, and sometimes up to 254 days, depending on the behaviour. That's why bi weekly tracking for months actually matters, and why willpower alone burns out.",
-                  citation: "Lally et al. (2010), European Journal of Social Psychology",
-                  href: "https://onlinelibrary.wiley.com/doi/10.1002/ejsp.674",
-                },
-                {
-                  stat: "2 in 3",
-                  unit: "clients",
-                  headline: "Coaching works, measurably",
-                  text: "Across 39 randomised controlled trials, roughly two in three people who received coaching showed better outcomes on behaviour change, wellbeing, and performance than those who didn't. Support isn't a nice to have, it's what tips the odds.",
-                  citation: "Theeboom et al., Journal of Positive Psychology",
-                  href: "https://www.tandfonline.com/doi/abs/10.1080/17439760.2013.837499",
-                },
-                {
-                  stat: "23",
-                  unit: "techniques",
-                  headline: "Goal setting + problem solving lead the way",
-                  text: "Across health coaching RCTs, researchers identified 23 distinct behaviour change techniques. Goal setting and problem solving, the two most frequently used, are the exact backbone of our sessions.",
-                  citation: "Behaviour Change Techniques in Health Coaching (PMC9837922)",
-                  href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9837922/",
-                },
-                {
-                  stat: "CBT",
-                  unit: "evidence base",
-                  headline: "Therapeutic support has decades of data",
-                  text: "Cognitive and behaviour based therapeutic approaches have among the strongest meta analytic support in mental health, for depression, anxiety, and behaviour change. Combining this with habit coaching addresses both the action and the emotion.",
-                  citation: "Hofmann et al., Efficacy of CBT meta-review (PMC3584580)",
-                  href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3584580/",
-                },
-              ].map((item, i) => (
+              {researchItems.map((item, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
@@ -192,7 +196,11 @@ export function AboutContent() {
                     <span className="text-sm text-white/80 font-medium">{item.unit}</span>
                   </div>
                   <h4 className="font-semibold text-white mb-2">{item.headline}</h4>
-                  <p className="text-sm text-white/85 leading-relaxed mb-3">{item.text}</p>
+                  <ExpandableParagraph
+                    intro={item.intro}
+                    rest={item.rest}
+                    className="!mb-3 !text-sm !text-white/85"
+                  />
                   <a
                     href={item.href}
                     target="_blank"

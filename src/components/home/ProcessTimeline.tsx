@@ -2,7 +2,14 @@
 
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ExpandableParagraph } from "@/components/ui/ExpandableParagraph";
 import { PROCESS_STEPS } from "@/lib/constants";
+
+function splitDesc(text: string): { intro: string; rest: string } {
+  const idx = text.indexOf(". ");
+  if (idx === -1) return { intro: text, rest: "" };
+  return { intro: text.slice(0, idx + 1), rest: text.slice(idx + 2) };
+}
 
 export function ProcessTimeline() {
   return (
@@ -36,7 +43,16 @@ export function ProcessTimeline() {
                   <h3 className="font-display text-xl md:text-2xl font-bold text-secondary mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-light/70 leading-relaxed">{step.description}</p>
+                  {(() => {
+                    const { intro, rest } = splitDesc(step.description);
+                    return (
+                      <ExpandableParagraph
+                        intro={intro}
+                        rest={rest}
+                        className="!mb-0 !text-base !text-light/70"
+                      />
+                    );
+                  })()}
                 </div>
               </motion.div>
             ))}

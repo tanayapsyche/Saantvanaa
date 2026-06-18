@@ -2,23 +2,27 @@
 
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ExpandableParagraph } from "@/components/ui/ExpandableParagraph";
 import { BookOpen, Heart, Users } from "lucide-react";
 
 const highlights = [
   {
     icon: BookOpen,
     title: "Habit Coaching",
-    text: "You've made the plans. You've broken them too. This time we co-design a routine that's built around your real life, drawing from Atomic Habits and mindfulness, and we keep tweaking until it actually fits.",
+    intro: "You've made the plans. You've broken them too.",
+    rest: "This time we co-design a routine built around your real life, drawing from Atomic Habits and mindfulness — and we keep tweaking until it actually fits.",
   },
   {
     icon: Heart,
     title: "Emotional Wellness",
-    text: "When the guilt, the self doubt, the why-can't-I-just-do-this voice shows up, we meet it. Real change touches real things, and you won't be navigating any of it alone.",
+    intro: "When the guilt, the self-doubt, the why-can't-I-just-do-this voice shows up, we meet it.",
+    rest: "Real change touches real things, and you won't be navigating any of it alone.",
   },
   {
     icon: Users,
     title: "Steady Accountability",
-    text: "Not an app. Not a streak. A real person checking in twice a week, noticing you before you notice yourself slipping. Someone whose only job is to be in your corner.",
+    intro: "Not an app. Not a streak. A real person checking in twice a week.",
+    rest: "Noticing you before you notice yourself slipping. Someone whose only job is to be in your corner.",
   },
 ];
 
@@ -46,7 +50,7 @@ export function WhatIsLifestyleManagement() {
                 <item.icon size={24} className="text-accent" />
               </div>
               <h3 className="font-display text-xl font-bold text-dark mb-3">{item.title}</h3>
-              <p className="text-dark-light leading-relaxed text-[15px]">{item.text}</p>
+              <ExpandableParagraph intro={item.intro} rest={item.rest} className="!mb-0 !text-[15px]" />
             </motion.div>
           ))}
         </div>

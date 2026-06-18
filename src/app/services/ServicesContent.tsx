@@ -19,6 +19,13 @@ import {
   NotebookPen,
   Sparkles,
 } from "lucide-react";
+import { ExpandableParagraph } from "@/components/ui/ExpandableParagraph";
+
+function splitDesc(text: string): { intro: string; rest: string } {
+  const idx = text.indexOf(". ");
+  if (idx === -1) return { intro: text, rest: "" };
+  return { intro: text.slice(0, idx + 1), rest: text.slice(idx + 2) };
+}
 import {
   LeafDecoration,
   DotsPattern,
@@ -33,26 +40,26 @@ const weekSchedule = [
   {
     icon: Video,
     label: "2 tracking sessions per week",
-    detail:
-      "30 minute video calls where we review your progress, troubleshoot what's not working, and adjust your plan together. Think of it as a regular pit stop, not a performance review.",
+    intro: "30-minute video calls where we review your progress, troubleshoot what's not working, and adjust your plan together.",
+    rest: "Think of it as a regular pit stop, not a performance review.",
   },
   {
     icon: MessageSquare,
     label: "Support between sessions",
-    detail:
-      "Life doesn't wait for scheduled meetings. Reach out via WhatsApp or email whenever you're stuck, confused, or just need a quick nudge to stay on track.",
+    intro: "Life doesn't wait for scheduled meetings.",
+    rest: "Reach out via WhatsApp or email whenever you're stuck, confused, or just need a quick nudge to stay on track.",
   },
   {
     icon: Calendar,
     label: "Monthly reflection session",
-    detail:
-      "Once a month, we sit down and look at the bigger picture: where you started, how far you've come, what's still challenging, and what the next month should focus on.",
+    intro: "Once a month, we sit down and look at the bigger picture: where you started, how far you've come, and what the next month should focus on.",
+    rest: "",
   },
   {
     icon: Clock,
     label: "Emotional wellness support",
-    detail:
-      "Scheduled whenever emotional challenges arise during your transition. Not every member needs this every week, but it's there when old patterns, guilt, or resistance show up.",
+    intro: "Scheduled whenever emotional challenges arise during your transition.",
+    rest: "Not every member needs this every week, but it's there when old patterns, guilt, or resistance show up.",
   },
 ];
 
@@ -146,9 +153,16 @@ export function ServicesContent() {
                         {step.title}
                       </h3>
                     </div>
-                    <p className="text-dark-light leading-relaxed max-w-2xl">
-                      {step.description}
-                    </p>
+                    {(() => {
+                      const { intro, rest } = splitDesc(step.description);
+                      return (
+                        <ExpandableParagraph
+                          intro={intro}
+                          rest={rest}
+                          className="!mb-0 max-w-2xl"
+                        />
+                      );
+                    })()}
                   </div>
                 </motion.div>
               );
@@ -184,7 +198,7 @@ export function ServicesContent() {
                   <item.icon size={22} className="text-accent" />
                 </div>
                 <h3 className="font-semibold text-dark mb-2">{item.label}</h3>
-                <p className="text-dark-light text-[15px] leading-relaxed">{item.detail}</p>
+                <ExpandableParagraph intro={item.intro} rest={item.rest} className="!mb-0 !text-[15px]" />
               </motion.div>
             ))}
           </div>
