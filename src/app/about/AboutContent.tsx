@@ -92,23 +92,20 @@ export function AboutContent() {
                 <span className="text-accent">Tanaya.</span>
               </h1>
               <p className="text-[12px] sm:text-sm font-semibold tracking-wide text-accent/90 mb-6">
-                An Educational Psychologist · A Neurodivergent Psychotherapist · Your Behaviour Change Coach
+                An Educational Psychologist · A Neurodivergent Psychotherapist · Your Lifestyle Coach
               </p>
-              <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4">
-                Whatever quietly brought you here—curiosity, a desire for change, feeling stuck, or simply the feeling that life could be a little more balanced—I&apos;m glad you came.
+              <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4 font-semibold">
+                Whatever quietly brought you here, whether it&apos;s curiosity, a will to make change but no plan, confusion about getting started, or a search for something different, I welcome you here.
               </p>
               <ExpandableParagraph
-                intro="Saantwanaa was born from a realization I had while working with people from diverse backgrounds."
-                rest="Many weren't struggling with a diagnosis or a major crisis. They simply wanted to feel happier, more aligned with themselves, and more intentional about the way they were living. They wanted support in building healthier habits, navigating life's demands, understanding themselves better, and creating a sense of balance across the parts of life that mattered most to them."
+                intro="I built Santwanaa with a vision to address the side of change which often goes unnoticed. It was born out of working with several people who just wanted to make their lives happier. No diagnosis, no ailment, just a desire to improve their quality of life."
+                rest="While working as a psychotherapist and a habit coach, I realised that there are people who do not have any definitive complaint but they choose therapy simply to strike a balance between all the parts of themselves that mattered. This brought a whole new perspective into my therapist journey. These experiences strengthened my belief that you don't need a diagnosis to deserve care. You don't need to be in crisis to ask for help. You don't need a deliberate reason to want to explore yourself."
               />
-              <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4">
-                These experiences strengthened my belief that you don&apos;t need a diagnosis to deserve care, and you don&apos;t need a crisis to begin exploring yourself.
-              </p>
-              <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4">
-                That&apos;s what Saantwanaa is here for. My role isn&apos;t to fix you, because I don&apos;t believe you&apos;re broken. It&apos;s to walk alongside you as you discover what works for you and create meaningful, sustainable changes that help you feel more like yourself.
+              <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4 font-semibold">
+                That&apos;s exactly what Santwanaa is here for. Wanting to feel a little more like yourself is a wonderful starting point for change. I&apos;m here to walk beside you with care and curiosity, helping you grow, with intention, into the next, gentler version of yourself.
               </p>
               <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-8">
-                If that resonates with you, let&apos;s start with a conversation.
+                If any of that sounds like what you&apos;ve been quietly looking for, let&apos;s just talk.
               </p>
 
               <Button href="/contact#contact-details">Book a Free Discovery Call</Button>
