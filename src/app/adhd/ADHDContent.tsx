@@ -17,7 +17,6 @@ import { SymptomFlipCard } from "@/components/adhd/SymptomFlipCard";
 
 const SYMPTOMS_MOBILE_CUTOFF = 6;
 const HELP_MOBILE_CUTOFF = 4;
-
 // "What you might call it / What it actually is" — real adult ADHD experiences
 // that most people quietly chalk up to personal failings.
 const reframedSymptoms = [
