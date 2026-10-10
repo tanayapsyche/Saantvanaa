@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -8,10 +9,14 @@ import {
   Brain,
   ArrowRight,
   Check,
+  ChevronDown,
 } from "lucide-react";
 import { ADHDQuiz } from "@/components/adhd/ADHDQuiz";
 import { ADHDBrainDiagram } from "@/components/adhd/ADHDBrainDiagram";
 import { SymptomFlipCard } from "@/components/adhd/SymptomFlipCard";
+
+const SYMPTOMS_MOBILE_CUTOFF = 6;
+const HELP_MOBILE_CUTOFF = 4;
 
 // "What you might call it / What it actually is" — real adult ADHD experiences
 // that most people quietly chalk up to personal failings.
@@ -108,6 +113,11 @@ const howWeHelp = [
 ];
 
 export function ADHDContent() {
+  const [symptomsShowAll, setSymptomsShowAll] = useState(false);
+  const hiddenSymptomsCount = reframedSymptoms.length - SYMPTOMS_MOBILE_CUTOFF;
+  const [helpShowAll, setHelpShowAll] = useState(false);
+  const hiddenHelpCount = howWeHelp.length - HELP_MOBILE_CUTOFF;
+
   return (
     <>
       {/* Hero */}
@@ -163,15 +173,28 @@ export function ADHDContent() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
             {reframedSymptoms.map((item, i) => (
-              <SymptomFlipCard
+              <div
                 key={item.name}
-                index={i}
-                label={item.label}
-                name={item.name}
-                text={item.text}
-              />
+                className={i >= SYMPTOMS_MOBILE_CUTOFF && !symptomsShowAll ? "hidden sm:block" : ""}
+              >
+                <SymptomFlipCard
+                  index={i}
+                  label={item.label}
+                  name={item.name}
+                  text={item.text}
+                />
+              </div>
             ))}
           </div>
+
+          {!symptomsShowAll && hiddenSymptomsCount > 0 && (
+            <button
+              onClick={() => setSymptomsShowAll(true)}
+              className="sm:hidden w-full mt-5 flex items-center justify-center gap-1.5 py-3 text-accent font-semibold text-sm hover:underline"
+            >
+              Show {hiddenSymptomsCount} more <ChevronDown size={16} />
+            </button>
+          )}
 
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -284,7 +307,9 @@ export function ADHDContent() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
-                className="flex items-start gap-4 p-4 rounded-xl bg-white border border-secondary/20"
+                className={`items-start gap-4 p-4 rounded-xl bg-white border border-secondary/20 ${
+                  i >= HELP_MOBILE_CUTOFF && !helpShowAll ? "hidden sm:flex" : "flex"
+                }`}
               >
                 <div className="flex-shrink-0 w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center mt-0.5">
                   <Check size={14} className="text-accent stroke-[3]" />
@@ -293,6 +318,15 @@ export function ADHDContent() {
               </motion.div>
             ))}
           </div>
+
+          {!helpShowAll && hiddenHelpCount > 0 && (
+            <button
+              onClick={() => setHelpShowAll(true)}
+              className="sm:hidden w-full max-w-2xl mx-auto mt-3 flex items-center justify-center gap-1.5 py-3 text-accent font-semibold text-sm hover:underline"
+            >
+              Show {hiddenHelpCount} more <ChevronDown size={16} />
+            </button>
+          )}
         </div>
       </section>
 

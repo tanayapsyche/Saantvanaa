@@ -1,15 +1,18 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { UserCheck, Eye, PartyPopper, LifeBuoy, HelpingHand } from "lucide-react";
+import { UserCheck, Eye, PartyPopper, LifeBuoy, HelpingHand, ChevronDown } from "lucide-react";
 import { FlowerInVase, Sprig } from "@/components/ui/Decorations";
+
+const MOBILE_CUTOFF = 3;
 
 const aspects = [
   {
     icon: UserCheck,
     title: "Checks in on you",
-    line: "Real, structured sessions. Not generic.",
+    line: "Real, Structured, personalised",
   },
   {
     icon: Eye,
@@ -34,6 +37,9 @@ const aspects = [
 ];
 
 export function Accountability() {
+  const [mobileShowAll, setMobileShowAll] = useState(false);
+  const hiddenCount = aspects.length - MOBILE_CUTOFF;
+
   return (
     <section className="py-14 sm:py-20 lg:py-28 bg-warm-bg relative overflow-hidden">
       <FlowerInVase className="absolute top-10 right-4 w-24 h-36 text-accent opacity-20 hidden lg:block" />
@@ -55,7 +61,9 @@ export function Accountability() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="bg-white rounded-2xl p-5 sm:p-6 border border-secondary/25 hover:border-accent/35 transition-all hover:shadow-md flex flex-col items-center text-center h-full"
+                className={`bg-white rounded-2xl p-5 sm:p-6 border border-secondary/25 hover:border-accent/35 transition-all hover:shadow-md flex-col items-center text-center h-full ${
+                  i >= MOBILE_CUTOFF && !mobileShowAll ? "hidden sm:flex" : "flex"
+                }`}
               >
                 <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
                   <item.icon size={22} className="text-accent" />
@@ -67,6 +75,15 @@ export function Accountability() {
               </motion.div>
             ))}
           </div>
+
+          {!mobileShowAll && hiddenCount > 0 && (
+            <button
+              onClick={() => setMobileShowAll(true)}
+              className="sm:hidden w-full mt-3 flex items-center justify-center gap-1.5 py-3 text-accent font-semibold text-sm hover:underline"
+            >
+              Show {hiddenCount} more <ChevronDown size={16} />
+            </button>
+          )}
         </div>
       </div>
     </section>

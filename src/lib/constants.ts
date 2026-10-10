@@ -66,7 +66,7 @@ export const PROCESS_STEPS = [
   },
   {
     number: "03",
-    title: "Bi-Weekly Tracking",
+    title: "Weekly Tracking",
     description:
       "We meet twice a week to check in on progress, troubleshoot challenges, celebrate wins, and adjust the plan as needed. Consistent accountability is key.",
   },
@@ -148,7 +148,7 @@ export const FAQ_ITEMS = [
   {
     question: "Do I need an ADHD diagnosis to join?",
     answer:
-      "No. While we have a program tailored for ADHD, our lifestyle management approach helps anyone who struggles with building habits, managing time, or overcoming patterns that hold them back.",
+      "No. Our lifestyle management approach helps anyone who struggles with building habits, managing time, or overcoming patterns that hold them back, including people who suspect or have been diagnosed with ADHD.",
   },
   {
     question: "How long is the program?",
@@ -184,11 +184,11 @@ export const PRICING_TIERS = [
     features: [
       "1 on 1 onboarding session (60 min)",
       "Personalised lifestyle plan built around your routine",
-      "8 bi weekly tracking sessions per month (30 min each)",
+      "8 tracking sessions per month, twice a week (30 min each)",
       "Monthly self reflection & feedback report",
       "WhatsApp & email support between sessions",
     ],
-    notIncluded: ["Emotional wellness sessions", "ADHD specific strategies"],
+    notIncluded: ["Emotional wellness sessions"],
     addon: {
       title: "Need a therapy session sometimes?",
       text: "You can book one whenever you need it, and only pay for the sessions you use. No big commitment, no plan upgrade required.",
@@ -210,29 +210,9 @@ export const PRICING_TIERS = [
       "Consistency and motivation coaching",
       "Priority scheduling for urgent support",
     ],
-    notIncluded: ["ADHD specific strategies"],
-    addon: null,
-    highlighted: true,
-  },
-  {
-    name: "ADHD Focus",
-    subtitle: "Tailored for ADHD",
-    priceUSD: "$99",
-    priceINR: "₹7,999",
-    period: "/month",
-    description: "For when your brain works differently and you're tired of fighting it",
-    bestFor: "You have ADHD (diagnosed or suspected) and need strategies designed for how your brain actually works, plus emotional support for the guilt, overwhelm, and masking that comes with it.",
-    features: [
-      "Everything in Complete",
-      "ADHD specific coping strategies",
-      "Executive function support (time, planning, initiation)",
-      "Task breakdown and prioritisation help",
-      "Overwhelm, guilt, and masking management",
-      "Environment design for ADHD brains",
-    ],
     notIncluded: [],
     addon: null,
-    highlighted: false,
+    highlighted: true,
   },
 ] as const;
 

@@ -5,13 +5,10 @@ import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { PROCESS_STEPS, PRICING_TIERS } from "@/lib/constants";
+import { ExpandableParagraph } from "@/components/ui/ExpandableParagraph";
 import {
   Check,
   ArrowRight,
-  Calendar,
-  Clock,
-  Video,
-  MessageSquare,
   Handshake,
   Map as MapIcon,
   CalendarCheck,
@@ -19,7 +16,6 @@ import {
   NotebookPen,
   Sparkles,
 } from "lucide-react";
-import { ExpandableParagraph } from "@/components/ui/ExpandableParagraph";
 
 function splitDesc(text: string): { intro: string; rest: string } {
   const idx = text.indexOf(". ");
@@ -28,40 +24,11 @@ function splitDesc(text: string): { intro: string; rest: string } {
 }
 import {
   LeafDecoration,
-  DotsPattern,
-  GentleArc,
   BranchDecoration,
   SunburstDecoration,
   FlowerInVase,
   Sprig,
 } from "@/components/ui/Decorations";
-
-const weekSchedule = [
-  {
-    icon: Video,
-    label: "2 tracking sessions per week",
-    intro: "30-minute video calls where we review your progress, troubleshoot what's not working, and adjust your plan together.",
-    rest: "Think of it as a regular pit stop, not a performance review.",
-  },
-  {
-    icon: MessageSquare,
-    label: "Support between sessions",
-    intro: "Life doesn't wait for scheduled meetings.",
-    rest: "Reach out via WhatsApp or email whenever you're stuck, confused, or just need a quick nudge to stay on track.",
-  },
-  {
-    icon: Calendar,
-    label: "Monthly reflection session",
-    intro: "Once a month, we sit down and look at the bigger picture: where you started, how far you've come, and what the next month should focus on.",
-    rest: "",
-  },
-  {
-    icon: Clock,
-    label: "Emotional wellness support",
-    intro: "Scheduled whenever emotional challenges arise during your transition.",
-    rest: "Not every member needs this every week, but it's there when old patterns, guilt, or resistance show up.",
-  },
-];
 
 const stepIcons = [Handshake, MapIcon, CalendarCheck, HeartHandshake, NotebookPen];
 
@@ -171,40 +138,6 @@ export function ServicesContent() {
         </div>
       </section>
 
-      {/* Typical Week */}
-      <section className="py-14 sm:py-20 lg:py-28 bg-gradient-to-b from-warm-bg to-light relative overflow-hidden">
-        <DotsPattern className="absolute bottom-10 right-10 w-36 h-36 text-accent hidden lg:block" />
-        <LeafDecoration className="absolute top-10 left-10 w-24 h-24 text-accent opacity-25 hidden lg:block" />
-        <GentleArc className="absolute top-0 left-0 w-full h-20 text-accent opacity-30" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            label="What to Expect"
-            title="A Typical Week With Us"
-            subtitle="Here's what ongoing support actually looks like once you're in the programme."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {weekSchedule.map((item, i) => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white rounded-2xl p-7 border-2 border-secondary/20 hover:border-accent/35 transition-all hover:shadow-md"
-              >
-                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
-                  <item.icon size={22} className="text-accent" />
-                </div>
-                <h3 className="font-semibold text-dark mb-2">{item.label}</h3>
-                <ExpandableParagraph intro={item.intro} rest={item.rest} className="!mb-0 !text-[15px]" />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing */}
       <section className="py-14 sm:py-20 lg:py-28 bg-white relative overflow-hidden">
         <SunburstDecoration className="absolute -top-20 -right-20 w-[400px] h-[400px] text-accent opacity-15" />
@@ -216,10 +149,10 @@ export function ServicesContent() {
           <SectionHeading
             label="Pricing"
             title="Choose Your Plan"
-            subtitle="Three plans, each built for a different stage of your journey. All run in monthly cycles with no lock in contracts. The goal is to make you self reliant enough that you eventually won't need us at all."
+            subtitle="Two plans, each built for a different stage of your journey. All run in monthly cycles with no lock in contracts. The goal is to make you self reliant enough that you eventually won't need us at all."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {PRICING_TIERS.map((tier, i) => (
               <motion.div
                 key={tier.name}
@@ -233,12 +166,6 @@ export function ServicesContent() {
                     : "border-secondary/25 bg-white"
                 }`}
               >
-                {tier.highlighted && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-accent text-white text-xs font-bold rounded-full shadow-md">
-                    Most Popular
-                  </div>
-                )}
-
                 {/* Header */}
                 <div className="text-center mb-6">
                   <h3 className="font-serif text-2xl font-bold text-dark">{tier.name}</h3>

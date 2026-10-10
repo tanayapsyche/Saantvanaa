@@ -14,7 +14,7 @@ const researchItems = [
     unit: "days",
     headline: "The real time it takes to form a habit",
     intro: "The popular \"21 days\" myth is wrong.",
-    rest: "Habit formation takes an average of 59 to 66 days, and sometimes up to 254 days, depending on the behaviour. That's why bi weekly tracking for months actually matters, and why willpower alone burns out.",
+    rest: "Habit formation takes an average of 59 to 66 days, and sometimes up to 254 days, depending on the behaviour. That's why tracking twice a week, for months, actually matters, and why willpower alone burns out.",
     citation: "Lally et al. (2010), European Journal of Social Psychology",
     href: "https://onlinelibrary.wiley.com/doi/10.1002/ejsp.674",
   },
@@ -101,9 +101,10 @@ export function AboutContent() {
                 intro="I built Santwanaa with a vision to address the side of change which often goes unnoticed. It was born out of working with several people who just wanted to make their lives happier. No diagnosis, no ailment, just a desire to improve their quality of life."
                 rest="While working as a psychotherapist and a habit coach, I realised that there are people who do not have any definitive complaint but they choose therapy simply to strike a balance between all the parts of themselves that mattered. This brought a whole new perspective into my therapist journey. These experiences strengthened my belief that you don't need a diagnosis to deserve care. You don't need to be in crisis to ask for help. You don't need a deliberate reason to want to explore yourself."
               />
-              <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4">
-                That&apos;s exactly what Santwanaa is here for. Wanting to feel a little more like yourself is a wonderful starting point for change. I&apos;m here to walk beside you with care and curiosity, helping you grow, with intention, into the next, gentler version of yourself.
-              </p>
+              <ExpandableParagraph
+                intro="That's exactly what Santwanaa is here for."
+                rest="Wanting to feel a little more like yourself is a wonderful starting point for change. I'm here to walk beside you with care and curiosity, helping you grow, with intention, into the next, gentler version of yourself."
+              />
               <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-8">
                 If any of that sounds like what you&apos;ve been quietly looking for, let&apos;s just talk.
               </p>

@@ -4,7 +4,6 @@ import { Accountability } from "@/components/home/Accountability";
 import { ProcessTimeline } from "@/components/home/ProcessTimeline";
 import { IsThisForYou } from "@/components/home/IsThisForYou";
 import { Testimonials } from "@/components/home/Testimonials";
-import { FAQ } from "@/components/home/FAQ";
 import { SelfReliance } from "@/components/home/SelfReliance";
 import { CTABanner } from "@/components/home/CTABanner";
 
@@ -17,7 +16,6 @@ export default function Home() {
       <ProcessTimeline />
       <IsThisForYou />
       <Testimonials />
-      <FAQ />
       <SelfReliance />
       <CTABanner />
     </>

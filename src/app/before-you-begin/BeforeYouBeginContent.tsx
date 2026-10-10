@@ -1,15 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { HelpCircle, ChevronDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { BEFORE_YOU_BEGIN_CONCERNS } from "@/lib/constants";
+import { BEFORE_YOU_BEGIN_CONCERNS, FAQ_ITEMS } from "@/lib/constants";
 import { LeafDecoration, DotsPattern } from "@/components/ui/Decorations";
 
 export function BeforeYouBeginContent() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const questions = [...BEFORE_YOU_BEGIN_CONCERNS, ...FAQ_ITEMS];
 
   return (
     <>
@@ -57,53 +58,59 @@ export function BeforeYouBeginContent() {
 
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-3">
-            {BEFORE_YOU_BEGIN_CONCERNS.map((item, i) => {
+            {questions.map((item, i) => {
               const isOpen = openIndex === i;
               return (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.05 }}
-                  className={`bg-white rounded-2xl overflow-hidden border-2 transition-colors ${
-                    isOpen ? "border-accent/40 shadow-md" : "border-secondary/25 hover:border-accent/25"
-                  }`}
-                >
-                  <button
-                    onClick={() => setOpenIndex(isOpen ? null : i)}
-                    className="w-full flex items-center gap-4 px-6 py-5 text-left"
+                <Fragment key={item.question}>
+                  {i === BEFORE_YOU_BEGIN_CONCERNS.length && (
+                    <h2 className="font-serif text-2xl font-bold text-dark pt-8 pb-2">
+                      Common Questions
+                    </h2>
+                  )}
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: (i % 7) * 0.05 }}
+                    className={`bg-white rounded-2xl overflow-hidden border-2 transition-colors ${
+                      isOpen ? "border-accent/40 shadow-md" : "border-secondary/25 hover:border-accent/25"
+                    }`}
                   >
-                    <div
-                      className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
-                        isOpen ? "bg-accent text-white" : "bg-accent/10 text-accent"
-                      }`}
+                    <button
+                      onClick={() => setOpenIndex(isOpen ? null : i)}
+                      className="w-full flex items-center gap-4 px-6 py-5 text-left"
                     >
-                      <HelpCircle size={20} />
-                    </div>
-                    <span className="flex-1 font-serif text-lg font-bold text-dark">
-                      {item.question}
-                    </span>
-                    <ChevronDown
-                      size={20}
-                      className={`text-accent flex-shrink-0 transition-transform ${isOpen ? "rotate-180" : ""}`}
-                    />
-                  </button>
-                  <AnimatePresence initial={false}>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.25 }}
+                      <div
+                        className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
+                          isOpen ? "bg-accent text-white" : "bg-accent/10 text-accent"
+                        }`}
                       >
-                        <div className="px-6 pb-6 pl-20 text-dark-light leading-relaxed">
-                          {item.answer}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
+                        <HelpCircle size={20} />
+                      </div>
+                      <span className="flex-1 font-serif text-lg font-bold text-dark">
+                        {item.question}
+                      </span>
+                      <ChevronDown
+                        size={20}
+                        className={`text-accent flex-shrink-0 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                      />
+                    </button>
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.25 }}
+                        >
+                          <div className="px-6 pb-6 pl-20 text-dark-light leading-relaxed">
+                            {item.answer}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                </Fragment>
               );
             })}
           </div>

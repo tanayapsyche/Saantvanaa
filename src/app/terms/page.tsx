@@ -92,7 +92,7 @@ export default function TermsPage() {
 
         <Section title="3. Our Services">
           <p>
-            Santwanaa offers three monthly programmes, each designed for a different stage of your
+            Santwanaa offers two monthly programmes, each designed for a different stage of your
             journey. All programmes run in monthly cycles with no lock-in contracts.
           </p>
 
@@ -103,7 +103,7 @@ export default function TermsPage() {
               <ul className="text-sm list-disc pl-4 space-y-1">
                 <li>1-on-1 onboarding session (60 min)</li>
                 <li>Personalised lifestyle plan</li>
-                <li>8 bi-weekly tracking sessions per month (30 min each)</li>
+                <li>8 tracking sessions per month, twice a week (30 min each)</li>
                 <li>Monthly self-reflection and feedback report</li>
                 <li>WhatsApp and email support between sessions</li>
               </ul>
@@ -118,19 +118,6 @@ export default function TermsPage() {
                 <li>Emotional resilience and self-regulation work</li>
                 <li>Consistency and motivation coaching</li>
                 <li>Priority scheduling for urgent support</li>
-              </ul>
-            </div>
-
-            <div className="border border-secondary/25 rounded-xl p-5">
-              <p className="font-semibold text-dark mb-1">ADHD Focus — Tailored for ADHD</p>
-              <p className="text-sm mb-2">₹7,999 / $99 per month</p>
-              <ul className="text-sm list-disc pl-4 space-y-1">
-                <li>Everything in Complete</li>
-                <li>ADHD-specific coping strategies</li>
-                <li>Executive function support (time, planning, initiation)</li>
-                <li>Task breakdown and prioritisation help</li>
-                <li>Overwhelm, guilt, and masking management</li>
-                <li>Environment design for ADHD brains</li>
               </ul>
             </div>
           </div>
