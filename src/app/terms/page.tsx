@@ -99,7 +99,7 @@ export default function TermsPage() {
           <div className="space-y-4 mt-2">
             <div className="border border-secondary/25 rounded-xl p-5">
               <p className="font-semibold text-dark mb-1">Essentials — Habit Coaching</p>
-              <p className="text-sm mb-2">₹4,999 / $59 per month</p>
+              <p className="text-sm mb-2">₹7,999 / $99 per month</p>
               <ul className="text-sm list-disc pl-4 space-y-1">
                 <li>1-on-1 onboarding session (60 min)</li>
                 <li>Personalised lifestyle plan</li>
@@ -111,7 +111,7 @@ export default function TermsPage() {
 
             <div className="border-2 border-accent/30 bg-accent/3 rounded-xl p-5">
               <p className="font-semibold text-dark mb-1">Complete — Coaching + Emotional Wellness</p>
-              <p className="text-sm mb-2">₹10,999 / $129 per month</p>
+              <p className="text-sm mb-2">₹14,999 / $159 per month</p>
               <ul className="text-sm list-disc pl-4 space-y-1">
                 <li>Everything in Essentials</li>
                 <li>Unlimited personalised therapeutic guidance sessions</li>
