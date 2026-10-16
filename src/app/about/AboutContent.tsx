@@ -95,18 +95,18 @@ export function AboutContent() {
                 An Educational Psychologist · A Neurodivergent Psychotherapist · Your Lifestyle Coach
               </p>
               <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4">
-                Whatever quietly brought you here, whether it&apos;s curiosity, a will to make change but no plan, confusion about getting started, or a search for something different, I welcome you here.
+                Whatever quietly brought you here, whether it&apos;s curiosity, a wish for change without a plan, or simply a search for something different, you&apos;re welcome here.
               </p>
               <ExpandableParagraph
-                intro="I built Santwanaa with a vision to address the side of change which often goes unnoticed. It was born out of working with several people who just wanted to make their lives happier. No diagnosis, no ailment, just a desire to improve their quality of life."
-                rest="While working as a psychotherapist and a habit coach, I realised that there are people who do not have any definitive complaint but they choose therapy simply to strike a balance between all the parts of themselves that mattered. This brought a whole new perspective into my therapist journey. These experiences strengthened my belief that you don't need a diagnosis to deserve care. You don't need to be in crisis to ask for help. You don't need a deliberate reason to want to explore yourself."
+                intro="I built Santwanaa for the side of change that often goes unnoticed."
+                rest="Working as a psychotherapist and habit coach, I met many people with no diagnosis and no crisis, who simply wanted to strike a balance between all the parts of themselves that mattered. It shaped my belief that you don't need a diagnosis to deserve care, and you don't need a reason to explore yourself."
               />
               <ExpandableParagraph
-                intro="That's exactly what Santwanaa is here for."
-                rest="Wanting to feel a little more like yourself is a wonderful starting point for change. I'm here to walk beside you with care and curiosity, helping you grow, with intention, into the next, gentler version of yourself."
+                intro="Wanting to feel a little more like yourself is a wonderful place to begin."
+                rest="I'm here to walk beside you with care and curiosity, as you grow, with intention, into the next, gentler version of yourself."
               />
               <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-8">
-                If any of that sounds like what you&apos;ve been quietly looking for, let&apos;s just talk.
+                If any of this sounds like what you&apos;ve been quietly looking for, let&apos;s just talk.
               </p>
 
               <Button href="/contact#contact-details">Book a Free Discovery Call</Button>

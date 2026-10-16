@@ -176,8 +176,8 @@ export const PRICING_TIERS = [
   {
     name: "Essentials",
     subtitle: "Habit Coaching",
-    priceUSD: "$59",
-    priceINR: "₹4,999",
+    priceUSD: "$99",
+    priceINR: "₹7,999",
     period: "/month",
     description: "For when you need structure, not emotional deep dives",
     bestFor: "You already know what you want to change. You just need a plan, accountability, and someone to keep you consistent.",
@@ -198,8 +198,8 @@ export const PRICING_TIERS = [
   {
     name: "Complete",
     subtitle: "Coaching + Emotional Wellness",
-    priceUSD: "$129",
-    priceINR: "₹10,999",
+    priceUSD: "$159",
+    priceINR: "₹14,999",
     period: "/month",
     description: "For when habits keep slipping and you don't know why",
     bestFor: "You've tried planning before but emotional patterns like guilt, resistance, or self doubt keep pulling you back. You want both the plan AND the inner work.",
