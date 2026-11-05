@@ -1,16 +1,37 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { HelpCircle, ChevronDown, ArrowRight } from "lucide-react";
+import { HelpCircle, ChevronDown, ArrowRight, Search, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { BEFORE_YOU_BEGIN_CONCERNS, FAQ_ITEMS } from "@/lib/constants";
+import { BEFORE_YOU_BEGIN_CONCERNS, FAQ_ITEMS, FAQ_CATEGORIES } from "@/lib/constants";
 import { LeafDecoration, DotsPattern } from "@/components/ui/Decorations";
 
 export function BeforeYouBeginContent() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const questions = [...BEFORE_YOU_BEGIN_CONCERNS, ...FAQ_ITEMS];
+  const [category, setCategory] = useState<string>(FAQ_CATEGORIES[0].id);
+  const [query, setQuery] = useState("");
+  const [openQuestion, setOpenQuestion] = useState<string | null>(null);
+
+  const questions = useMemo(
+    () => [...BEFORE_YOU_BEGIN_CONCERNS, ...FAQ_ITEMS] as { question: string; answer: string }[],
+    []
+  );
+  const tabs = FAQ_CATEGORIES;
+
+  const visible = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (q) {
+      return questions.filter(
+        (item) => item.question.toLowerCase().includes(q) || item.answer.toLowerCase().includes(q)
+      );
+    }
+    const current = FAQ_CATEGORIES.find((c) => c.id === category);
+    const order: readonly string[] = current ? current.questions : [];
+    return order
+      .map((text) => questions.find((item) => item.question === text))
+      .filter((item): item is { question: string; answer: string } => Boolean(item));
+  }, [query, category, questions]);
 
   return (
     <>
@@ -52,67 +73,111 @@ export function BeforeYouBeginContent() {
       </section>
 
       {/* Worries / Q&A */}
-      <section className="py-14 sm:py-20 lg:py-28 bg-warm-bg relative overflow-hidden">
+      <section className="py-14 sm:py-20 lg:py-24 bg-warm-bg relative overflow-hidden">
         <DotsPattern className="absolute top-20 right-10 w-32 h-32 text-accent opacity-35 hidden lg:block" />
         <LeafDecoration className="absolute bottom-20 left-0 w-28 h-28 text-accent opacity-15 hidden lg:block" />
 
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative mb-6">
+            <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-dark-light/60" />
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => {
+                setQuery(e.target.value);
+                setOpenQuestion(null);
+              }}
+              placeholder="Type your worry, e.g. “quit” or “therapy”"
+              aria-label="Search questions"
+              className="w-full pl-11 pr-4 py-3.5 rounded-full bg-white border-2 border-secondary/25 focus:border-accent/50 focus:outline-none text-dark placeholder:text-dark-light/50"
+            />
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-2 mb-8" role="tablist">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                role="tab"
+                aria-selected={category === tab.id && !query.trim()}
+                onClick={() => {
+                  setCategory(tab.id);
+                  setQuery("");
+                  setOpenQuestion(null);
+                }}
+                className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+                  category === tab.id && !query.trim()
+                    ? "bg-accent text-white"
+                    : "bg-white text-dark-light border border-secondary/30 hover:border-accent/40"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
           <div className="space-y-3">
-            {questions.map((item, i) => {
-              const isOpen = openIndex === i;
+            {visible.length === 0 && (
+              <p className="text-center text-dark-light py-10">
+                Nothing matched that. Try another word, or bring it to the free discovery call below.
+              </p>
+            )}
+            {visible.map((item) => {
+              const isOpen = openQuestion === item.question;
               return (
-                <Fragment key={item.question}>
-                  {i === BEFORE_YOU_BEGIN_CONCERNS.length && (
-                    <h2 className="font-serif text-2xl font-bold text-dark pt-8 pb-2">
-                      Common Questions
-                    </h2>
-                  )}
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: (i % 7) * 0.05 }}
-                    className={`bg-white rounded-2xl overflow-hidden border-2 transition-colors ${
-                      isOpen ? "border-accent/40 shadow-md" : "border-secondary/25 hover:border-accent/25"
-                    }`}
+                <div
+                  key={item.question}
+                  className={`bg-white rounded-2xl overflow-hidden border-2 transition-colors ${
+                    isOpen ? "border-accent/40 shadow-md" : "border-secondary/25 hover:border-accent/25"
+                  }`}
+                >
+                  <button
+                    onClick={() => setOpenQuestion(isOpen ? null : item.question)}
+                    aria-expanded={isOpen}
+                    className="w-full flex items-center gap-4 px-5 sm:px-6 py-5 text-left"
                   >
-                    <button
-                      onClick={() => setOpenIndex(isOpen ? null : i)}
-                      className="w-full flex items-center gap-4 px-6 py-5 text-left"
+                    <div
+                      className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
+                        isOpen ? "bg-accent text-white" : "bg-accent/10 text-accent"
+                      }`}
                     >
-                      <div
-                        className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
-                          isOpen ? "bg-accent text-white" : "bg-accent/10 text-accent"
-                        }`}
+                      <HelpCircle size={20} />
+                    </div>
+                    <span className="flex-1 font-serif text-lg font-bold text-dark">{item.question}</span>
+                    <ChevronDown
+                      size={20}
+                      className={`text-accent flex-shrink-0 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.25 }}
                       >
-                        <HelpCircle size={20} />
-                      </div>
-                      <span className="flex-1 font-serif text-lg font-bold text-dark">
-                        {item.question}
-                      </span>
-                      <ChevronDown
-                        size={20}
-                        className={`text-accent flex-shrink-0 transition-transform ${isOpen ? "rotate-180" : ""}`}
-                      />
-                    </button>
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.25 }}
-                        >
-                          <div className="px-6 pb-6 pl-20 text-dark-light leading-relaxed">
-                            {item.answer}
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                </Fragment>
+                        <div className="px-5 sm:px-6 pb-6 sm:pl-20 text-dark-light leading-relaxed">
+                          {item.answer}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               );
             })}
+          </div>
+
+          <div className="mt-10 bg-white rounded-2xl border border-accent/25 p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+              <MessageCircle size={22} className="text-accent" />
+            </div>
+            <div className="flex-1">
+              <p className="font-serif text-lg font-bold text-dark">Still have a question?</p>
+              <p className="text-sm text-dark-light">No question is too small or too personal. Ask us directly.</p>
+            </div>
+            <Button href="/contact#contact-details" variant="outline" size="sm">
+              Ask us
+            </Button>
           </div>
         </div>
       </section>

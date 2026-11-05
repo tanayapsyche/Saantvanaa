@@ -8,6 +8,7 @@ export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
+  { href: "/therapy", label: "Therapy" },
   { href: "/adhd", label: "ADHD Support" },
   { href: "/before-you-begin", label: "Before You Begin" },
   { href: "/contact", label: "Contact" },
@@ -84,16 +85,52 @@ export const PROCESS_STEPS = [
   },
 ] as const;
 
-export const IS_THIS_FOR_YOU = [
-  "You start strong with new habits but can't sustain them past a few weeks",
-  "You feel overwhelmed by your own to do list and often freeze up",
-  "You rely on last minute pressure to get things done",
-  "You know what you should do but can't seem to make yourself do it",
-  "You feel guilty about not living up to your own potential",
-  "You've tried self help books and apps but nothing sticks",
-  "You experience brain fog where even simple decisions feel exhausting",
-  "You suspect you have ADHD or have been recently diagnosed",
-  "You want professional support, not just motivation",
+export const SELF_REFLECTION_CARDS = [
+  {
+    label: "&ldquo;I start strong, then it all fizzles out.&rdquo;",
+    name: "The Week-Three Slump",
+    text: "Motivation is a spark, not a system. Without structure and someone checking in, even great habits fade. We build the routine around your real life and keep adjusting until it sticks.",
+  },
+  {
+    label: "&ldquo;My to-do list freezes me.&rdquo;",
+    name: "Overwhelm Paralysis",
+    text: "When everything feels urgent, nothing feels startable. We break things into small, concrete steps so you always know what the next one is.",
+  },
+  {
+    label: "&ldquo;I only get things done at the last minute.&rdquo;",
+    name: "Pressure-Dependent Productivity",
+    text: "Deadlines are doing the work your routine should be doing. Together we find calmer ways to start, so you aren&apos;t living on adrenaline.",
+  },
+  {
+    label: "&ldquo;I know what to do. I just can&apos;t make myself do it.&rdquo;",
+    name: "The Knowing–Doing Gap",
+    text: "This isn&apos;t a knowledge problem, so more information won&apos;t fix it. Accountability and a look at what&apos;s underneath the resistance will.",
+  },
+  {
+    label: "&ldquo;I feel guilty about my own potential.&rdquo;",
+    name: "Guilt Loops",
+    text: "Guilt feels like motivation but it quietly drains it. We work on the self-doubt so progress can feel kinder.",
+  },
+  {
+    label: "&ldquo;Books and apps haven&apos;t worked for me.&rdquo;",
+    name: "Tools Without Support",
+    text: "Plenty of people don&apos;t need another app, they need a real person asking &ldquo;so what happened on Wednesday?&rdquo;",
+  },
+  {
+    label: "&ldquo;My brain feels foggy, even simple choices are exhausting.&rdquo;",
+    name: "Decision Fatigue & Brain Fog",
+    text: "A cloudy mind is often a sign of too much running at once. We simplify, build rhythm, and give you a steady place to think things through.",
+  },
+  {
+    label: "&ldquo;Maybe I have ADHD, or I was recently diagnosed.&rdquo;",
+    name: "Wired Differently",
+    text: "You don&apos;t need a label to deserve support. We build systems that work with your brain, not against it.",
+  },
+  {
+    label: "&ldquo;I want real support, not just a pep talk.&rdquo;",
+    name: "Professional Support",
+    text: "That&apos;s exactly what this is: a qualified psychologist, evidence-based tools, and a plan made for you.",
+  },
 ] as const;
 
 export const TESTIMONIALS = [
@@ -139,6 +176,11 @@ export const FAQ_ITEMS = [
     question: "Will this make me dependent on you?",
     answer:
       "This is exactly the question we hope you ask, and the honest answer is no. In fact, our entire program is designed to do the opposite. The emotional wellness component exists specifically to address the patterns that could make you rely on external support. We work with you to build the self awareness, systems, and inner resilience you need to eventually stand on your own. Our job is to hold your hand through the difficult part of change, not to replace the confidence you're building in yourself. The day you feel ready to continue without us is the day we've done our job right.",
+  },
+  {
+    question: "What happens when I don't need you anymore?",
+    answer:
+      "That moment is something we genuinely celebrate. It means the work we did together has taken root in you. It usually unfolds in three stages: first we walk with you, guiding closely with planning, tracking and working through the hard parts together. Then you start leading, recognising your own triggers and making your own adjustments, while we stay in your corner as a sounding board. Finally you carry it forward, with the habits, self-awareness and resilience to keep going on your own. We're not building a dependency, we're tending to your growth.",
   },
   {
     question: "How is this different from a life coach?",
@@ -193,7 +235,7 @@ export const PRICING_TIERS = [
       title: "Need a therapy session sometimes?",
       text: "You can book one whenever you need it, and only pay for the sessions you use. No big commitment, no plan upgrade required.",
     },
-    highlighted: false,
+    highlighted: true,
   },
   {
     name: "Complete",
@@ -212,7 +254,7 @@ export const PRICING_TIERS = [
     ],
     notIncluded: [],
     addon: null,
-    highlighted: true,
+    highlighted: false,
   },
 ] as const;
 
@@ -224,3 +266,46 @@ export const FORMCARRY_ENDPOINT = "https://formcarry.com/s/G4JLN9Wu2NU";
 
 export const CONTACT_EMAIL = "hellosantwanaa@gmail.com";
 export const CONTACT_PHONE = "+91 63610 31937";
+
+export const FAQ_CATEGORIES = [
+  {
+    id: "getting-started",
+    label: "Getting started",
+    questions: [
+      "What if I'm not ready to commit yet?",
+      "What happens in the free discovery call?",
+      "Do I need an ADHD diagnosis to join?",
+      "How long is the program?",
+      "Is this available online?",
+    ],
+  },
+  {
+    id: "staying-on-track",
+    label: "Staying on track",
+    questions: [
+      "What if I miss a week?",
+      "What if I don't want to show up?",
+      "What if I relapse into old habits?",
+      "What if the plan isn't working?",
+      "What if I just want to quit?",
+    ],
+  },
+  {
+    id: "therapy-support",
+    label: "Therapy & support",
+    questions: [
+      "Is this therapy or coaching?",
+      "How is this different from a life coach?",
+      "What if I find this emotionally hard?",
+      "What does accountability actually mean here?",
+    ],
+  },
+  {
+    id: "independence",
+    label: "Growing independent",
+    questions: [
+      "Will this make me dependent on you?",
+      "What happens when I don't need you anymore?",
+    ],
+  },
+] as const;

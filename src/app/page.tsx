@@ -1,10 +1,7 @@
 import { Hero } from "@/components/home/Hero";
 import { WhatIsLifestyleManagement } from "@/components/home/WhatIsLifestyleManagement";
 import { Accountability } from "@/components/home/Accountability";
-import { ProcessTimeline } from "@/components/home/ProcessTimeline";
-import { IsThisForYou } from "@/components/home/IsThisForYou";
 import { Testimonials } from "@/components/home/Testimonials";
-import { SelfReliance } from "@/components/home/SelfReliance";
 import { CTABanner } from "@/components/home/CTABanner";
 
 export default function Home() {
@@ -13,10 +10,7 @@ export default function Home() {
       <Hero />
       <WhatIsLifestyleManagement />
       <Accountability />
-      <ProcessTimeline />
-      <IsThisForYou />
       <Testimonials />
-      <SelfReliance />
       <CTABanner />
     </>
   );

@@ -9,9 +9,11 @@ interface SymptomFlipCardProps {
   name: string;
   text: string;
   index: number;
+  frontLabel?: string;
+  backLabel?: string;
 }
 
-export function SymptomFlipCard({ label, name, text, index }: SymptomFlipCardProps) {
+export function SymptomFlipCard({ label, name, text, index, frontLabel = "What you thought", backLabel = "What it actually is" }: SymptomFlipCardProps) {
   const [flipped, setFlipped] = useState(false);
 
   return (
@@ -44,7 +46,7 @@ export function SymptomFlipCard({ label, name, text, index }: SymptomFlipCardPro
             style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
           >
             <p className="text-[10.5px] font-bold tracking-wider uppercase text-dark-light/70 mb-5">
-              What you thought
+              {frontLabel}
             </p>
             <p
               className="font-display text-xl sm:text-2xl text-dark italic leading-snug px-2"
@@ -66,7 +68,7 @@ export function SymptomFlipCard({ label, name, text, index }: SymptomFlipCardPro
             }}
           >
             <p className="text-[10.5px] font-bold tracking-wider uppercase text-white/70 mb-2">
-              What it actually is
+              {backLabel}
             </p>
             <h3 className="font-display text-lg sm:text-xl font-bold mb-3 leading-snug">
               {name}
