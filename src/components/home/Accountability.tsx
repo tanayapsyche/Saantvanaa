@@ -48,7 +48,7 @@ export function Accountability() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Accountability"
-          title="What Does Accountability Actually Mean?"
+          title="What WE Mean by Accountability"
           subtitle="Less of a watchdog, more of a workout partner for your life. Here's what it looks like in practice:"
         />
 

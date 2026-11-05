@@ -84,9 +84,6 @@ export function AboutContent() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent text-sm font-semibold rounded-full mb-6">
-                About
-              </span>
               <h1 className="font-serif text-4xl sm:text-5xl font-bold text-dark leading-tight mb-2">
                 Hello, I&apos;m{" "}
                 <span className="text-accent">Tanaya.</span>
@@ -120,12 +117,12 @@ export function AboutContent() {
             >
               <LeafDecoration className="absolute -top-6 -right-6 w-20 h-20 text-accent opacity-40 z-10" />
               {/* Tanaya's portrait */}
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+              <div className="relative aspect-[1/1] rounded-3xl overflow-hidden shadow-xl border-4 border-white">
                 <Image
                   src="/images/tanaya.jpg"
                   alt="Tanaya, Educational Psychologist and founder of Saantwanaa"
                   fill
-                  className="object-cover"
+                  className="object-cover object-bottom"
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
@@ -140,7 +137,7 @@ export function AboutContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Philosophy"
-            title="Why Lifestyle Management?"
+            title="Why We Do What We Do"
             subtitle="Most people don't fail at habits because they lack information. They fail because they lack support, the right kind of support."
           />
 
@@ -149,7 +146,7 @@ export function AboutContent() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="prose prose-lg text-dark-light leading-relaxed space-y-5"
+              className="prose prose-lg text-dark-light leading-relaxed space-y-5 text-center"
             >
               <ExpandableParagraph
                 intro="Every week, people download habit trackers, buy planners, and make promises to themselves."
@@ -224,7 +221,7 @@ export function AboutContent() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Values"
-            title="What I Stand For"
+            title="The Values We Stand For"
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">

@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { PROCESS_STEPS, PRICING_TIERS } from "@/lib/constants";
 import { ExpandableParagraph } from "@/components/ui/ExpandableParagraph";
+import { SelfReflection } from "@/components/services/SelfReflection";
 import {
   Check,
   ArrowRight,
@@ -15,6 +16,8 @@ import {
   HeartHandshake,
   NotebookPen,
   Sparkles,
+  Star,
+  MessageCircleHeart,
 } from "lucide-react";
 
 function splitDesc(text: string): { intro: string; rest: string } {
@@ -138,6 +141,8 @@ export function ServicesContent() {
         </div>
       </section>
 
+      <SelfReflection />
+
       {/* Pricing */}
       <section className="py-14 sm:py-20 lg:py-28 bg-white relative overflow-hidden">
         <SunburstDecoration className="absolute -top-20 -right-20 w-[400px] h-[400px] text-accent opacity-15" />
@@ -166,6 +171,12 @@ export function ServicesContent() {
                     : "border-secondary/25 bg-white"
                 }`}
               >
+                {tier.highlighted && (
+                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-4 py-1 bg-accent text-white text-xs font-bold tracking-wide uppercase rounded-full shadow-md whitespace-nowrap">
+                    <Star size={12} className="fill-white" /> Most popular
+                  </span>
+                )}
+
                 {/* Header */}
                 <div className="text-center mb-6">
                   <h3 className="font-serif text-2xl font-bold text-dark">{tier.name}</h3>
@@ -174,21 +185,21 @@ export function ServicesContent() {
                   {/* Dual currency pricing */}
                   <div className="mt-5">
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="font-display text-4xl font-bold text-dark">{tier.priceUSD}</span>
+                      <span className="font-display text-4xl font-bold text-dark">{tier.priceINR}</span>
                       <span className="text-dark-light text-sm">{tier.period}</span>
                     </div>
                     <div className="mt-1 flex items-baseline justify-center gap-1 text-dark-light">
                       <span className="text-sm">or</span>
-                      <span className="text-lg font-semibold text-dark">{tier.priceINR}</span>
+                      <span className="text-lg font-semibold text-dark">{tier.priceUSD}</span>
                       <span className="text-xs">{tier.period}</span>
                     </div>
                   </div>
 
-                  <p className="text-sm text-dark-light mt-4 italic">{tier.description}</p>
+                  <p className="text-sm text-dark-light mt-4 italic md:min-h-[2.5rem]">{tier.description}</p>
                 </div>
 
                 {/* Best for */}
-                <div className="bg-accent/8 rounded-xl p-4 mb-6 border border-secondary/20">
+                <div className="bg-accent/8 rounded-xl p-4 mb-6 border border-secondary/20 md:min-h-[9rem]">
                   <p className="text-xs font-bold text-accent uppercase tracking-wider mb-2">Best for you if</p>
                   <p className="text-sm text-dark-light leading-relaxed">{tier.bestFor}</p>
                 </div>
@@ -237,7 +248,22 @@ export function ServicesContent() {
             ))}
           </div>
 
-          <p className="text-center text-sm text-dark-light mt-10 max-w-xl mx-auto">
+          <div className="mt-12 max-w-4xl mx-auto bg-warm-bg border border-accent/25 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
+            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+              <MessageCircleHeart size={24} className="text-accent" />
+            </div>
+            <div className="flex-1">
+              <h3 className="font-serif text-xl font-bold text-dark">Just need to talk?</h3>
+              <p className="text-dark-light text-sm sm:text-base mt-1">
+                Not ready for a month-long plan? Book a single therapy session for a vent, a first taste of therapy, or ongoing support at your own pace.
+              </p>
+            </div>
+            <Button href="/therapy" variant="outline">
+              Book a session <ArrowRight size={16} className="ml-1" />
+            </Button>
+          </div>
+
+          <p className="text-center text-base sm:text-lg text-dark-light mt-12 max-w-2xl mx-auto">
             Still unsure which plan fits you? Start with a{" "}
             <a href="/contact#contact-details" className="text-accent font-semibold hover:underline">
               free discovery call

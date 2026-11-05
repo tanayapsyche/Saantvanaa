@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Phone } from "lucide-react";
 import {
   LeafDecoration,
   FlowerInVase,
@@ -59,6 +61,31 @@ export function Hero() {
             something always slips. Santwanaa is where habit coaching meets emotional
             wellness, the grounded, personal support that helps real change actually stay.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-8"
+          >
+            <Link
+              href="/contact#contact-details"
+              className="group inline-flex items-center gap-4 bg-white/90 backdrop-blur-sm border border-accent/30 rounded-2xl px-5 py-4 shadow-sm hover:shadow-md hover:border-accent transition-all"
+            >
+              <span className="flex-shrink-0 w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
+                <Phone size={18} className="text-accent" />
+              </span>
+              <span className="text-left">
+                <span className="block font-semibold text-dark text-sm sm:text-base">
+                  Not sure where to start?
+                </span>
+                <span className="block text-dark-light text-xs sm:text-sm">
+                  Book a free call, no pressure.
+                </span>
+              </span>
+              <ArrowRight size={18} className="text-accent transition-transform group-hover:translate-x-1" />
+            </Link>
+          </motion.div>
         </div>
       </div>
     </section>
