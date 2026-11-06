@@ -118,7 +118,7 @@ export function AboutContent() {
             >
               <LeafDecoration className="absolute -top-6 -right-6 w-20 h-20 text-accent opacity-40 z-10" />
               {/* Tanaya's portrait */}
-              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border-4 border-earth">
+              <div className="relative aspect-[3/4] w-full max-w-md mx-auto lg:ml-auto rounded-3xl overflow-hidden shadow-xl border-4 border-earth">
                 <Image
                   src="/images/tanaya.jpg"
                   alt="Tanaya, Educational Psychologist and founder of Saantwanaa"
