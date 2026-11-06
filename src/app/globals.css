@@ -15,6 +15,9 @@
   --color-light: #faf7f2;
   --color-warm-white: #fff9f0;
   --color-warm-bg: #f3ede4;
+  --color-earth: #5b3e2f;
+  --color-earth-deep: #3b281e;
+  --color-clay: #7a4430;
 
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);

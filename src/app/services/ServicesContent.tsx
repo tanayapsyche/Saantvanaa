@@ -61,12 +61,12 @@ export function ServicesContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-1.5 bg-accent text-white text-sm font-semibold rounded-full mb-6">
+              <span className="inline-block px-4 py-1.5 bg-earth text-light text-sm font-semibold rounded-full mb-6">
                 Services
               </span>
-              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-dark leading-[1.1]">
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-earth-deep leading-[1.1]">
                 Not another programme.{" "}
-                <span className="text-accent">Yours.</span>
+                <span className="text-accent-dark">Yours.</span>
               </h1>
               <p className="mt-6 text-base sm:text-xl text-dark-light leading-relaxed">
                 You&apos;ve already tried the one size fits all method. It didn&apos;t fit. This is built around your routine, your patterns, your real life, with someone walking beside you the whole way.
@@ -104,7 +104,7 @@ export function ServicesContent() {
                   {/* Left column: number + vertical line */}
                   <div className="flex flex-col items-center">
                     <div className="relative">
-                      <span className="font-display text-5xl sm:text-6xl font-bold text-accent/20 leading-none">
+                      <span className="font-display text-5xl sm:text-6xl font-bold text-accent/50 leading-none">
                         {step.number}
                       </span>
                     </div>
@@ -116,10 +116,10 @@ export function ServicesContent() {
                   {/* Right column: content */}
                   <div className={`pb-14 ${isLast ? "pb-0" : ""}`}>
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Icon size={20} className="text-accent" strokeWidth={2} />
+                      <div className="w-10 h-10 bg-earth rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon size={20} className="text-secondary" strokeWidth={2} />
                       </div>
-                      <h3 className="font-serif text-2xl sm:text-3xl font-bold text-dark leading-tight">
+                      <h3 className="font-serif text-2xl sm:text-3xl font-bold text-earth-deep leading-tight">
                         {step.title}
                       </h3>
                     </div>
@@ -144,14 +144,15 @@ export function ServicesContent() {
       <SelfReflection />
 
       {/* Pricing */}
-      <section className="py-14 sm:py-20 lg:py-28 bg-white relative overflow-hidden">
-        <SunburstDecoration className="absolute -top-20 -right-20 w-[400px] h-[400px] text-accent opacity-15" />
-        <BranchDecoration className="absolute -right-8 bottom-20 w-24 h-56 text-accent opacity-15 hidden lg:block rotate-180" />
-        <FlowerInVase className="absolute top-20 left-4 w-20 h-32 text-accent opacity-20 hidden lg:block" />
-        <Sprig className="absolute bottom-20 right-10 w-20 h-32 text-accent opacity-20 hidden lg:block" />
+      <section className="py-14 sm:py-20 lg:py-28 bg-earth-deep relative overflow-hidden">
+        <SunburstDecoration className="absolute -top-20 -right-20 w-[400px] h-[400px] text-secondary opacity-30" />
+        <BranchDecoration className="absolute -right-8 bottom-20 w-24 h-56 text-secondary opacity-25 hidden lg:block rotate-180" />
+        <FlowerInVase className="absolute top-20 left-4 w-20 h-32 text-secondary opacity-30 hidden lg:block" />
+        <Sprig className="absolute bottom-20 right-10 w-20 h-32 text-secondary opacity-30 hidden lg:block" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
+            light
             label="Pricing"
             title="Choose Your Plan"
             subtitle="Two plans, each built for a different stage of your journey. All run in monthly cycles with no lock in contracts. The goal is to make you self reliant enough that you eventually won't need us at all."
@@ -167,20 +168,20 @@ export function ServicesContent() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className={`rounded-2xl p-8 border-2 relative flex flex-col ${
                   tier.highlighted
-                    ? "border-accent bg-accent/5 shadow-xl scale-[1.02]"
+                    ? "border-secondary bg-warm-white shadow-xl scale-[1.02]"
                     : "border-secondary/25 bg-white"
                 }`}
               >
                 {tier.highlighted && (
-                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-4 py-1 bg-accent text-white text-xs font-bold tracking-wide uppercase rounded-full shadow-md whitespace-nowrap">
+                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-4 py-1 bg-accent-dark text-white text-xs font-bold tracking-wide uppercase rounded-full shadow-md whitespace-nowrap">
                     <Star size={12} className="fill-white" /> Most popular
                   </span>
                 )}
 
                 {/* Header */}
                 <div className="text-center mb-6">
-                  <h3 className="font-serif text-2xl font-bold text-dark">{tier.name}</h3>
-                  <p className="text-sm text-accent font-semibold mt-1">{tier.subtitle}</p>
+                  <h3 className="font-serif text-2xl font-bold text-earth-deep">{tier.name}</h3>
+                  <p className="text-sm text-accent-dark font-semibold mt-1">{tier.subtitle}</p>
 
                   {/* Dual currency pricing */}
                   <div className="mt-5">
@@ -200,7 +201,7 @@ export function ServicesContent() {
 
                 {/* Best for */}
                 <div className="bg-accent/8 rounded-xl p-4 mb-6 border border-secondary/20 md:min-h-[9rem]">
-                  <p className="text-xs font-bold text-accent uppercase tracking-wider mb-2">Best for you if</p>
+                  <p className="text-xs font-bold text-accent-dark uppercase tracking-wider mb-2">Best for you if</p>
                   <p className="text-sm text-dark-light leading-relaxed">{tier.bestFor}</p>
                 </div>
 
@@ -248,24 +249,24 @@ export function ServicesContent() {
             ))}
           </div>
 
-          <div className="mt-12 max-w-4xl mx-auto bg-warm-bg border border-accent/25 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
-            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-              <MessageCircleHeart size={24} className="text-accent" />
+          <div className="mt-12 max-w-4xl mx-auto bg-warm-bg border border-secondary rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
+            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-earth flex items-center justify-center">
+              <MessageCircleHeart size={24} className="text-secondary" />
             </div>
             <div className="flex-1">
-              <h3 className="font-serif text-xl font-bold text-dark">Just need to talk?</h3>
+              <h3 className="font-serif text-xl font-bold text-earth-deep">Just need to talk?</h3>
               <p className="text-dark-light text-sm sm:text-base mt-1">
-                Not ready for a month-long plan? Book a single therapy session for a vent, a first taste of therapy, or ongoing support at your own pace.
+                Not ready for a month-long plan? Book a single psychotherapy session with a qualified psychologist for a vent, a first taste of therapy, or ongoing support at your own pace. Confidential, online, and no plan to sign up for.
               </p>
             </div>
-            <Button href="/therapy" variant="outline">
+            <Button href="/contact#contact-details" variant="dark">
               Book a session <ArrowRight size={16} className="ml-1" />
             </Button>
           </div>
 
-          <p className="text-center text-base sm:text-lg text-dark-light mt-12 max-w-2xl mx-auto">
+          <p className="text-center text-base sm:text-lg text-light/85 mt-12 max-w-2xl mx-auto">
             Still unsure which plan fits you? Start with a{" "}
-            <a href="/contact#contact-details" className="text-accent font-semibold hover:underline">
+            <a href="/contact#contact-details" className="text-secondary font-semibold underline underline-offset-4 hover:text-white">
               free discovery call
             </a>{" "}
             and we&apos;ll figure it out together, no pressure.

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 interface ButtonProps {
   href?: string;
-  variant?: "primary" | "secondary" | "outline";
+  variant?: "primary" | "secondary" | "outline" | "dark" | "light";
   size?: "sm" | "md" | "lg";
   children: React.ReactNode;
   className?: string;
@@ -11,9 +11,11 @@ interface ButtonProps {
 }
 
 const variants = {
-  primary: "bg-accent text-white hover:bg-accent-dark",
-  secondary: "bg-secondary text-dark hover:bg-secondary-light",
-  outline: "border-2 border-primary text-dark hover:bg-primary/10",
+  primary: "bg-accent-dark text-white hover:bg-earth shadow-sm",
+  secondary: "bg-secondary text-earth-deep hover:bg-secondary-light",
+  outline: "border-2 border-earth text-earth hover:bg-earth hover:text-light",
+  dark: "bg-earth-deep text-light hover:bg-earth",
+  light: "bg-light text-earth-deep hover:bg-secondary-light",
 };
 
 const sizes = {

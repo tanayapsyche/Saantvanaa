@@ -192,3 +192,39 @@ export function GentleArc({ className = "" }: { className?: string }) {
     </svg>
   );
 }
+
+// Growth: a small sapling rising from layered ground, with a balance ring behind it
+export function Sapling({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 200 220" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="95" r="78" stroke="currentColor" strokeWidth="1.5" opacity="0.35" />
+      <circle cx="100" cy="95" r="58" stroke="currentColor" strokeWidth="1" opacity="0.25" strokeDasharray="3 6" />
+      <path d="M100 190 Q96 150 102 118 Q106 90 98 62" stroke="currentColor" strokeWidth="3" strokeLinecap="round" opacity="0.7" />
+      <path d="M101 128 Q70 126 58 98 Q88 94 101 128Z" fill="currentColor" opacity="0.5" />
+      <path d="M103 104 Q134 102 146 72 Q116 68 103 104Z" fill="currentColor" opacity="0.5" />
+      <path d="M98 66 Q84 44 98 24 Q114 44 98 66Z" fill="currentColor" opacity="0.7" />
+      <path d="M40 192 Q100 176 160 192 Q100 208 40 192Z" fill="currentColor" opacity="0.4" />
+    </svg>
+  );
+}
+
+// Soft organic shape used as a quiet background accent
+export function OrganicBlob({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 200 200" fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg" aria-hidden>
+      <path d="M44 33C70-1 132-6 164 28c33 35 36 92 8 128-27 35-86 48-124 22C10 152 8 71 44 33Z" />
+    </svg>
+  );
+}
+
+// Three ascending steps: gradual, steady progress
+export function GrowthSteps({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 160 120" fill="none" className={className} xmlns="http://www.w3.org/2000/svg" aria-hidden>
+      <rect x="10" y="76" width="36" height="34" rx="8" fill="currentColor" opacity="0.4" />
+      <rect x="62" y="50" width="36" height="60" rx="8" fill="currentColor" opacity="0.6" />
+      <rect x="114" y="20" width="36" height="90" rx="8" fill="currentColor" opacity="0.85" />
+      <circle cx="132" cy="8" r="5" fill="currentColor" />
+    </svg>
+  );
+}
