@@ -20,7 +20,7 @@ export function Testimonials() {
 
   return (
     <section className="py-14 sm:py-20 lg:py-28 bg-light relative overflow-hidden">
-      <LeafDecoration className="absolute -bottom-5 left-10 w-20 h-20 text-accent opacity-20 hidden lg:block" />
+      <LeafDecoration className="absolute -bottom-5 left-10 w-20 h-20 text-accent opacity-25 hidden lg:block" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
@@ -34,14 +34,14 @@ export function Testimonials() {
           <button
             onClick={() => scroll("left")}
             aria-label="Previous testimonial"
-            className="w-10 h-10 rounded-full border border-secondary/30 hover:border-accent hover:bg-accent/5 flex items-center justify-center text-accent transition-colors"
+            className="w-10 h-10 rounded-full border-2 border-earth hover:bg-earth hover:text-light flex items-center justify-center text-earth transition-colors"
           >
             <ChevronLeft size={18} />
           </button>
           <button
             onClick={() => scroll("right")}
             aria-label="Next testimonial"
-            className="w-10 h-10 rounded-full border border-secondary/30 hover:border-accent hover:bg-accent/5 flex items-center justify-center text-accent transition-colors"
+            className="w-10 h-10 rounded-full border-2 border-earth hover:bg-earth hover:text-light flex items-center justify-center text-earth transition-colors"
           >
             <ChevronRight size={18} />
           </button>
@@ -61,14 +61,14 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: (i % 3) * 0.08 }}
-              className="snap-start shrink-0 w-[300px] sm:w-[340px] bg-white rounded-2xl p-7 border border-secondary/20 flex flex-col"
+              className="snap-start shrink-0 w-[300px] sm:w-[340px] bg-white rounded-2xl p-7 border border-secondary/30 border-l-4 border-l-accent-dark flex flex-col shadow-sm"
             >
-              <Quote size={28} className="text-secondary/50 mb-3" />
+              <Quote size={28} className="text-accent mb-3" />
               <p className="text-dark-light leading-relaxed mb-5 italic flex-1">
                 &ldquo;{item.quote}&rdquo;
               </p>
               <div>
-                <p className="font-semibold text-dark">{item.name}</p>
+                <p className="font-semibold text-earth-deep">{item.name}</p>
                 <p className="text-sm text-dark-light">{item.role}</p>
               </div>
             </motion.div>

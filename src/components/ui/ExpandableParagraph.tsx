@@ -33,7 +33,7 @@ export function ExpandableParagraph({
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="sm:hidden inline ml-1 text-accent font-semibold underline underline-offset-2 decoration-accent/40 hover:decoration-accent transition-colors"
+          className="sm:hidden inline ml-1 text-accent-dark font-semibold underline underline-offset-2 decoration-accent/40 hover:decoration-accent transition-colors"
         >
           Read more
         </button>

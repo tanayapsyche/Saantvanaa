@@ -35,12 +35,12 @@ export function ContactContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-1.5 bg-accent text-white text-sm font-semibold rounded-full mb-6">
+              <span className="inline-block px-4 py-1.5 bg-earth text-light text-sm font-semibold rounded-full mb-6">
                 Get In Touch
               </span>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-dark leading-tight">
+              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-earth-deep leading-tight">
                 Some things shouldn&apos;t be{" "}
-                <span className="text-accent">carried alone.</span>
+                <span className="text-accent-dark">carried alone.</span>
               </h1>
               <p className="mt-5 text-base sm:text-lg text-dark-light max-w-xl leading-relaxed">
                 Whatever&apos;s been sitting heavy on you, start by saying it out loud. The first conversation is free, gentle, and entirely on your terms.
@@ -57,19 +57,19 @@ export function ContactContent() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Left: Info */}
-            <div className="lg:col-span-2">
-              <h2 className="font-serif text-2xl font-bold text-dark mb-6">Contact Details</h2>
+            <div className="lg:col-span-2 self-start rounded-3xl bg-earth-deep text-light p-6 sm:p-8 shadow-lg">
+              <h2 className="font-serif text-2xl font-bold text-light mb-6">Contact Details</h2>
 
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail size={18} className="text-accent" />
+                  <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail size={18} className="text-earth-deep" />
                   </div>
                   <div>
-                    <p className="text-sm text-dark-light">Email</p>
+                    <p className="text-sm text-light/75">Email</p>
                     <a
                       href={`mailto:${CONTACT_EMAIL}`}
-                      className="text-dark font-medium hover:text-accent transition-colors"
+                      className="text-light font-medium hover:text-secondary transition-colors"
                     >
                       {CONTACT_EMAIL}
                     </a>
@@ -77,14 +77,14 @@ export function ContactContent() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone size={18} className="text-accent" />
+                  <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Phone size={18} className="text-earth-deep" />
                   </div>
                   <div>
-                    <p className="text-sm text-dark-light">Phone</p>
+                    <p className="text-sm text-light/75">Phone</p>
                     <a
                       href={`tel:${CONTACT_PHONE.replace(/\s/g, "")}`}
-                      className="text-dark font-medium hover:text-accent transition-colors"
+                      className="text-light font-medium hover:text-secondary transition-colors"
                     >
                       {CONTACT_PHONE}
                     </a>
@@ -92,29 +92,29 @@ export function ContactContent() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin size={18} className="text-accent" />
+                  <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin size={18} className="text-earth-deep" />
                   </div>
                   <div>
-                    <p className="text-sm text-dark-light">Sessions</p>
-                    <p className="text-dark font-medium">Online via Video Call</p>
+                    <p className="text-sm text-light/75">Sessions</p>
+                    <p className="text-light font-medium">Online via Video Call</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-10 p-6 bg-warm-bg rounded-2xl border border-secondary/25">
-                <h3 className="font-semibold text-dark mb-2">What happens next?</h3>
-                <ol className="space-y-2 text-sm text-dark-light">
+              <div className="mt-10 p-6 bg-earth rounded-2xl">
+                <h3 className="font-semibold text-light mb-2">What happens next?</h3>
+                <ol className="space-y-2 text-sm text-light/90">
                   <li className="flex gap-2">
-                    <span className="font-semibold text-accent">1.</span>
+                    <span className="font-semibold text-secondary">1.</span>
                     Book a slot or send a message
                   </li>
                   <li className="flex gap-2">
-                    <span className="font-semibold text-accent">2.</span>
+                    <span className="font-semibold text-secondary">2.</span>
                     We have a 15 minute chat about your goals
                   </li>
                   <li className="flex gap-2">
-                    <span className="font-semibold text-accent">3.</span>
+                    <span className="font-semibold text-secondary">3.</span>
                     If it&apos;s a good fit, we schedule your onboarding session
                   </li>
                 </ol>

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { Target, Heart, Shield, GraduationCap } from "lucide-react";
-import { LeafDecoration, DotsPattern } from "@/components/ui/Decorations";
+import { LeafDecoration, DotsPattern, OrganicBlob, Sapling, WaveDivider } from "@/components/ui/Decorations";
 import { ExpandableParagraph } from "@/components/ui/ExpandableParagraph";
 
 const researchItems = [
@@ -76,6 +76,7 @@ export function AboutContent() {
       {/* Hero */}
       <section className="py-14 sm:py-20 lg:py-28 bg-gradient-to-br from-light to-secondary-light/20 relative overflow-hidden">
         <DotsPattern className="absolute top-10 left-10 w-32 h-32 text-accent hidden lg:block" />
+        <OrganicBlob className="absolute -bottom-32 -right-24 w-96 h-96 text-secondary opacity-30 hidden md:block" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -84,11 +85,11 @@ export function AboutContent() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="font-serif text-4xl sm:text-5xl font-bold text-dark leading-tight mb-2">
+              <h1 className="font-serif text-4xl sm:text-5xl font-bold text-earth-deep leading-tight mb-2">
                 Hello, I&apos;m{" "}
-                <span className="text-accent">Tanaya.</span>
+                <span className="text-accent-dark">Tanaya.</span>
               </h1>
-              <p className="text-[12px] sm:text-sm font-semibold tracking-wide text-accent/90 mb-6">
+              <p className="text-[12px] sm:text-sm font-semibold tracking-wide text-accent-dark mb-6">
                 An Educational Psychologist · A Neurodivergent Psychotherapist · Your Lifestyle Coach
               </p>
               <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4">
@@ -117,7 +118,7 @@ export function AboutContent() {
             >
               <LeafDecoration className="absolute -top-6 -right-6 w-20 h-20 text-accent opacity-40 z-10" />
               {/* Tanaya's portrait */}
-              <div className="relative aspect-[1/1] rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+              <div className="relative aspect-[1/1] rounded-3xl overflow-hidden shadow-xl border-4 border-earth">
                 <Image
                   src="/images/tanaya.jpg"
                   alt="Tanaya, Educational Psychologist and founder of Saantwanaa"
@@ -133,9 +134,12 @@ export function AboutContent() {
       </section>
 
       {/* Philosophy */}
-      <section className="py-14 sm:py-20 lg:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 sm:py-20 lg:py-28 bg-earth-deep relative overflow-hidden">
+        <WaveDivider flip className="absolute top-0 left-0 w-full h-6 sm:h-10 text-warm-bg" />
+        <Sapling className="absolute top-24 right-6 w-40 h-44 text-secondary opacity-20 hidden lg:block" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
+            light
             label="Philosophy"
             title="Why We Do What We Do"
             subtitle="Most people don't fail at habits because they lack information. They fail because they lack support, the right kind of support."
@@ -146,15 +150,17 @@ export function AboutContent() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="prose prose-lg text-dark-light leading-relaxed space-y-5 text-center"
+              className="prose prose-lg text-light/90 leading-relaxed space-y-5 text-center"
             >
               <ExpandableParagraph
                 intro="Every week, people download habit trackers, buy planners, and make promises to themselves."
                 rest="By week three, most have abandoned the plan. Not because they're weak, but because nobody addressed why the old patterns existed in the first place."
+                className="!text-light/90 [&_button]:!text-secondary"
               />
               <ExpandableParagraph
                 intro="Lifestyle Management bridges this gap."
                 rest="It pairs the structure of habit coaching (planning, tracking, accountability) with the depth of emotional wellness support (understanding resistance, building resilience, processing the discomfort of change)."
+                className="!text-light/90 [&_button]:!text-secondary"
               />
               <p>
                 This is especially critical for people with ADHD, where the challenge isn&apos;t
@@ -171,10 +177,10 @@ export function AboutContent() {
               viewport={{ once: true }}
               className="text-center mb-10"
             >
-              <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent text-xs font-bold tracking-wider uppercase rounded-full mb-3">
+              <span className="inline-block px-4 py-1.5 bg-secondary text-earth-deep text-xs font-bold tracking-wider uppercase rounded-full mb-3">
                 The Research Backs This
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-dark">
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-light">
                 Why this approach actually works
               </h3>
             </motion.div>
@@ -187,7 +193,7 @@ export function AboutContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-accent-dark rounded-2xl p-6 border border-accent-dark shadow-md"
+                  className="bg-accent-dark rounded-2xl p-6 border border-accent shadow-md"
                 >
                   <div className="flex items-baseline gap-2 mb-3">
                     <span className="font-serif text-3xl font-bold text-white">{item.stat}</span>
@@ -234,11 +240,11 @@ export function AboutContent() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="flex gap-4"
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
-                  <item.icon size={22} className="text-accent" />
+                <div className="flex-shrink-0 w-12 h-12 bg-earth rounded-xl flex items-center justify-center">
+                  <item.icon size={22} className="text-secondary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-dark mb-1">{item.title}</h3>
+                  <h3 className="font-semibold text-earth-deep mb-1">{item.title}</h3>
                   <p className="text-dark-light text-sm leading-relaxed">{item.text}</p>
                 </div>
               </motion.div>

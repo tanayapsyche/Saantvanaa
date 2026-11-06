@@ -52,7 +52,7 @@ export function ContactForm() {
         </p>
         <button
           onClick={() => setStatus("idle")}
-          className="mt-4 text-accent font-medium hover:underline"
+          className="mt-4 text-accent-dark font-medium hover:underline"
         >
           Send another message
         </button>
@@ -64,24 +64,24 @@ export function ContactForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label className="block text-sm font-medium text-dark mb-1.5">Name *</label>
+          <label className="block text-sm font-medium text-earth-deep mb-1.5">Name *</label>
           <input
             {...register("name", { required: "Name is required" })}
-            className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-light focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
+            className="w-full px-4 py-3 rounded-xl border border-earth/30 bg-light focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
             placeholder="Your name"
           />
           {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-dark mb-1.5">Email *</label>
+          <label className="block text-sm font-medium text-earth-deep mb-1.5">Email *</label>
           <input
             {...register("email", {
               required: "Email is required",
               pattern: { value: /^\S+@\S+$/i, message: "Invalid email" },
             })}
             type="email"
-            className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-light focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
+            className="w-full px-4 py-3 rounded-xl border border-earth/30 bg-light focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
             placeholder="your@email.com"
           />
           {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
@@ -90,21 +90,21 @@ export function ContactForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label className="block text-sm font-medium text-dark mb-1.5">Phone *</label>
+          <label className="block text-sm font-medium text-earth-deep mb-1.5">Phone *</label>
           <input
             {...register("phone", { required: "Phone is required" })}
             type="tel"
-            className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-light focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
+            className="w-full px-4 py-3 rounded-xl border border-earth/30 bg-light focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
             placeholder="+91 XXXXX XXXXX"
           />
           {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-dark mb-1.5">What brings you here? *</label>
+          <label className="block text-sm font-medium text-earth-deep mb-1.5">What brings you here? *</label>
           <select
             {...register("interest", { required: "Please select an option" })}
-            className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-light focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
+            className="w-full px-4 py-3 rounded-xl border border-earth/30 bg-light focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
           >
             <option value="">Select...</option>
             <option value="habits">Building new habits</option>
@@ -118,11 +118,11 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-dark mb-1.5">Message *</label>
+        <label className="block text-sm font-medium text-earth-deep mb-1.5">Message *</label>
         <textarea
           {...register("message", { required: "Message is required" })}
           rows={5}
-          className="w-full px-4 py-3 rounded-xl border border-primary/20 bg-light focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors resize-none"
+          className="w-full px-4 py-3 rounded-xl border border-earth/30 bg-light focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors resize-none"
           placeholder="Tell me a bit about what you're looking for..."
         />
         {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message.message}</p>}
@@ -135,7 +135,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 bg-accent text-white font-semibold rounded-full hover:bg-accent-dark transition-colors disabled:opacity-60"
+        className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 bg-accent-dark text-white font-semibold rounded-full hover:bg-earth transition-colors disabled:opacity-60"
       >
         {status === "sending" ? (
           "Sending..."

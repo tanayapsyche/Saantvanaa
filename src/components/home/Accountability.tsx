@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { UserCheck, Eye, PartyPopper, LifeBuoy, HelpingHand, ChevronDown } from "lucide-react";
-import { FlowerInVase, Sprig } from "@/components/ui/Decorations";
+import { FlowerInVase, Sprig, WaveDivider, GrowthSteps } from "@/components/ui/Decorations";
 
 const MOBILE_CUTOFF = 3;
 
@@ -41,12 +41,16 @@ export function Accountability() {
   const hiddenCount = aspects.length - MOBILE_CUTOFF;
 
   return (
-    <section className="py-14 sm:py-20 lg:py-28 bg-warm-bg relative overflow-hidden">
-      <FlowerInVase className="absolute top-10 right-4 w-24 h-36 text-accent opacity-20 hidden lg:block" />
-      <Sprig className="absolute bottom-10 left-4 w-20 h-32 text-accent opacity-20 hidden lg:block" />
+    <section className="py-14 sm:py-20 lg:py-28 bg-earth-deep relative overflow-hidden">
+      <WaveDivider flip className="absolute top-0 left-0 w-full h-6 sm:h-10 text-white" />
+      <WaveDivider className="absolute bottom-0 left-0 w-full h-6 sm:h-10 text-light" />
+      <FlowerInVase className="absolute top-16 right-4 w-24 h-36 text-secondary opacity-40 hidden lg:block" />
+      <Sprig className="absolute bottom-16 left-4 w-20 h-32 text-secondary opacity-40 hidden lg:block" />
+      <GrowthSteps className="absolute top-20 left-8 w-24 h-20 text-secondary opacity-30 hidden xl:block" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
         <SectionHeading
+          light
           label="Accountability"
           title="What WE Mean by Accountability"
           subtitle="Less of a watchdog, more of a workout partner for your life. Here's what it looks like in practice:"
@@ -61,14 +65,14 @@ export function Accountability() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className={`bg-white rounded-2xl p-5 sm:p-6 border border-secondary/25 hover:border-accent/35 transition-all hover:shadow-md flex-col items-center text-center h-full ${
+                className={`bg-warm-white rounded-2xl p-5 sm:p-6 border border-secondary/30 hover:border-accent transition-all hover:shadow-lg flex-col items-center text-center h-full ${
                   i >= MOBILE_CUTOFF && !mobileShowAll ? "hidden sm:flex" : "flex"
                 }`}
               >
-                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
-                  <item.icon size={22} className="text-accent" />
+                <div className="w-12 h-12 bg-accent-dark rounded-xl flex items-center justify-center mb-4">
+                  <item.icon size={22} className="text-white" />
                 </div>
-                <h3 className="font-semibold text-dark text-[15px] mb-2 leading-snug">
+                <h3 className="font-semibold text-earth-deep text-[15px] mb-2 leading-snug">
                   {item.title}
                 </h3>
                 <p className="text-dark-light text-sm leading-relaxed">{item.line}</p>
@@ -79,7 +83,7 @@ export function Accountability() {
           {!mobileShowAll && hiddenCount > 0 && (
             <button
               onClick={() => setMobileShowAll(true)}
-              className="sm:hidden w-full mt-3 flex items-center justify-center gap-1.5 py-3 text-accent font-semibold text-sm hover:underline"
+              className="sm:hidden w-full mt-3 flex items-center justify-center gap-1.5 py-3 text-secondary font-semibold text-sm hover:underline"
             >
               Show {hiddenCount} more <ChevronDown size={16} />
             </button>

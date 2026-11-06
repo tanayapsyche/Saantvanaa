@@ -8,7 +8,6 @@ export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
-  { href: "/therapy", label: "Therapy" },
   { href: "/adhd", label: "ADHD Support" },
   { href: "/before-you-begin", label: "Before You Begin" },
   { href: "/contact", label: "Contact" },
@@ -85,51 +84,71 @@ export const PROCESS_STEPS = [
   },
 ] as const;
 
-export const SELF_REFLECTION_CARDS = [
+export const SELF_CHECKIN_AREAS = {
+  routine: {
+    name: "Routine & rhythm",
+    reflection: "Your days may be running on autopilot, without a steady structure to lean on.",
+    support: "We co-design a routine around your real life, not an idealised one, and adjust it until it fits.",
+  },
+  habits: {
+    name: "Habit-building",
+    reflection: "Starting may not be the hard part. Keeping things going once the first spark fades might be.",
+    support: "We build habits in small, realistic steps, drawing on habit science and mindfulness, so they can last.",
+  },
+  focus: {
+    name: "Focus & productivity",
+    reflection: "Too much on your plate, or too little clarity on where to begin, can make everything feel heavier.",
+    support: "We break things into concrete next steps and find calmer ways to start, so you aren't running on adrenaline.",
+  },
+  accountability: {
+    name: "Accountability & follow-through",
+    reflection: "Knowing what to do and doing it are different things, and that gap is very human.",
+    support: "A real person checks in with you twice a week, notices patterns early and celebrates the small wins.",
+  },
+  kindness: {
+    name: "Self-kindness & emotional wellbeing",
+    reflection: "Self-doubt or guilt may be adding weight to the changes you want to make.",
+    support: "Alongside coaching, our emotional wellness and psychotherapy support helps you meet those feelings with more kindness.",
+  },
+} as const;
+
+export type SelfCheckInArea = keyof typeof SELF_CHECKIN_AREAS;
+
+export const SELF_CHECKIN_STATEMENTS: ReadonlyArray<{ id: string; area: SelfCheckInArea; text: string }> = [
+  { id: "s1", area: "routine", text: "My days feel unstructured, and I often wonder where the time went." },
+  { id: "s2", area: "routine", text: "My sleep or morning routine changes so often that I can't rely on it." },
+  { id: "s3", area: "habits", text: "I start new habits with energy, but they fade after a few weeks." },
+  { id: "s4", area: "habits", text: "I've tried planners, apps or books, and nothing has stuck for long." },
+  { id: "s5", area: "focus", text: "My to-do list feels so long that I struggle to know where to begin." },
+  { id: "s6", area: "focus", text: "I tend to get things done only when a deadline is close." },
+  { id: "s7", area: "focus", text: "Even simple decisions can leave me feeling mentally tired or foggy." },
+  { id: "s8", area: "accountability", text: "I know what I should do, but find it hard to actually do it." },
+  { id: "s9", area: "accountability", text: "I do better when someone checks in on me, but I rarely have that." },
+  { id: "s10", area: "accountability", text: "When I miss a day, I tend to drop the whole plan." },
+  { id: "s11", area: "kindness", text: "I feel guilty when I don't live up to my own expectations." },
+  { id: "s12", area: "kindness", text: "I'd like a calmer, kinder relationship with myself while I make changes." },
+];
+
+export const SELF_CHECKIN_RESULT_BANDS = [
   {
-    label: "&ldquo;I start strong, then it all fizzles out.&rdquo;",
-    name: "The Week-Three Slump",
-    text: "Motivation is a spark, not a system. Without structure and someone checking in, even great habits fade. We build the routine around your real life and keep adjusting until it sticks.",
+    max: 0,
+    title: "You're feeling steady right now",
+    text: "Nothing here stood out today, and that's genuinely good to notice. Life changes, though, and if something shifts, Santwanaa is a warm place to come back to.",
   },
   {
-    label: "&ldquo;My to-do list freezes me.&rdquo;",
-    name: "Overwhelm Paralysis",
-    text: "When everything feels urgent, nothing feels startable. We break things into small, concrete steps so you always know what the next one is.",
+    max: 3,
+    title: "A few things are asking for attention",
+    text: "A handful of these felt familiar. That's very common, and small, well-placed changes can make a real difference.",
   },
   {
-    label: "&ldquo;I only get things done at the last minute.&rdquo;",
-    name: "Pressure-Dependent Productivity",
-    text: "Deadlines are doing the work your routine should be doing. Together we find calmer ways to start, so you aren&apos;t living on adrenaline.",
+    max: 7,
+    title: "Several parts of daily life feel like a stretch",
+    text: "A good number of these resonated, which suggests you've been carrying quite a bit on your own. You haven't done anything wrong. Most people try to work this out alone, without the right kind of support.",
   },
   {
-    label: "&ldquo;I know what to do. I just can&apos;t make myself do it.&rdquo;",
-    name: "The Knowing–Doing Gap",
-    text: "This isn&apos;t a knowledge problem, so more information won&apos;t fix it. Accountability and a look at what&apos;s underneath the resistance will.",
-  },
-  {
-    label: "&ldquo;I feel guilty about my own potential.&rdquo;",
-    name: "Guilt Loops",
-    text: "Guilt feels like motivation but it quietly drains it. We work on the self-doubt so progress can feel kinder.",
-  },
-  {
-    label: "&ldquo;Books and apps haven&apos;t worked for me.&rdquo;",
-    name: "Tools Without Support",
-    text: "Plenty of people don&apos;t need another app, they need a real person asking &ldquo;so what happened on Wednesday?&rdquo;",
-  },
-  {
-    label: "&ldquo;My brain feels foggy, even simple choices are exhausting.&rdquo;",
-    name: "Decision Fatigue & Brain Fog",
-    text: "A cloudy mind is often a sign of too much running at once. We simplify, build rhythm, and give you a steady place to think things through.",
-  },
-  {
-    label: "&ldquo;Maybe I have ADHD, or I was recently diagnosed.&rdquo;",
-    name: "Wired Differently",
-    text: "You don&apos;t need a label to deserve support. We build systems that work with your brain, not against it.",
-  },
-  {
-    label: "&ldquo;I want real support, not just a pep talk.&rdquo;",
-    name: "Professional Support",
-    text: "That&apos;s exactly what this is: a qualified psychologist, evidence-based tools, and a plan made for you.",
+    max: Infinity,
+    title: "A lot of these feel very familiar",
+    text: "Many of these felt like they were written about you. That takes honesty to recognise, and it's a kind first step. You don't have to untangle all of it by yourself.",
   },
 ] as const;
 
