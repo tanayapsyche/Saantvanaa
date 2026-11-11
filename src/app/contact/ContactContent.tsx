@@ -128,7 +128,7 @@ export function ContactContent() {
           </div>
         </div>
       </section>
-
+      
       {/* Calendly Section */}
       <section className="py-14 sm:py-20 lg:py-28 bg-warm-bg relative overflow-hidden">
         <FlowerInVase className="absolute top-10 right-10 w-24 h-36 text-accent opacity-25 hidden lg:block" />
