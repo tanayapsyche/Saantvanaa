@@ -19,13 +19,13 @@ export function BrandLogo({ tone = "light", size = "md", onClick }: BrandLogoPro
       </span>
       <span className="flex flex-col leading-none">
         <span
-          className={`font-brand text-2xl lg:text-3xl font-bold ${tone === "dark" ? "text-secondary" : "text-earth-deep"}`}
+          className={`font-brand text-2xl lg:text-3xl font-bold ${tone === "dark" ? "text-secondary" : "text-dark"}`}
         >
           {SITE_NAME_DEVANAGARI}
         </span>
         <span
           className={`mt-1 text-[10px] lg:text-xs font-semibold tracking-[0.25em] uppercase ${
-            tone === "dark" ? "text-accent-light" : "text-accent-dark"
+            tone === "dark" ? "text-accent-light" : "text-accent"
           }`}
         >
           {SITE_NAME}

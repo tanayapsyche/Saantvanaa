@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { HelpCircle, ChevronDown, ArrowRight, Search, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { BEFORE_YOU_BEGIN_CONCERNS, FAQ_ITEMS, FAQ_CATEGORIES } from "@/lib/constants";
-import { LeafDecoration, DotsPattern, Sapling } from "@/components/ui/Decorations";
+import { LeafDecoration, DotsPattern } from "@/components/ui/Decorations";
 
 export function BeforeYouBeginContent() {
   const [category, setCategory] = useState<string>(FAQ_CATEGORIES[0].id);
@@ -58,10 +58,10 @@ export function BeforeYouBeginContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-1.5 bg-earth text-light text-sm font-semibold rounded-full mb-6">
+              <span className="inline-block px-4 py-1.5 bg-accent text-white text-sm font-semibold rounded-full mb-6">
                 Before You Begin
               </span>
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-earth-deep leading-[1.1]">
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-dark leading-[1.1]">
                 The questions you&apos;re afraid to ask, answered honestly.
               </h1>
               <p className="mt-6 text-base sm:text-lg text-dark-light leading-relaxed max-w-xl">
@@ -106,8 +106,8 @@ export function BeforeYouBeginContent() {
                 }}
                 className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
                   category === tab.id && !query.trim()
-                    ? "bg-earth text-light"
-                    : "bg-white text-earth border border-secondary/40 hover:border-accent"
+                    ? "bg-accent text-white"
+                    : "bg-white text-dark-light border border-secondary/30 hover:border-accent/40"
                 }`}
               >
                 {tab.label}
@@ -168,11 +168,11 @@ export function BeforeYouBeginContent() {
           </div>
 
           <div className="mt-10 bg-white rounded-2xl border border-accent/25 p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-earth flex items-center justify-center">
-              <MessageCircle size={22} className="text-secondary" />
+            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+              <MessageCircle size={22} className="text-accent" />
             </div>
             <div className="flex-1">
-              <p className="font-serif text-lg font-bold text-earth-deep">Still have a question?</p>
+              <p className="font-serif text-lg font-bold text-dark">Still have a question?</p>
               <p className="text-sm text-dark-light">No question is too small or too personal. Ask us directly.</p>
             </div>
             <Button href="/contact#contact-details" variant="outline" size="sm">
@@ -183,9 +183,8 @@ export function BeforeYouBeginContent() {
       </section>
 
       {/* Closing CTA on white with warm accent */}
-      <section className="py-14 sm:py-20 lg:py-24 bg-earth-deep relative overflow-hidden">
-        <LeafDecoration className="absolute -top-6 left-1/2 -translate-x-1/2 w-20 h-20 text-secondary opacity-30" />
-        <Sapling className="absolute bottom-0 right-8 w-32 h-36 text-secondary opacity-25 hidden md:block" />
+      <section className="py-14 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+        <LeafDecoration className="absolute -top-6 left-1/2 -translate-x-1/2 w-20 h-20 text-accent opacity-20" />
 
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -193,10 +192,10 @@ export function BeforeYouBeginContent() {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         >
-          <p className="font-serif text-xl sm:text-2xl text-light leading-relaxed italic mb-8">
+          <p className="font-serif text-xl sm:text-2xl text-dark leading-relaxed italic mb-8">
             &ldquo;If something else is on your mind, bring it to the free discovery call. There&apos;s no question too small or too personal to ask.&rdquo;
           </p>
-          <Button href="/contact#contact-details" size="lg" variant="light">
+          <Button href="/contact#contact-details" size="lg">
             Book a Free Discovery Call <ArrowRight size={18} className="ml-2" />
           </Button>
         </motion.div>

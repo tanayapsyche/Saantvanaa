@@ -12,7 +12,7 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-warm-white/95 backdrop-blur-md border-b-2 border-accent/60 shadow-sm">
+    <header className="sticky top-0 z-50 bg-light/80 backdrop-blur-md border-b border-secondary/20">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[72px] lg:h-24">
         <BrandLogo />
 
@@ -23,8 +23,8 @@ export function Navbar() {
               href={link.href}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 pathname === link.href
-                  ? "bg-earth text-light"
-                  : "text-earth hover:text-earth-deep hover:bg-secondary/30"
+                  ? "bg-accent/10 text-accent"
+                  : "text-dark-light hover:text-dark hover:bg-secondary/20"
               }`}
             >
               {link.label}
@@ -32,14 +32,14 @@ export function Navbar() {
           ))}
           <Link
             href="/contact#contact-details"
-            className="ml-2 px-5 py-2.5 bg-accent-dark text-white rounded-full text-sm font-semibold hover:bg-earth transition-colors"
+            className="ml-2 px-5 py-2.5 bg-accent text-white rounded-full text-sm font-semibold hover:bg-accent-dark transition-colors"
           >
             Book Free Call
           </Link>
         </div>
 
         <button
-          className="md:hidden p-2 text-earth-deep"
+          className="md:hidden p-2 text-dark"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -48,7 +48,7 @@ export function Navbar() {
       </nav>
 
       {mobileOpen && (
-        <div className="md:hidden border-t border-secondary/30 bg-warm-white">
+        <div className="md:hidden border-t border-secondary/20 bg-light">
           <div className="px-4 py-4 space-y-1">
             {NAV_LINKS.map((link) => (
               <Link
@@ -57,8 +57,8 @@ export function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                   pathname === link.href
-                    ? "bg-earth text-light"
-                    : "text-earth hover:bg-secondary/25"
+                    ? "bg-accent/10 text-accent"
+                    : "text-dark-light hover:bg-secondary/15"
                 }`}
               >
                 {link.label}
@@ -67,7 +67,7 @@ export function Navbar() {
             <Link
               href="/contact#contact-details"
               onClick={() => setMobileOpen(false)}
-              className="block mt-2 px-4 py-3 bg-accent-dark text-white rounded-lg text-center font-semibold"
+              className="block mt-2 px-4 py-3 bg-accent text-white rounded-lg text-center font-semibold"
             >
               Book Free Call
             </Link>

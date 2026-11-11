@@ -46,12 +46,12 @@ export function WhatIsLifestyleManagement() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-warm-bg rounded-2xl p-8 border border-secondary/40 border-t-4 border-t-accent-dark hover:shadow-lg transition-shadow"
+              className="bg-warm-bg rounded-2xl p-8 border border-secondary/30 hover:shadow-lg transition-shadow"
             >
-              <div className="w-12 h-12 bg-earth rounded-xl flex items-center justify-center mb-5">
-                <item.icon size={24} className="text-secondary" />
+              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+                <item.icon size={24} className="text-accent" />
               </div>
-              <h3 className="font-display text-xl font-bold text-earth-deep mb-3">{item.title}</h3>
+              <h3 className="font-display text-xl font-bold text-dark mb-3">{item.title}</h3>
               <ExpandableParagraph intro={item.intro} rest={item.rest} className="!mb-0 !text-[15px]" />
             </motion.div>
           ))}
