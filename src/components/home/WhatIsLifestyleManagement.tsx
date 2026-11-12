@@ -29,13 +29,14 @@ const highlights = [
 
 export function WhatIsLifestyleManagement() {
   return (
-    <section className="py-14 sm:py-20 lg:py-28 bg-white relative overflow-hidden">
+    <section className="py-14 sm:py-20 lg:py-28 bg-pale-linen relative overflow-hidden">
       <OrganicBlob className="absolute -bottom-32 -left-32 w-80 h-80 text-secondary opacity-25 hidden md:block" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="What We Do"
           title="More Than Coaching. More Than Therapy."
           subtitle="Most coaching gives you a plan. Most therapy gives you understanding. Lifestyle Management is the rare space that gives you both, with someone walking beside you the whole way."
+          titleClassName="text-heading"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

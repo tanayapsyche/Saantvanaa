@@ -77,7 +77,7 @@ export function ServicesContent() {
       </section>
 
       {/* Editorial Process Timeline */}
-      <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+      <section className="py-20 lg:py-32 bg-slate relative overflow-hidden">
         <LeafDecoration className="absolute top-24 right-0 w-24 h-24 text-accent opacity-15 hidden lg:block" />
         <BranchDecoration className="absolute -left-10 bottom-10 w-24 h-56 text-accent opacity-12 hidden lg:block" />
 
@@ -86,6 +86,7 @@ export function ServicesContent() {
             label="The Process"
             title="How We Work Together"
             subtitle="Five deliberate steps. Not a rigid programme, but a clear direction for the journey."
+            light
           />
 
           <div className="max-w-4xl mx-auto mt-16">
@@ -119,7 +120,7 @@ export function ServicesContent() {
                       <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
                         <Icon size={20} className="text-accent" strokeWidth={2} />
                       </div>
-                      <h3 className="font-serif text-2xl sm:text-3xl font-bold text-dark leading-tight">
+                      <h3 className="font-serif text-2xl sm:text-3xl font-bold text-light leading-tight">
                         {step.title}
                       </h3>
                     </div>
@@ -129,7 +130,7 @@ export function ServicesContent() {
                         <ExpandableParagraph
                           intro={intro}
                           rest={rest}
-                          className="!mb-0 max-w-2xl"
+                          className="!mb-0 max-w-2xl !text-light/70"
                         />
                       );
                     })()}
@@ -144,17 +145,18 @@ export function ServicesContent() {
       <SelfReflection />
 
       {/* Pricing */}
-      <section className="py-14 sm:py-20 lg:py-28 bg-white relative overflow-hidden">
+      <section className="py-14 sm:py-20 lg:py-28 bg-slate relative overflow-hidden">
         <SunburstDecoration className="absolute -top-20 -right-20 w-[400px] h-[400px] text-accent opacity-15" />
         <BranchDecoration className="absolute -right-8 bottom-20 w-24 h-56 text-accent opacity-15 hidden lg:block rotate-180" />
-        <FlowerInVase className="absolute top-20 left-4 w-20 h-32 text-accent opacity-20 hidden lg:block" />
-        <Sprig className="absolute bottom-20 right-10 w-20 h-32 text-accent opacity-20 hidden lg:block" />
+        <FlowerInVase className="absolute top-20 left-4 w-20 h-32 text-light opacity-20 hidden lg:block" />
+        <Sprig className="absolute bottom-20 right-10 w-20 h-32 text-light opacity-20 hidden lg:block" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Pricing"
             title="Choose Your Plan"
             subtitle="Two plans, each built for a different stage of your journey. All run in monthly cycles with no lock in contracts. The goal is to make you self reliant enough that you eventually won't need us at all."
+            light
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -263,7 +265,7 @@ export function ServicesContent() {
             </Button>
           </div>
 
-          <p className="text-center text-base sm:text-lg text-dark-light mt-12 max-w-2xl mx-auto">
+          <p className="text-center text-base sm:text-lg text-light/70 mt-12 max-w-2xl mx-auto">
             Still unsure which plan fits you? Start with a{" "}
             <a href="/contact#contact-details" className="text-accent font-semibold hover:underline">
               free discovery call

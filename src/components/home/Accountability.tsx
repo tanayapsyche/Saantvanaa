@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { UserCheck, Eye, PartyPopper, LifeBuoy, HelpingHand, ChevronDown } from "lucide-react";
-import { FlowerInVase, Sprig } from "@/components/ui/Decorations";
+import { Sprig } from "@/components/ui/Decorations";
 
 const MOBILE_CUTOFF = 3;
 
@@ -41,15 +41,15 @@ export function Accountability() {
   const hiddenCount = aspects.length - MOBILE_CUTOFF;
 
   return (
-    <section className="py-14 sm:py-20 lg:py-28 bg-warm-bg relative overflow-hidden">
-      <FlowerInVase className="absolute top-10 right-4 w-24 h-36 text-accent opacity-20 hidden lg:block" />
-      <Sprig className="absolute bottom-10 left-4 w-20 h-32 text-accent opacity-20 hidden lg:block" />
+    <section className="py-14 sm:py-20 lg:py-28 bg-terracotta relative overflow-hidden">
+      <Sprig className="absolute bottom-10 left-4 w-20 h-32 text-light opacity-20 hidden lg:block" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Accountability"
           title="What WE Mean by Accountability"
           subtitle="Less of a watchdog, more of a workout partner for your life. Here's what it looks like in practice:"
+          light
         />
 
         <div className="max-w-6xl mx-auto">
@@ -79,7 +79,7 @@ export function Accountability() {
           {!mobileShowAll && hiddenCount > 0 && (
             <button
               onClick={() => setMobileShowAll(true)}
-              className="sm:hidden w-full mt-3 flex items-center justify-center gap-1.5 py-3 text-accent font-semibold text-sm hover:underline"
+              className="sm:hidden w-full mt-3 flex items-center justify-center gap-1.5 py-3 text-light font-semibold text-sm hover:underline"
             >
               Show {hiddenCount} more <ChevronDown size={16} />
             </button>

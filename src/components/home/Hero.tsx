@@ -49,7 +49,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-dark leading-[1.1]"
+            className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-heading leading-[1.1]"
           >
             The life you keep promising yourself,{" "}
             <span className="text-accent">let&apos;s actually build it.</span>

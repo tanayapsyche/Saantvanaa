@@ -19,7 +19,7 @@ export function Testimonials() {
   };
 
   return (
-    <section className="py-14 sm:py-20 lg:py-28 bg-light relative overflow-hidden">
+    <section className="py-14 sm:py-20 lg:py-28 bg-slate relative overflow-hidden">
       <LeafDecoration className="absolute -bottom-5 left-10 w-20 h-20 text-accent opacity-20 hidden lg:block" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,6 +27,7 @@ export function Testimonials() {
           label="Stories"
           title="What Members Say"
           subtitle="Real experiences from people who've walked this path."
+          light
         />
 
         {/* Desktop arrows */}
@@ -34,14 +35,14 @@ export function Testimonials() {
           <button
             onClick={() => scroll("left")}
             aria-label="Previous testimonial"
-            className="w-10 h-10 rounded-full border border-secondary/30 hover:border-accent hover:bg-accent/5 flex items-center justify-center text-accent transition-colors"
+            className="w-10 h-10 rounded-full border border-white/25 hover:border-white text-white/80 hover:bg-white/10 flex items-center justify-center transition-colors"
           >
             <ChevronLeft size={18} />
           </button>
           <button
             onClick={() => scroll("right")}
             aria-label="Next testimonial"
-            className="w-10 h-10 rounded-full border border-secondary/30 hover:border-accent hover:bg-accent/5 flex items-center justify-center text-accent transition-colors"
+            className="w-10 h-10 rounded-full border border-white/25 hover:border-white text-white/80 hover:bg-white/10 flex items-center justify-center transition-colors"
           >
             <ChevronRight size={18} />
           </button>
@@ -77,7 +78,7 @@ export function Testimonials() {
           <div className="shrink-0 w-2" aria-hidden />
         </div>
 
-        <p className="text-center text-xs text-dark-light/60 mt-4 md:hidden">
+        <p className="text-center text-xs text-white/50 mt-4 md:hidden">
           Swipe to read more →
         </p>
       </div>
