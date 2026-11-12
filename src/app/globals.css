@@ -15,9 +15,10 @@
   --color-light: #faf7f2;
   --color-warm-white: #fff9f0;
   --color-warm-bg: #f3ede4;
-  --color-earth: #5b3e2f;
-  --color-earth-deep: #3b281e;
-  --color-clay: #7a4430;
+  --color-heading: #2b0e00;
+  --color-pale-linen: #f0d5c0;
+  --color-slate: #414143;
+  --color-terracotta: #9a543a;
 
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);

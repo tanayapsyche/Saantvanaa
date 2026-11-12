@@ -139,12 +139,12 @@ export function ADHDContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-1.5 bg-earth text-light text-sm font-semibold rounded-full mb-6">
+              <span className="inline-block px-4 py-1.5 bg-accent text-white text-sm font-semibold rounded-full mb-6">
                 ADHD Support
               </span>
-              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-earth-deep leading-[1.1] mb-6">
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-dark leading-[1.1] mb-6">
                 Finally, a Place That Gets{" "}
-                <span className="text-accent-dark">How Your Brain Actually Works</span>
+                <span className="text-accent">How Your Brain Actually Works</span>
               </h1>
               <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-8 max-w-2xl">
                 You&apos;ve spent a lifetime translating yourself for everyone else. Here, you don&apos;t have to. This is built for your brain, not against it, with real support for the parts no one else sees.
@@ -189,7 +189,7 @@ export function ADHDContent() {
           {!symptomsShowAll && hiddenSymptomsCount > 0 && (
             <button
               onClick={() => setSymptomsShowAll(true)}
-              className="sm:hidden w-full mt-5 flex items-center justify-center gap-1.5 py-3 text-accent-dark font-semibold text-sm hover:underline"
+              className="sm:hidden w-full mt-5 flex items-center justify-center gap-1.5 py-3 text-accent font-semibold text-sm hover:underline"
             >
               Show {hiddenSymptomsCount} more <ChevronDown size={16} />
             </button>
@@ -208,7 +208,7 @@ export function ADHDContent() {
       </section>
 
       {/* Statistics */}
-      <section className="py-10 sm:py-16 lg:py-20 bg-earth-deep">
+      <section className="py-10 sm:py-16 lg:py-20 bg-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-secondary text-sm font-semibold uppercase tracking-wider mb-10">
             You are not alone
@@ -223,7 +223,7 @@ export function ADHDContent() {
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 className="text-center"
               >
-                <p className="text-3xl sm:text-4xl font-bold text-accent-light mb-1">{stat.number}</p>
+                <p className="text-3xl sm:text-4xl font-bold text-accent mb-1">{stat.number}</p>
                 <p className="text-light/80 text-sm leading-snug">{stat.label}</p>
                 <a
                   href={stat.href}
@@ -259,7 +259,7 @@ export function ADHDContent() {
       </section>
 
       {/* Manageable, not reversible */}
-      <section className="py-14 sm:py-20 lg:py-28 bg-gradient-to-br from-accent-dark to-clay relative overflow-hidden">
+      <section className="py-14 sm:py-20 lg:py-28 bg-gradient-to-br from-accent to-accent-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_30%,rgba(255,255,255,0.08),transparent)]" />
 
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -306,12 +306,12 @@ export function ADHDContent() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
-                className={`items-start gap-4 p-4 rounded-xl bg-white border border-secondary/30 border-l-4 border-l-accent-dark ${
+                className={`items-start gap-4 p-4 rounded-xl bg-white border border-secondary/20 ${
                   i >= HELP_MOBILE_CUTOFF && !helpShowAll ? "hidden sm:flex" : "flex"
                 }`}
               >
-                <div className="flex-shrink-0 w-6 h-6 bg-earth rounded-full flex items-center justify-center mt-0.5">
-                  <Check size={14} className="text-secondary stroke-[3]" />
+                <div className="flex-shrink-0 w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center mt-0.5">
+                  <Check size={14} className="text-accent stroke-[3]" />
                 </div>
                 <p className="text-dark-light leading-relaxed">{item}</p>
               </motion.div>
@@ -321,7 +321,7 @@ export function ADHDContent() {
           {!helpShowAll && hiddenHelpCount > 0 && (
             <button
               onClick={() => setHelpShowAll(true)}
-              className="sm:hidden w-full max-w-2xl mx-auto mt-3 flex items-center justify-center gap-1.5 py-3 text-accent-dark font-semibold text-sm hover:underline"
+              className="sm:hidden w-full max-w-2xl mx-auto mt-3 flex items-center justify-center gap-1.5 py-3 text-accent font-semibold text-sm hover:underline"
             >
               Show {hiddenHelpCount} more <ChevronDown size={16} />
             </button>
@@ -338,7 +338,7 @@ export function ADHDContent() {
             viewport={{ once: true }}
           >
             <Brain size={48} className="text-accent mx-auto mb-6" />
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-earth-deep leading-tight mb-4">
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-dark leading-tight mb-4">
               You Don&apos;t Have to Figure This Out Alone
             </h2>
             <p className="text-lg text-dark-light mb-8 max-w-xl mx-auto">

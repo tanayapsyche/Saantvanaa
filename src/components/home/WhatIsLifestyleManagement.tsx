@@ -29,13 +29,14 @@ const highlights = [
 
 export function WhatIsLifestyleManagement() {
   return (
-    <section className="py-14 sm:py-20 lg:py-28 bg-white relative overflow-hidden">
+    <section className="py-14 sm:py-20 lg:py-28 bg-pale-linen relative overflow-hidden">
       <OrganicBlob className="absolute -bottom-32 -left-32 w-80 h-80 text-secondary opacity-25 hidden md:block" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="What We Do"
           title="More Than Coaching. More Than Therapy."
           subtitle="Most coaching gives you a plan. Most therapy gives you understanding. Lifestyle Management is the rare space that gives you both, with someone walking beside you the whole way."
+          titleClassName="text-heading"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -46,12 +47,12 @@ export function WhatIsLifestyleManagement() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-warm-bg rounded-2xl p-8 border border-secondary/40 border-t-4 border-t-accent-dark hover:shadow-lg transition-shadow"
+              className="bg-warm-bg rounded-2xl p-8 border border-secondary/30 hover:shadow-lg transition-shadow"
             >
-              <div className="w-12 h-12 bg-earth rounded-xl flex items-center justify-center mb-5">
-                <item.icon size={24} className="text-secondary" />
+              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+                <item.icon size={24} className="text-accent" />
               </div>
-              <h3 className="font-display text-xl font-bold text-earth-deep mb-3">{item.title}</h3>
+              <h3 className="font-display text-xl font-bold text-dark mb-3">{item.title}</h3>
               <ExpandableParagraph intro={item.intro} rest={item.rest} className="!mb-0 !text-[15px]" />
             </motion.div>
           ))}

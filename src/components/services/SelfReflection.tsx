@@ -94,7 +94,7 @@ export function SelfReflection() {
                         key={item.id}
                         className={`group flex items-start gap-4 rounded-2xl border-2 p-4 sm:p-5 cursor-pointer transition-colors focus-within:ring-2 focus-within:ring-accent focus-within:ring-offset-2 focus-within:ring-offset-warm-bg ${
                           checked
-                            ? "bg-earth border-earth text-light"
+                            ? "bg-accent-dark border-accent-dark text-white"
                             : "bg-white border-secondary/40 text-dark hover:border-accent"
                         }`}
                       >
@@ -107,7 +107,7 @@ export function SelfReflection() {
                         <span
                           aria-hidden
                           className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 transition-colors ${
-                            checked ? "bg-secondary border-secondary text-earth-deep" : "border-accent-dark bg-white"
+                            checked ? "bg-secondary border-secondary text-accent-dark" : "border-accent-dark bg-white"
                           }`}
                         >
                           {checked && <Check size={14} strokeWidth={3} />}
@@ -119,7 +119,7 @@ export function SelfReflection() {
                 </div>
               </fieldset>
 
-              <div className="sticky bottom-3 z-10 mt-8 rounded-2xl bg-earth-deep p-4 shadow-xl flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+              <div className="sticky bottom-3 z-10 mt-8 rounded-2xl bg-accent-dark p-4 shadow-xl flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
                 <div className="flex-1" role="status" aria-live="polite">
                   <p className="text-sm font-semibold text-light">
                     {count} of {TOTAL} selected
@@ -131,7 +131,7 @@ export function SelfReflection() {
                     />
                   </div>
                 </div>
-                <Button variant="light" onClick={() => reveal(true)} className="w-full sm:w-auto">
+                <Button variant="secondary" onClick={() => reveal(true)} className="w-full sm:w-auto">
                   See My Results <ArrowRight size={16} className="ml-2" />
                 </Button>
               </div>
@@ -149,12 +149,12 @@ export function SelfReflection() {
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="rounded-3xl bg-earth-deep text-light p-6 sm:p-10 shadow-xl relative overflow-hidden">
+              <div className="rounded-3xl bg-accent-dark text-light p-6 sm:p-10 shadow-xl relative overflow-hidden">
                 <LeafDecoration className="absolute -top-4 -right-4 w-28 h-28 text-secondary opacity-30" />
 
                 <p className="text-sm font-semibold tracking-wider uppercase text-secondary">Your reflection</p>
                 <div className="mt-4 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-                  <div className="flex h-24 w-24 shrink-0 flex-col items-center justify-center rounded-full border-4 border-secondary bg-earth">
+                  <div className="flex h-24 w-24 shrink-0 flex-col items-center justify-center rounded-full border-4 border-secondary bg-accent">
                     <span className="font-display text-3xl font-bold leading-none">{score}</span>
                     <span className="text-xs text-light/80 mt-1">of {TOTAL}</span>
                   </div>
@@ -179,7 +179,7 @@ export function SelfReflection() {
                     <h4 className="font-display text-xl font-bold text-secondary">Where you may be feeling it most</h4>
                     <ul className="mt-4 space-y-4">
                       {areaCounts.map((a) => (
-                        <li key={a.key} className="rounded-2xl bg-earth p-4 sm:p-5">
+                        <li key={a.key} className="rounded-2xl bg-accent p-4 sm:p-5">
                           <p className="font-semibold text-light">
                             {a.name}{" "}
                             <span className="font-normal text-light/75 text-sm">
@@ -198,7 +198,7 @@ export function SelfReflection() {
                 )}
 
                 <div className="mt-8 rounded-2xl bg-warm-white p-5 sm:p-6 text-dark">
-                  <h4 className="font-display text-xl font-bold text-earth-deep">
+                  <h4 className="font-display text-xl font-bold text-dark">
                     How Santwanaa could support you
                   </h4>
                   <p className="mt-2 text-dark-light leading-relaxed">
