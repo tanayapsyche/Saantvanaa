@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="mb-10">
-      <h2 className="font-serif text-xl sm:text-2xl font-bold text-dark mb-4 pb-2 border-b border-secondary/25">
+      <h2 className="font-serif text-xl sm:text-2xl font-bold text-dark mb-4 pb-2 border-b border-dark/25">
         {title}
       </h2>
-      <div className="text-dark-light leading-relaxed space-y-3">{children}</div>
+      <div className="text-dark/70 leading-relaxed space-y-3">{children}</div>
     </section>
   );
 }
@@ -33,13 +33,13 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Header */}
-      <div className="bg-warm-bg border-b border-secondary/20">
+      <div className="bg-warm-bg border-b border-dark/20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-xs font-bold uppercase tracking-wider rounded-full mb-4">
             Legal
           </span>
           <h1 className="font-serif text-3xl sm:text-4xl font-bold text-dark mb-3">Privacy Policy</h1>
-          <p className="text-dark-light text-sm">
+          <p className="text-dark/70 text-sm">
             Effective date: {effectiveDate} &nbsp;·&nbsp; Last updated: {effectiveDate}
           </p>
         </div>
@@ -281,7 +281,7 @@ export default function PrivacyPolicyPage() {
           </div>
         </Section>
 
-        <div className="mt-10 pt-8 border-t border-secondary/20 text-xs text-dark-light">
+        <div className="mt-10 pt-8 border-t border-dark/20 text-xs text-dark/70">
           <p>
             This privacy policy was drafted to comply with the{" "}
             <strong>Digital Personal Data Protection Act, 2023</strong>,{" "}

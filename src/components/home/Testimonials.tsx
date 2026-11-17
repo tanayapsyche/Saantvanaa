@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TESTIMONIALS } from "@/lib/constants";
-import { LeafDecoration } from "@/components/ui/Decorations";
 
 export function Testimonials() {
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -19,10 +18,8 @@ export function Testimonials() {
   };
 
   return (
-    <section className="py-14 sm:py-20 lg:py-28 bg-slate relative overflow-hidden">
-      <LeafDecoration className="absolute -bottom-5 left-10 w-20 h-20 text-accent opacity-20 hidden lg:block" />
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-14 sm:py-20 lg:py-28 bg-dark">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Stories"
           title="What Members Say"
@@ -62,15 +59,15 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: (i % 3) * 0.08 }}
-              className="snap-start shrink-0 w-[300px] sm:w-[340px] bg-white rounded-2xl p-7 border border-secondary/20 flex flex-col"
+              className="snap-start shrink-0 w-[300px] sm:w-[340px] bg-white rounded-2xl p-7 border border-dark/20 flex flex-col"
             >
-              <Quote size={28} className="text-secondary/50 mb-3" />
-              <p className="text-dark-light leading-relaxed mb-5 italic flex-1">
+              <Quote size={28} className="text-accent/50 mb-3" />
+              <p className="text-dark/70 leading-relaxed mb-5 italic flex-1">
                 &ldquo;{item.quote}&rdquo;
               </p>
               <div>
                 <p className="font-semibold text-dark">{item.name}</p>
-                <p className="text-sm text-dark-light">{item.role}</p>
+                <p className="text-sm text-dark/70">{item.role}</p>
               </div>
             </motion.div>
           ))}

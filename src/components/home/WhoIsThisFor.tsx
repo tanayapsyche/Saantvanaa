@@ -11,7 +11,7 @@ const items = [
     description:
       "You want to build a healthier routine with better sleep, exercise, focus, or productivity but struggle to make it stick on your own.",
     icon: Sprout,
-    color: "bg-green/10 text-green",
+    color: "bg-accent/10 text-accent",
   },
   {
     title: "Breaking Unhealthy Patterns",
@@ -25,14 +25,14 @@ const items = [
     description:
       "You're a high functioning person with ADHD who struggles with sustained attention, last minute pressure, overwhelm, and the guilt that follows.",
     icon: Brain,
-    color: "bg-secondary/30 text-accent",
+    color: "bg-accent/30 text-accent",
   },
   {
     title: "Dealing with Brain Fog",
     description:
       "You often feel mentally cloudy, scattered, or unable to think clearly. Simple decisions feel heavy and you find yourself staring at your screen without processing anything.",
     icon: Cloud,
-    color: "bg-green/10 text-green",
+    color: "bg-accent/10 text-accent",
   },
   {
     title: "Wanting Someone in Your Corner",
@@ -46,7 +46,7 @@ const items = [
 export function WhoIsThisFor() {
   return (
     <section className="py-14 sm:py-20 lg:py-28 bg-light relative overflow-hidden">
-      <LeafDecoration className="absolute top-10 right-10 w-24 h-24 text-green opacity-30 hidden lg:block" />
+      <LeafDecoration className="absolute top-10 right-10 w-24 h-24 text-accent opacity-30 hidden lg:block" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
@@ -63,13 +63,13 @@ export function WhoIsThisFor() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="relative bg-white rounded-2xl p-7 border border-secondary/20 hover:border-green/30 transition-all hover:shadow-md group"
+              className="relative bg-white rounded-2xl p-7 border border-dark/20 hover:border-accent/30 transition-all hover:shadow-md group"
             >
               <div className={`w-12 h-12 ${item.color} rounded-2xl flex items-center justify-center mb-4`}>
                 <item.icon size={24} />
               </div>
               <h3 className="font-serif text-lg font-bold text-dark mb-2">{item.title}</h3>
-              <p className="text-dark-light leading-relaxed text-[15px]">{item.description}</p>
+              <p className="text-dark/70 leading-relaxed text-[15px]">{item.description}</p>
             </motion.div>
           ))}
         </div>

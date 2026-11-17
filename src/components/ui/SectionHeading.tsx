@@ -11,7 +11,7 @@ export function SectionHeading({ label, title, subtitle, centered = true, light 
   return (
     <div className={`max-w-2xl ${centered ? "mx-auto text-center" : ""} mb-12 lg:mb-16`}>
       {label && (
-        <span className={`inline-block text-sm font-semibold tracking-wider uppercase mb-3 ${light ? "text-secondary" : "text-accent"}`}>
+        <span className="inline-block text-sm font-semibold tracking-wider uppercase mb-3 text-accent">
           {label}
         </span>
       )}
@@ -19,7 +19,7 @@ export function SectionHeading({ label, title, subtitle, centered = true, light 
         {title}
       </h2>
       {subtitle && (
-        <p className={`mt-4 text-lg leading-relaxed ${light ? "text-light/70" : "text-dark-light"}`}>
+        <p className={`mt-4 text-lg leading-relaxed ${light ? "text-light/70" : "text-dark/70"}`}>
           {subtitle}
         </p>
       )}

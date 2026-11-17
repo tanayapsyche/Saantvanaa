@@ -42,7 +42,7 @@ export function ContactContent() {
                 Some things shouldn&apos;t be{" "}
                 <span className="text-accent">carried alone.</span>
               </h1>
-              <p className="mt-5 text-base sm:text-lg text-dark-light max-w-xl leading-relaxed">
+              <p className="mt-5 text-base sm:text-lg text-dark/70 max-w-xl leading-relaxed">
                 Whatever&apos;s been sitting heavy on you, start by saying it out loud. The first conversation is free, gentle, and entirely on your terms.
               </p>
             </motion.div>
@@ -66,7 +66,7 @@ export function ContactContent() {
                     <Mail size={18} className="text-accent" />
                   </div>
                   <div>
-                    <p className="text-sm text-dark-light">Email</p>
+                    <p className="text-sm text-dark/70">Email</p>
                     <a
                       href={`mailto:${CONTACT_EMAIL}`}
                       className="text-dark font-medium hover:text-accent transition-colors"
@@ -81,7 +81,7 @@ export function ContactContent() {
                     <Phone size={18} className="text-accent" />
                   </div>
                   <div>
-                    <p className="text-sm text-dark-light">Phone</p>
+                    <p className="text-sm text-dark/70">Phone</p>
                     <a
                       href={`tel:${CONTACT_PHONE.replace(/\s/g, "")}`}
                       className="text-dark font-medium hover:text-accent transition-colors"
@@ -96,15 +96,15 @@ export function ContactContent() {
                     <MapPin size={18} className="text-accent" />
                   </div>
                   <div>
-                    <p className="text-sm text-dark-light">Sessions</p>
+                    <p className="text-sm text-dark/70">Sessions</p>
                     <p className="text-dark font-medium">Online via Video Call</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-10 p-6 bg-warm-bg rounded-2xl border border-secondary/25">
+              <div className="mt-10 p-6 bg-warm-bg rounded-2xl border border-dark/25">
                 <h3 className="font-semibold text-dark mb-2">What happens next?</h3>
-                <ol className="space-y-2 text-sm text-dark-light">
+                <ol className="space-y-2 text-sm text-dark/70">
                   <li className="flex gap-2">
                     <span className="font-semibold text-accent">1.</span>
                     Book a slot or send a message

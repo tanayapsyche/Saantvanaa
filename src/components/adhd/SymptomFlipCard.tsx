@@ -42,10 +42,10 @@ export function SymptomFlipCard({ label, name, text, index, frontLabel = "What y
         >
           {/* FRONT — "What you thought it was" */}
           <div
-            className="absolute inset-0 bg-warm-bg border-2 border-secondary/30 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:border-accent/40 hover:shadow-md transition-all"
+            className="absolute inset-0 bg-warm-bg border-2 border-dark/30 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:border-accent/40 hover:shadow-md transition-all"
             style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
           >
-            <p className="text-[10.5px] font-bold tracking-wider uppercase text-dark-light/70 mb-5">
+            <p className="text-[10.5px] font-bold tracking-wider uppercase text-dark/70 mb-5">
               {frontLabel}
             </p>
             <p

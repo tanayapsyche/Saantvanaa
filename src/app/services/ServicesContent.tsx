@@ -68,7 +68,7 @@ export function ServicesContent() {
                 Not another programme.{" "}
                 <span className="text-accent">Yours.</span>
               </h1>
-              <p className="mt-6 text-base sm:text-xl text-dark-light leading-relaxed">
+              <p className="mt-6 text-base sm:text-xl text-dark/70 leading-relaxed">
                 You&apos;ve already tried the one size fits all method. It didn&apos;t fit. This is built around your routine, your patterns, your real life, with someone walking beside you the whole way.
               </p>
             </motion.div>
@@ -77,7 +77,7 @@ export function ServicesContent() {
       </section>
 
       {/* Editorial Process Timeline */}
-      <section className="py-20 lg:py-32 bg-slate relative overflow-hidden">
+      <section className="py-20 lg:py-32 bg-dark relative overflow-hidden">
         <LeafDecoration className="absolute top-24 right-0 w-24 h-24 text-accent opacity-15 hidden lg:block" />
         <BranchDecoration className="absolute -left-10 bottom-10 w-24 h-56 text-accent opacity-12 hidden lg:block" />
 
@@ -145,7 +145,7 @@ export function ServicesContent() {
       <SelfReflection />
 
       {/* Pricing */}
-      <section className="py-14 sm:py-20 lg:py-28 bg-slate relative overflow-hidden">
+      <section className="py-14 sm:py-20 lg:py-28 bg-dark relative overflow-hidden">
         <SunburstDecoration className="absolute -top-20 -right-20 w-[400px] h-[400px] text-accent opacity-15" />
         <BranchDecoration className="absolute -right-8 bottom-20 w-24 h-56 text-accent opacity-15 hidden lg:block rotate-180" />
         <FlowerInVase className="absolute top-20 left-4 w-20 h-32 text-light opacity-20 hidden lg:block" />
@@ -170,7 +170,7 @@ export function ServicesContent() {
                 className={`rounded-2xl p-8 border-2 relative flex flex-col ${
                   tier.highlighted
                     ? "border-accent bg-accent/5 shadow-xl scale-[1.02]"
-                    : "border-secondary/25 bg-white"
+                    : "border-dark/25 bg-white"
                 }`}
               >
                 {tier.highlighted && (
@@ -188,22 +188,22 @@ export function ServicesContent() {
                   <div className="mt-5">
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="font-display text-4xl font-bold text-dark">{tier.priceINR}</span>
-                      <span className="text-dark-light text-sm">{tier.period}</span>
+                      <span className="text-dark/70 text-sm">{tier.period}</span>
                     </div>
-                    <div className="mt-1 flex items-baseline justify-center gap-1 text-dark-light">
+                    <div className="mt-1 flex items-baseline justify-center gap-1 text-dark/70">
                       <span className="text-sm">or</span>
                       <span className="text-lg font-semibold text-dark">{tier.priceUSD}</span>
                       <span className="text-xs">{tier.period}</span>
                     </div>
                   </div>
 
-                  <p className="text-sm text-dark-light mt-4 italic md:min-h-[2.5rem]">{tier.description}</p>
+                  <p className="text-sm text-dark/70 mt-4 italic md:min-h-[2.5rem]">{tier.description}</p>
                 </div>
 
                 {/* Best for */}
-                <div className="bg-accent/8 rounded-xl p-4 mb-6 border border-secondary/20 md:min-h-[9rem]">
+                <div className="bg-accent/8 rounded-xl p-4 mb-6 border border-dark/20 md:min-h-[9rem]">
                   <p className="text-xs font-bold text-accent uppercase tracking-wider mb-2">Best for you if</p>
-                  <p className="text-sm text-dark-light leading-relaxed">{tier.bestFor}</p>
+                  <p className="text-sm text-dark/70 leading-relaxed">{tier.bestFor}</p>
                 </div>
 
                 {/* What's included */}
@@ -215,7 +215,7 @@ export function ServicesContent() {
                         <div className="flex-shrink-0 w-4 h-4 rounded-full bg-accent/15 flex items-center justify-center mt-0.5">
                           <Check size={10} className="text-accent stroke-[3]" />
                         </div>
-                        <span className="text-sm text-dark-light leading-snug">{feature}</span>
+                        <span className="text-sm text-dark/70 leading-snug">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -230,7 +230,7 @@ export function ServicesContent() {
                           <p className="text-[13px] font-semibold text-dark mb-1 leading-snug">
                             {tier.addon.title}
                           </p>
-                          <p className="text-[12.5px] text-dark-light leading-relaxed">
+                          <p className="text-[12.5px] text-dark/70 leading-relaxed">
                             {tier.addon.text}
                           </p>
                         </div>
@@ -256,7 +256,7 @@ export function ServicesContent() {
             </div>
             <div className="flex-1">
               <h3 className="font-serif text-xl font-bold text-dark">Just need to talk?</h3>
-              <p className="text-dark-light text-sm sm:text-base mt-1">
+              <p className="text-dark/70 text-sm sm:text-base mt-1">
                 Not ready for a month-long plan? Book a single psychotherapy session with a qualified psychologist for a vent, a first taste of therapy, or ongoing support at your own pace. Confidential, online, and no plan to sign up for.
               </p>
             </div>

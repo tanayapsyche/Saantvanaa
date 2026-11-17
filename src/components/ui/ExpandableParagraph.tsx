@@ -25,7 +25,7 @@ export function ExpandableParagraph({
 
   return (
     <p
-      className={`text-base sm:text-lg text-dark-light leading-relaxed mb-4 ${className}`}
+      className={`text-base sm:text-lg text-dark/70 leading-relaxed mb-4 ${className}`}
     >
       {intro}{" "}
       <span className={open ? "inline" : "hidden sm:inline"}>{rest}</span>

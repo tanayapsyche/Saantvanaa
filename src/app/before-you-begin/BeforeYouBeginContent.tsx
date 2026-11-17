@@ -64,7 +64,7 @@ export function BeforeYouBeginContent() {
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-dark leading-[1.1]">
                 The questions you&apos;re afraid to ask, answered honestly.
               </h1>
-              <p className="mt-6 text-base sm:text-lg text-dark-light leading-relaxed max-w-xl">
+              <p className="mt-6 text-base sm:text-lg text-dark/70 leading-relaxed max-w-xl">
                 Before you commit to anything, here&apos;s space to address the worries that usually go unspoken. The &ldquo;what if I&apos;m not ready&rdquo; ones. The &ldquo;what if I quit&rdquo; ones. No sugar coating, no scripts.
               </p>
             </motion.div>
@@ -79,7 +79,7 @@ export function BeforeYouBeginContent() {
 
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative mb-6">
-            <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-dark-light/60" />
+            <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-dark/60" />
             <input
               type="search"
               value={query}
@@ -89,7 +89,7 @@ export function BeforeYouBeginContent() {
               }}
               placeholder="Type your worry, e.g. “quit” or “therapy”"
               aria-label="Search questions"
-              className="w-full pl-11 pr-4 py-3.5 rounded-full bg-white border-2 border-secondary/25 focus:border-accent/50 focus:outline-none text-dark placeholder:text-dark-light/50"
+              className="w-full pl-11 pr-4 py-3.5 rounded-full bg-white border-2 border-dark/25 focus:border-accent/50 focus:outline-none text-dark placeholder:text-dark/50"
             />
           </div>
 
@@ -107,7 +107,7 @@ export function BeforeYouBeginContent() {
                 className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
                   category === tab.id && !query.trim()
                     ? "bg-accent text-white"
-                    : "bg-white text-dark-light border border-secondary/30 hover:border-accent/40"
+                    : "bg-white text-dark/70 border border-dark/30 hover:border-accent/40"
                 }`}
               >
                 {tab.label}
@@ -117,7 +117,7 @@ export function BeforeYouBeginContent() {
 
           <div className="space-y-3">
             {visible.length === 0 && (
-              <p className="text-center text-dark-light py-10">
+              <p className="text-center text-dark/70 py-10">
                 Nothing matched that. Try another word, or bring it to the free discovery call below.
               </p>
             )}
@@ -127,7 +127,7 @@ export function BeforeYouBeginContent() {
                 <div
                   key={item.question}
                   className={`bg-white rounded-2xl overflow-hidden border-2 transition-colors ${
-                    isOpen ? "border-accent/40 shadow-md" : "border-secondary/25 hover:border-accent/25"
+                    isOpen ? "border-accent/40 shadow-md" : "border-dark/25 hover:border-accent/25"
                   }`}
                 >
                   <button
@@ -156,7 +156,7 @@ export function BeforeYouBeginContent() {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.25 }}
                       >
-                        <div className="px-5 sm:px-6 pb-6 sm:pl-20 text-dark-light leading-relaxed">
+                        <div className="px-5 sm:px-6 pb-6 sm:pl-20 text-dark/70 leading-relaxed">
                           {item.answer}
                         </div>
                       </motion.div>
@@ -173,7 +173,7 @@ export function BeforeYouBeginContent() {
             </div>
             <div className="flex-1">
               <p className="font-serif text-lg font-bold text-dark">Still have a question?</p>
-              <p className="text-sm text-dark-light">No question is too small or too personal. Ask us directly.</p>
+              <p className="text-sm text-dark/70">No question is too small or too personal. Ask us directly.</p>
             </div>
             <Button href="/contact#contact-details" variant="outline" size="sm">
               Ask us

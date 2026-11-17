@@ -88,7 +88,7 @@ export function ADHDQuiz() {
 
   return (
     <div className="max-w-3xl mx-auto">
-      <div className="bg-white rounded-3xl p-8 sm:p-10 border border-secondary/25 shadow-sm">
+      <div className="bg-white rounded-3xl p-8 sm:p-10 border border-dark/25 shadow-sm">
         <div className="text-center mb-8">
           <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent text-xs font-bold rounded-full mb-4 uppercase tracking-wider">
             Relatability Check
@@ -96,7 +96,7 @@ export function ADHDQuiz() {
           <h3 className="font-display text-3xl sm:text-4xl font-bold text-dark mb-3 leading-tight">
             Does This Sound Like You?
           </h3>
-          <p className="text-dark-light leading-relaxed max-w-xl mx-auto text-[15px]">
+          <p className="text-dark/70 leading-relaxed max-w-xl mx-auto text-[15px]">
             A little just for fun self relatability checklist. Tick the ones that feel true for you and see how much resonates. Not a diagnosis, just a chance to feel a little more seen.
           </p>
         </div>
@@ -110,15 +110,15 @@ export function ADHDQuiz() {
                 onClick={() => toggleAnswer(i)}
                 disabled={submitted}
                 className={`w-full flex items-start gap-4 p-4 rounded-xl text-left transition-all ${
-                  on ? "bg-accent/8 border-2 border-accent" : "bg-warm-bg border-2 border-secondary/15 hover:border-secondary/40"
+                  on ? "bg-accent/8 border-2 border-accent" : "bg-warm-bg border-2 border-dark/15 hover:border-dark/40"
                 } ${submitted ? "cursor-default" : "cursor-pointer"}`}
               >
                 <div className={`flex-shrink-0 w-6 h-6 rounded-md flex items-center justify-center mt-0.5 transition-all ${
-                  on ? "bg-accent" : "bg-white border-2 border-secondary/40"
+                  on ? "bg-accent" : "bg-white border-2 border-dark/40"
                 }`}>
                   {on && <Check size={14} className="text-white stroke-[3]" />}
                 </div>
-                <span className={`text-[15px] leading-relaxed ${on ? "text-dark font-medium" : "text-dark-light"}`}>
+                <span className={`text-[15px] leading-relaxed ${on ? "text-dark font-medium" : "text-dark/70"}`}>
                   {q}
                 </span>
               </button>
@@ -132,12 +132,12 @@ export function ADHDQuiz() {
               <button
                 onClick={handleSubmit}
                 disabled={selected.size === 0}
-                className="inline-flex items-center justify-center px-8 py-3.5 bg-accent text-white font-semibold rounded-full hover:bg-accent-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex items-center justify-center px-8 py-3.5 bg-accent text-white font-semibold rounded-full hover:bg-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 See My Reflection ({selected.size} selected)
               </button>
               {selected.size > 0 && (
-                <button onClick={() => { setSelected(new Set()); }} className="text-sm text-dark-light hover:text-accent transition-colors">
+                <button onClick={() => { setSelected(new Set()); }} className="text-sm text-dark/70 hover:text-accent transition-colors">
                   Start over
                 </button>
               )}
@@ -161,7 +161,7 @@ export function ADHDQuiz() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
-            className="mt-8 bg-gradient-to-br from-secondary-light/40 to-warm-bg rounded-3xl p-8 sm:p-10 border border-secondary/30"
+            className="mt-8 bg-gradient-to-br from-warm-bg/40 to-warm-bg rounded-3xl p-8 sm:p-10 border border-dark/30"
           >
             <div className="text-center">
               <div className="text-5xl mb-4">{result.emoji}</div>
@@ -171,7 +171,7 @@ export function ADHDQuiz() {
               <h3 className="font-display text-3xl font-bold text-dark mb-4 leading-tight">
                 {result.title}
               </h3>
-              <p className="text-dark-light leading-relaxed max-w-xl mx-auto mb-8">
+              <p className="text-dark/70 leading-relaxed max-w-xl mx-auto mb-8">
                 {result.message}
               </p>
               {result.showCta && (
@@ -179,7 +179,7 @@ export function ADHDQuiz() {
                   <Button href="/contact#contact-details" size="lg">Let&apos;s Talk About It</Button>
                 </div>
               )}
-              <p className="text-xs text-dark-light/60 mt-4 max-w-md mx-auto italic">
+              <p className="text-xs text-dark/60 mt-4 max-w-md mx-auto italic">
                 This is a self reflection exercise based on themes from validated screening frameworks.
                 It is not a diagnosis.
               </p>

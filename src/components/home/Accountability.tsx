@@ -4,7 +4,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { UserCheck, Eye, PartyPopper, LifeBuoy, HelpingHand, ChevronDown } from "lucide-react";
-import { Sprig } from "@/components/ui/Decorations";
 
 const MOBILE_CUTOFF = 3;
 
@@ -41,10 +40,8 @@ export function Accountability() {
   const hiddenCount = aspects.length - MOBILE_CUTOFF;
 
   return (
-    <section className="py-14 sm:py-20 lg:py-28 bg-terracotta relative overflow-hidden">
-      <Sprig className="absolute bottom-10 left-4 w-20 h-32 text-light opacity-20 hidden lg:block" />
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-14 sm:py-20 lg:py-28 bg-accent">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Accountability"
           title="What WE Mean by Accountability"
@@ -61,7 +58,7 @@ export function Accountability() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className={`bg-white rounded-2xl p-5 sm:p-6 border border-secondary/25 hover:border-accent/35 transition-all hover:shadow-md flex-col items-center text-center h-full ${
+                className={`bg-white rounded-2xl p-5 sm:p-6 border border-dark/10 hover:shadow-md transition-all flex-col items-center text-center h-full ${
                   i >= MOBILE_CUTOFF && !mobileShowAll ? "hidden sm:flex" : "flex"
                 }`}
               >
@@ -71,7 +68,7 @@ export function Accountability() {
                 <h3 className="font-semibold text-dark text-[15px] mb-2 leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-dark-light text-sm leading-relaxed">{item.line}</p>
+                <p className="text-dark/70 text-sm leading-relaxed">{item.line}</p>
               </motion.div>
             ))}
           </div>

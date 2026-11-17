@@ -5,7 +5,6 @@ import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { Target, Heart, Shield, GraduationCap } from "lucide-react";
-import { LeafDecoration, DotsPattern, OrganicBlob } from "@/components/ui/Decorations";
 import { ExpandableParagraph } from "@/components/ui/ExpandableParagraph";
 
 const researchItems = [
@@ -74,11 +73,8 @@ export function AboutContent() {
   return (
     <>
       {/* Hero */}
-      <section className="py-14 sm:py-20 lg:py-28 bg-gradient-to-br from-light to-secondary-light/20 relative overflow-hidden">
-        <DotsPattern className="absolute top-10 left-10 w-32 h-32 text-accent hidden lg:block" />
-        <OrganicBlob className="absolute -bottom-32 -right-24 w-96 h-96 text-secondary opacity-30 hidden md:block" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 sm:py-20 lg:py-28 bg-warm-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -92,7 +88,7 @@ export function AboutContent() {
               <p className="text-[12px] sm:text-sm font-semibold tracking-wide text-accent/90 mb-6">
                 An Educational Psychologist · A Neurodivergent Psychotherapist · Your Lifestyle Coach
               </p>
-              <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-4">
+              <p className="text-base sm:text-lg text-dark/70 leading-relaxed mb-4">
                 Whatever quietly brought you here, whether it&apos;s curiosity, a wish for change without a plan, or simply a search for something different, you&apos;re welcome here.
               </p>
               <ExpandableParagraph
@@ -103,7 +99,7 @@ export function AboutContent() {
                 intro="Wanting to feel a little more like yourself is a wonderful place to begin."
                 rest="I'm here to walk beside you with care and curiosity, as you grow, with intention, into the next, gentler version of yourself."
               />
-              <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-8">
+              <p className="text-base sm:text-lg text-dark/70 leading-relaxed mb-8">
                 If any of this sounds like what you&apos;ve been quietly looking for, let&apos;s just talk.
               </p>
 
@@ -116,7 +112,6 @@ export function AboutContent() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <LeafDecoration className="absolute -top-6 -right-6 w-20 h-20 text-accent opacity-40 z-10" />
               {/* Tanaya's portrait */}
               <div className="relative aspect-[3/4] w-full max-w-md mx-auto lg:ml-auto rounded-3xl overflow-hidden shadow-xl border-4 border-white">
                 <Image
@@ -147,7 +142,7 @@ export function AboutContent() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="prose prose-lg text-dark-light leading-relaxed space-y-5 text-center"
+              className="prose prose-lg text-dark/70 leading-relaxed space-y-5 text-center"
             >
               <ExpandableParagraph
                 intro="Every week, people download habit trackers, buy planners, and make promises to themselves."
@@ -188,7 +183,7 @@ export function AboutContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-accent-dark rounded-2xl p-6 border border-accent-dark shadow-md"
+                  className="bg-dark rounded-2xl p-6 shadow-md"
                 >
                   <div className="flex items-baseline gap-2 mb-3">
                     <span className="font-serif text-3xl font-bold text-white">{item.stat}</span>
@@ -204,7 +199,7 @@ export function AboutContent() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block text-[11px] text-secondary hover:text-white underline underline-offset-2 decoration-secondary/40 hover:decoration-white leading-snug transition-colors"
+                    className="inline-block text-[11px] text-accent hover:text-white underline underline-offset-2 decoration-accent/40 hover:decoration-white leading-snug transition-colors"
                   >
                     {item.citation}
                   </a>
@@ -216,10 +211,8 @@ export function AboutContent() {
       </section>
 
       {/* Values */}
-      <section className="py-14 sm:py-20 lg:py-28 bg-light relative overflow-hidden">
-        <LeafDecoration className="absolute bottom-10 right-10 w-24 h-24 text-accent opacity-20 hidden lg:block" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 sm:py-20 lg:py-28 bg-warm-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Values"
             title="The Values We Stand For"
@@ -240,7 +233,7 @@ export function AboutContent() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-dark mb-1">{item.title}</h3>
-                  <p className="text-dark-light text-sm leading-relaxed">{item.text}</p>
+                  <p className="text-dark/70 text-sm leading-relaxed">{item.text}</p>
                 </div>
               </motion.div>
             ))}

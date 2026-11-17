@@ -12,7 +12,7 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-light/80 backdrop-blur-md border-b border-secondary/20">
+    <header className="sticky top-0 z-50 bg-light/80 backdrop-blur-md border-b border-dark/20">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[72px] lg:h-24">
         <BrandLogo />
 
@@ -24,7 +24,7 @@ export function Navbar() {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 pathname === link.href
                   ? "bg-accent/10 text-accent"
-                  : "text-dark-light hover:text-dark hover:bg-secondary/20"
+                  : "text-dark/70 hover:text-dark hover:bg-accent/20"
               }`}
             >
               {link.label}
@@ -32,7 +32,7 @@ export function Navbar() {
           ))}
           <Link
             href="/contact#contact-details"
-            className="ml-2 px-5 py-2.5 bg-accent text-white rounded-full text-sm font-semibold hover:bg-accent-dark transition-colors"
+            className="ml-2 px-5 py-2.5 bg-accent text-white rounded-full text-sm font-semibold hover:bg-dark transition-colors"
           >
             Book Free Call
           </Link>
@@ -48,7 +48,7 @@ export function Navbar() {
       </nav>
 
       {mobileOpen && (
-        <div className="md:hidden border-t border-secondary/20 bg-light">
+        <div className="md:hidden border-t border-dark/20 bg-light">
           <div className="px-4 py-4 space-y-1">
             {NAV_LINKS.map((link) => (
               <Link
@@ -58,7 +58,7 @@ export function Navbar() {
                 className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                   pathname === link.href
                     ? "bg-accent/10 text-accent"
-                    : "text-dark-light hover:bg-secondary/15"
+                    : "text-dark/70 hover:bg-accent/15"
                 }`}
               >
                 {link.label}

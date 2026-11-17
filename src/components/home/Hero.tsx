@@ -4,12 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
-import {
-  LeafDecoration,
-  FlowerInVase,
-  Sapling,
-  OrganicBlob,
-} from "@/components/ui/Decorations";
 
 export function Hero() {
   return (
@@ -23,15 +17,9 @@ export function Hero() {
           className="object-cover"
           priority
         />
-        {/* Strong warm overlay to keep everything in brand palette */}
-        <div className="absolute inset-0 bg-gradient-to-r from-warm-bg/92 via-warm-bg/75 to-secondary-light/40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-light/20 via-transparent to-warm-bg/45" />
+        {/* Warm overlay to keep everything in brand palette */}
+        <div className="absolute inset-0 bg-warm-bg/80" />
       </div>
-
-      <OrganicBlob className="absolute -top-24 -right-24 w-[420px] h-[420px] text-accent opacity-15 hidden md:block" />
-      <Sapling className="absolute top-1/2 -translate-y-1/2 right-24 w-56 h-60 text-accent opacity-40 hidden xl:block" />
-      <LeafDecoration className="absolute top-20 right-10 w-28 h-28 text-accent opacity-25 hidden lg:block" />
-      <FlowerInVase className="absolute bottom-10 right-4 w-24 h-36 text-accent opacity-30 hidden xl:block" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-28 lg:py-40">
         <div className="max-w-2xl">
@@ -49,7 +37,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-heading leading-[1.1]"
+            className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-dark leading-[1.1]"
           >
             The life you keep promising yourself,{" "}
             <span className="text-accent">let&apos;s actually build it.</span>
@@ -59,7 +47,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 text-base sm:text-xl text-dark-light leading-relaxed"
+            className="mt-6 text-base sm:text-xl text-dark/70 leading-relaxed"
           >
             You&apos;ve tried the planners. You&apos;ve made the lists. By week three,
             something always slips. Santwanaa is where habit coaching meets emotional
@@ -83,7 +71,7 @@ export function Hero() {
                 <span className="block font-semibold text-dark text-sm sm:text-base">
                   Not sure where to start?
                 </span>
-                <span className="block text-dark-light text-xs sm:text-sm">
+                <span className="block text-dark/70 text-xs sm:text-sm">
                   Book a free call, no pressure.
                 </span>
               </span>

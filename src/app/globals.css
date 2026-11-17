@@ -1,24 +1,11 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: #a6996c;
-  --color-primary-light: #bfb48e;
-  --color-secondary: #dbb08a;
-  --color-secondary-light: #e8c9a8;
-  --color-accent: #ba704b;
-  --color-accent-dark: #9e5d3d;
-  --color-accent-light: #d4956e;
-  --color-green: #6A6F4C;
-  --color-green-light: #8a8f6c;
-  --color-dark: #2d2a26;
-  --color-dark-light: #4a4540;
-  --color-light: #faf7f2;
-  --color-warm-white: #fff9f0;
-  --color-warm-bg: #f3ede4;
-  --color-heading: #2b0e00;
-  --color-pale-linen: #f0d5c0;
-  --color-slate: #414143;
-  --color-terracotta: #9a543a;
+  /* Brand palette — exactly four colours: slate, terracotta, cream, white */
+  --color-dark: #2d2a26; /* slate */
+  --color-accent: #ba704b; /* terracotta */
+  --color-warm-bg: #f3ede4; /* cream */
+  --color-light: #ffffff; /* white */
 
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
