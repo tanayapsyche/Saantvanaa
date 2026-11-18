@@ -25,7 +25,7 @@ export function ExpandableParagraph({
 
   return (
     <p
-      className={`text-base sm:text-lg text-dark-light leading-relaxed mb-4 ${className}`}
+      className={`text-base sm:text-lg text-dark/70 leading-relaxed mb-4 ${className}`}
     >
       {intro}{" "}
       <span className={open ? "inline" : "hidden sm:inline"}>{rest}</span>
@@ -33,7 +33,7 @@ export function ExpandableParagraph({
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="sm:hidden inline ml-1 text-accent-dark font-semibold underline underline-offset-2 decoration-accent/40 hover:decoration-accent transition-colors"
+          className="sm:hidden inline ml-1 text-accent font-semibold underline underline-offset-2 decoration-accent/40 hover:decoration-accent transition-colors"
         >
           Read more
         </button>

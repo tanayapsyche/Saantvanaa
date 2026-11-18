@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="mb-10">
-      <h2 className="font-serif text-xl sm:text-2xl font-bold text-dark mb-4 pb-2 border-b border-secondary/25">
+      <h2 className="font-serif text-xl sm:text-2xl font-bold text-dark mb-4 pb-2 border-b border-dark/25">
         {title}
       </h2>
-      <div className="text-dark-light leading-relaxed space-y-3">{children}</div>
+      <div className="text-dark/70 leading-relaxed space-y-3">{children}</div>
     </section>
   );
 }
@@ -29,7 +29,7 @@ function Callout({ children }: { children: React.ReactNode }) {
 
 function Note({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-secondary/15 border border-secondary/30 rounded-xl px-5 py-4 text-dark-light text-sm leading-relaxed">
+    <div className="bg-accent/15 border border-dark/30 rounded-xl px-5 py-4 text-dark/70 text-sm leading-relaxed">
       {children}
     </div>
   );
@@ -41,7 +41,7 @@ export default function TermsPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Header */}
-      <div className="bg-warm-bg border-b border-secondary/20">
+      <div className="bg-warm-bg border-b border-dark/20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-xs font-bold uppercase tracking-wider rounded-full mb-4">
             Legal
@@ -49,10 +49,10 @@ export default function TermsPage() {
           <h1 className="font-serif text-3xl sm:text-4xl font-bold text-dark mb-3">
             Terms of Service
           </h1>
-          <p className="text-dark-light text-sm">
+          <p className="text-dark/70 text-sm">
             Effective date: {effectiveDate} &nbsp;·&nbsp; Last updated: {effectiveDate}
           </p>
-          <p className="text-dark-light text-sm mt-3 max-w-xl">
+          <p className="text-dark/70 text-sm mt-3 max-w-xl">
             Please read these terms carefully before booking a discovery call or enrolling in any
             Santwanaa programme. By using our services, you agree to these terms.
           </p>
@@ -97,7 +97,7 @@ export default function TermsPage() {
           </p>
 
           <div className="space-y-4 mt-2">
-            <div className="border border-secondary/25 rounded-xl p-5">
+            <div className="border border-dark/25 rounded-xl p-5">
               <p className="font-semibold text-dark mb-1">Essentials — Habit Coaching</p>
               <p className="text-sm mb-2">₹7,999 / $99 per month</p>
               <ul className="text-sm list-disc pl-4 space-y-1">
@@ -383,7 +383,7 @@ export default function TermsPage() {
           </div>
         </Section>
 
-        <div className="mt-10 pt-8 border-t border-secondary/20 text-xs text-dark-light space-y-2">
+        <div className="mt-10 pt-8 border-t border-dark/20 text-xs text-dark/70 space-y-2">
           <p>
             These Terms of Service are governed by the{" "}
             <strong>Indian Contract Act, 1872</strong>,{" "}

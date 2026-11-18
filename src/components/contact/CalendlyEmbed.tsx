@@ -7,10 +7,10 @@ export function CalendlyEmbed() {
   // If Calendly URL is not configured, show a placeholder
   if (CALENDLY_URL.includes("your-link-here")) {
     return (
-      <div className="max-w-2xl mx-auto bg-white rounded-2xl p-10 text-center border border-primary/10">
+      <div className="max-w-2xl mx-auto bg-white rounded-2xl p-10 text-center border border-dark/10">
         <Calendar size={48} className="text-accent mx-auto mb-4" />
         <h3 className="font-serif text-xl font-bold text-dark mb-2">Booking Coming Soon</h3>
-        <p className="text-dark-light">
+        <p className="text-dark/70">
           Online booking will be available here shortly. In the meantime, use the contact form
           above or reach out directly.
         </p>
@@ -19,7 +19,7 @@ export function CalendlyEmbed() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto bg-white rounded-2xl overflow-hidden border border-primary/10">
+    <div className="max-w-3xl mx-auto bg-white rounded-2xl overflow-hidden border border-dark/10">
       <iframe
         src={CALENDLY_URL}
         width="100%"

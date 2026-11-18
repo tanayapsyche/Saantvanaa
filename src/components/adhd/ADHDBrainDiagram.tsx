@@ -155,8 +155,8 @@ export function ADHDBrainDiagram() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
         {/* Brain SVG */}
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-secondary/10 rounded-3xl blur-2xl" />
-          <div className="relative bg-warm-bg rounded-3xl p-6 border-2 border-secondary/25">
+          <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-accent/10 rounded-3xl blur-2xl" />
+          <div className="relative bg-warm-bg rounded-3xl p-6 border-2 border-dark/25">
             <svg
               viewBox="0 0 600 450"
               className="w-full h-auto"
@@ -272,7 +272,7 @@ export function ADHDBrainDiagram() {
               })}
             </svg>
 
-            <p className="text-center text-sm text-dark-light mt-4 italic">
+            <p className="text-center text-sm text-dark/70 mt-4 italic">
               Click any glowing region to explore the science
             </p>
           </div>
@@ -292,7 +292,7 @@ export function ADHDBrainDiagram() {
               >
                 <button
                   onClick={() => setSelected(null)}
-                  className="absolute top-4 right-4 w-8 h-8 rounded-full hover:bg-warm-bg flex items-center justify-center text-dark-light transition-colors"
+                  className="absolute top-4 right-4 w-8 h-8 rounded-full hover:bg-warm-bg flex items-center justify-center text-dark/70 transition-colors"
                   aria-label="Close"
                 >
                   <X size={16} />
@@ -306,7 +306,7 @@ export function ADHDBrainDiagram() {
                     <p className="font-serif text-lg font-bold text-dark leading-tight">
                       {selected.researcher}
                     </p>
-                    <p className="text-xs text-dark-light">{selected.researcherTitle}</p>
+                    <p className="text-xs text-dark/70">{selected.researcherTitle}</p>
                   </div>
                 </div>
 
@@ -314,18 +314,18 @@ export function ADHDBrainDiagram() {
                   {selected.name}
                 </p>
 
-                <p className="text-dark-light leading-relaxed text-[15px] mb-5">
+                <p className="text-dark/70 leading-relaxed text-[15px] mb-5">
                   {selected.finding}
                 </p>
 
-                <div className="bg-secondary-light/30 rounded-xl p-4 border border-secondary/30 mb-4">
+                <div className="bg-warm-bg/30 rounded-xl p-4 border border-dark/30 mb-4">
                   <p className="text-[11px] font-bold text-accent uppercase tracking-wider mb-1">
                     What this means for you
                   </p>
                   <p className="text-dark leading-relaxed text-[15px]">{selected.takeaway}</p>
                 </div>
 
-                <p className="text-[11px] text-primary italic leading-snug">{selected.citation}</p>
+                <p className="text-[11px] text-dark italic leading-snug">{selected.citation}</p>
 
                 {/* Nav to next region */}
                 <button
@@ -334,7 +334,7 @@ export function ADHDBrainDiagram() {
                     const next = REGIONS[(idx + 1) % REGIONS.length];
                     setSelected(next);
                   }}
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-dark transition-colors"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-dark transition-colors"
                 >
                   Explore another region <ArrowRight size={14} />
                 </button>
@@ -345,13 +345,13 @@ export function ADHDBrainDiagram() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="w-full bg-white rounded-2xl p-8 border-2 border-dashed border-secondary/40 text-center"
+                className="w-full bg-white rounded-2xl p-8 border-2 border-dashed border-dark/40 text-center"
               >
                 <p className="text-6xl mb-4">🧠</p>
                 <h3 className="font-serif text-xl font-bold text-dark mb-2">
                   Start Exploring
                 </h3>
-                <p className="text-dark-light leading-relaxed">
+                <p className="text-dark/70 leading-relaxed">
                   Click any of the pulsing dots on the brain to discover what leading
                   neuroscientists and ADHD researchers have found about your brain.
                 </p>
@@ -382,7 +382,7 @@ export function ADHDBrainDiagram() {
               className={`px-4 py-2 text-xs font-semibold rounded-full border transition-all ${
                 active
                   ? "bg-accent text-white border-accent"
-                  : "bg-white text-dark-light border-secondary/30 hover:border-accent/40 hover:text-accent"
+                  : "bg-white text-dark/70 border-dark/30 hover:border-accent/40 hover:text-accent"
               }`}
             >
               {r.name}

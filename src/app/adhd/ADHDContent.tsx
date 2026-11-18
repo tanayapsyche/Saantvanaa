@@ -139,14 +139,14 @@ export function ADHDContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-1.5 bg-earth text-light text-sm font-semibold rounded-full mb-6">
+              <span className="inline-block px-4 py-1.5 bg-accent text-white text-sm font-semibold rounded-full mb-6">
                 ADHD Support
               </span>
-              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-earth-deep leading-[1.1] mb-6">
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-dark leading-[1.1] mb-6">
                 Finally, a Place That Gets{" "}
-                <span className="text-accent-dark">How Your Brain Actually Works</span>
+                <span className="text-accent">How Your Brain Actually Works</span>
               </h1>
-              <p className="text-base sm:text-lg text-dark-light leading-relaxed mb-8 max-w-2xl">
+              <p className="text-base sm:text-lg text-dark/70 leading-relaxed mb-8 max-w-2xl">
                 You&apos;ve spent a lifetime translating yourself for everyone else. Here, you don&apos;t have to. This is built for your brain, not against it, with real support for the parts no one else sees.
               </p>
               <Button href="/contact#contact-details" size="lg">
@@ -166,7 +166,7 @@ export function ADHDContent() {
             subtitle="Most adults with ADHD spend years quietly diagnosing themselves with personality flaws. Here are some of the most common experiences, with the actual neurological names they go by."
           />
 
-          <p className="text-center text-sm text-dark-light italic mb-8 max-w-md mx-auto">
+          <p className="text-center text-sm text-dark/70 italic mb-8 max-w-md mx-auto">
             Tap any card to flip and see what it&apos;s actually called.
           </p>
 
@@ -189,7 +189,7 @@ export function ADHDContent() {
           {!symptomsShowAll && hiddenSymptomsCount > 0 && (
             <button
               onClick={() => setSymptomsShowAll(true)}
-              className="sm:hidden w-full mt-5 flex items-center justify-center gap-1.5 py-3 text-accent-dark font-semibold text-sm hover:underline"
+              className="sm:hidden w-full mt-5 flex items-center justify-center gap-1.5 py-3 text-accent font-semibold text-sm hover:underline"
             >
               Show {hiddenSymptomsCount} more <ChevronDown size={16} />
             </button>
@@ -199,7 +199,7 @@ export function ADHDContent() {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-14 max-w-2xl mx-auto text-center font-display text-xl sm:text-2xl text-dark-light italic leading-relaxed"
+            className="mt-14 max-w-2xl mx-auto text-center font-display text-xl sm:text-2xl text-dark/70 italic leading-relaxed"
           >
             &ldquo;If you recognise yourself here, know that you&apos;re not alone, you&apos;re
             not broken, and you&apos;re not imagining it.&rdquo;
@@ -208,9 +208,9 @@ export function ADHDContent() {
       </section>
 
       {/* Statistics */}
-      <section className="py-10 sm:py-16 lg:py-20 bg-earth-deep">
+      <section className="py-10 sm:py-16 lg:py-20 bg-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-secondary text-sm font-semibold uppercase tracking-wider mb-10">
+          <p className="text-center text-accent text-sm font-semibold uppercase tracking-wider mb-10">
             You are not alone
           </p>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
@@ -223,13 +223,13 @@ export function ADHDContent() {
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 className="text-center"
               >
-                <p className="text-3xl sm:text-4xl font-bold text-accent-light mb-1">{stat.number}</p>
+                <p className="text-3xl sm:text-4xl font-bold text-accent mb-1">{stat.number}</p>
                 <p className="text-light/80 text-sm leading-snug">{stat.label}</p>
                 <a
                   href={stat.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-secondary/70 hover:text-secondary text-[11px] mt-1 underline underline-offset-2 decoration-secondary/30 hover:decoration-secondary transition-colors"
+                  className="inline-block text-accent/70 hover:text-accent text-[11px] mt-1 underline underline-offset-2 decoration-accent/30 hover:decoration-accent transition-colors"
                 >
                   {stat.source}
                 </a>
@@ -259,8 +259,8 @@ export function ADHDContent() {
       </section>
 
       {/* Manageable, not reversible */}
-      <section className="py-14 sm:py-20 lg:py-28 bg-gradient-to-br from-accent-dark to-clay relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_30%,rgba(255,255,255,0.08),transparent)]" />
+      <section className="py-14 sm:py-20 lg:py-28 bg-accent relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_30%,rgba(255,255,255,0.1),transparent)]" />
 
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -268,21 +268,21 @@ export function ADHDContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Brain size={40} className="text-secondary mx-auto mb-6" />
+            <Brain size={40} className="text-white mx-auto mb-6" />
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
               ADHD isn&apos;t something to be{" "}
-              <span className="text-secondary">fixed.</span>
+              <span className="text-warm-bg italic">fixed.</span>
             </h2>
-            <p className="text-lg text-white/85 leading-relaxed mb-6">
+            <p className="text-lg text-white/90 leading-relaxed mb-6">
               Your brain is wired differently, and that wiring isn&apos;t going away. And honestly?
               It doesn&apos;t need to. ADHD isn&apos;t a flaw to be corrected.
             </p>
-            <p className="text-lg text-white/85 leading-relaxed mb-6">
+            <p className="text-lg text-white/90 leading-relaxed mb-6">
               But with small, intentional lifestyle changes, the right systems, and proper emotional
               support, you can effectively manage the challenging symptoms while cherishing everything
               that makes your ADHD brain special.
             </p>
-            <p className="font-display text-xl text-secondary italic mt-8">
+            <p className="font-display text-xl text-warm-bg italic mt-8">
               The goal isn&apos;t to become neurotypical. It&apos;s to thrive as you are.
             </p>
           </motion.div>
@@ -306,14 +306,14 @@ export function ADHDContent() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
-                className={`items-start gap-4 p-4 rounded-xl bg-white border border-secondary/30 border-l-4 border-l-accent-dark ${
+                className={`items-start gap-4 p-4 rounded-xl bg-white border border-dark/20 ${
                   i >= HELP_MOBILE_CUTOFF && !helpShowAll ? "hidden sm:flex" : "flex"
                 }`}
               >
-                <div className="flex-shrink-0 w-6 h-6 bg-earth rounded-full flex items-center justify-center mt-0.5">
-                  <Check size={14} className="text-secondary stroke-[3]" />
+                <div className="flex-shrink-0 w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center mt-0.5">
+                  <Check size={14} className="text-accent stroke-[3]" />
                 </div>
-                <p className="text-dark-light leading-relaxed">{item}</p>
+                <p className="text-dark/70 leading-relaxed">{item}</p>
               </motion.div>
             ))}
           </div>
@@ -321,7 +321,7 @@ export function ADHDContent() {
           {!helpShowAll && hiddenHelpCount > 0 && (
             <button
               onClick={() => setHelpShowAll(true)}
-              className="sm:hidden w-full max-w-2xl mx-auto mt-3 flex items-center justify-center gap-1.5 py-3 text-accent-dark font-semibold text-sm hover:underline"
+              className="sm:hidden w-full max-w-2xl mx-auto mt-3 flex items-center justify-center gap-1.5 py-3 text-accent font-semibold text-sm hover:underline"
             >
               Show {hiddenHelpCount} more <ChevronDown size={16} />
             </button>
@@ -338,10 +338,10 @@ export function ADHDContent() {
             viewport={{ once: true }}
           >
             <Brain size={48} className="text-accent mx-auto mb-6" />
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-earth-deep leading-tight mb-4">
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-dark leading-tight mb-4">
               You Don&apos;t Have to Figure This Out Alone
             </h2>
-            <p className="text-lg text-dark-light mb-8 max-w-xl mx-auto">
+            <p className="text-lg text-dark/70 mb-8 max-w-xl mx-auto">
               A 15 minute call is all it takes to start understanding what&apos;s possible. No
               diagnosis required. No commitment. Just a safe, warm conversation.
             </p>

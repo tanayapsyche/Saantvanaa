@@ -61,14 +61,14 @@ export function ServicesContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-1.5 bg-earth text-light text-sm font-semibold rounded-full mb-6">
+              <span className="inline-block px-4 py-1.5 bg-accent text-white text-sm font-semibold rounded-full mb-6">
                 Services
               </span>
-              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-earth-deep leading-[1.1]">
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-dark leading-[1.1]">
                 Not another programme.{" "}
-                <span className="text-accent-dark">Yours.</span>
+                <span className="text-accent">Yours.</span>
               </h1>
-              <p className="mt-6 text-base sm:text-xl text-dark-light leading-relaxed">
+              <p className="mt-6 text-base sm:text-xl text-dark/70 leading-relaxed">
                 You&apos;ve already tried the one size fits all method. It didn&apos;t fit. This is built around your routine, your patterns, your real life, with someone walking beside you the whole way.
               </p>
             </motion.div>
@@ -77,7 +77,7 @@ export function ServicesContent() {
       </section>
 
       {/* Editorial Process Timeline */}
-      <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+      <section className="py-20 lg:py-32 bg-dark relative overflow-hidden">
         <LeafDecoration className="absolute top-24 right-0 w-24 h-24 text-accent opacity-15 hidden lg:block" />
         <BranchDecoration className="absolute -left-10 bottom-10 w-24 h-56 text-accent opacity-12 hidden lg:block" />
 
@@ -86,6 +86,7 @@ export function ServicesContent() {
             label="The Process"
             title="How We Work Together"
             subtitle="Five deliberate steps. Not a rigid programme, but a clear direction for the journey."
+            light
           />
 
           <div className="max-w-4xl mx-auto mt-16">
@@ -104,7 +105,7 @@ export function ServicesContent() {
                   {/* Left column: number + vertical line */}
                   <div className="flex flex-col items-center">
                     <div className="relative">
-                      <span className="font-display text-5xl sm:text-6xl font-bold text-accent/50 leading-none">
+                      <span className="font-display text-5xl sm:text-6xl font-bold text-accent/20 leading-none">
                         {step.number}
                       </span>
                     </div>
@@ -116,10 +117,10 @@ export function ServicesContent() {
                   {/* Right column: content */}
                   <div className={`pb-14 ${isLast ? "pb-0" : ""}`}>
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 bg-earth rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Icon size={20} className="text-secondary" strokeWidth={2} />
+                      <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon size={20} className="text-accent" strokeWidth={2} />
                       </div>
-                      <h3 className="font-serif text-2xl sm:text-3xl font-bold text-earth-deep leading-tight">
+                      <h3 className="font-serif text-2xl sm:text-3xl font-bold text-light leading-tight">
                         {step.title}
                       </h3>
                     </div>
@@ -129,7 +130,7 @@ export function ServicesContent() {
                         <ExpandableParagraph
                           intro={intro}
                           rest={rest}
-                          className="!mb-0 max-w-2xl"
+                          className="!mb-0 max-w-2xl !text-light/70"
                         />
                       );
                     })()}
@@ -144,15 +145,14 @@ export function ServicesContent() {
       <SelfReflection />
 
       {/* Pricing */}
-      <section className="py-14 sm:py-20 lg:py-28 bg-earth-deep relative overflow-hidden">
-        <SunburstDecoration className="absolute -top-20 -right-20 w-[400px] h-[400px] text-secondary opacity-30" />
-        <BranchDecoration className="absolute -right-8 bottom-20 w-24 h-56 text-secondary opacity-25 hidden lg:block rotate-180" />
-        <FlowerInVase className="absolute top-20 left-4 w-20 h-32 text-secondary opacity-30 hidden lg:block" />
-        <Sprig className="absolute bottom-20 right-10 w-20 h-32 text-secondary opacity-30 hidden lg:block" />
+      <section className="py-14 sm:py-20 lg:py-28 bg-white relative overflow-hidden">
+        <SunburstDecoration className="absolute -top-20 -right-20 w-[400px] h-[400px] text-accent opacity-15" />
+        <BranchDecoration className="absolute -right-8 bottom-20 w-24 h-56 text-accent opacity-15 hidden lg:block rotate-180" />
+        <FlowerInVase className="absolute top-20 left-4 w-20 h-32 text-accent opacity-15 hidden lg:block" />
+        <Sprig className="absolute bottom-20 right-10 w-20 h-32 text-accent opacity-15 hidden lg:block" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            light
             label="Pricing"
             title="Choose Your Plan"
             subtitle="Two plans, each built for a different stage of your journey. All run in monthly cycles with no lock in contracts. The goal is to make you self reliant enough that you eventually won't need us at all."
@@ -168,41 +168,41 @@ export function ServicesContent() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className={`rounded-2xl p-8 border-2 relative flex flex-col ${
                   tier.highlighted
-                    ? "border-secondary bg-warm-white shadow-xl scale-[1.02]"
-                    : "border-secondary/25 bg-white"
+                    ? "border-accent bg-accent/5 shadow-xl scale-[1.02]"
+                    : "border-dark/15 bg-warm-bg"
                 }`}
               >
                 {tier.highlighted && (
-                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-4 py-1 bg-accent-dark text-white text-xs font-bold tracking-wide uppercase rounded-full shadow-md whitespace-nowrap">
+                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-4 py-1 bg-accent text-white text-xs font-bold tracking-wide uppercase rounded-full shadow-md whitespace-nowrap">
                     <Star size={12} className="fill-white" /> Most popular
                   </span>
                 )}
 
                 {/* Header */}
                 <div className="text-center mb-6">
-                  <h3 className="font-serif text-2xl font-bold text-earth-deep">{tier.name}</h3>
-                  <p className="text-sm text-accent-dark font-semibold mt-1">{tier.subtitle}</p>
+                  <h3 className="font-serif text-2xl font-bold text-dark">{tier.name}</h3>
+                  <p className="text-sm text-accent font-semibold mt-1">{tier.subtitle}</p>
 
                   {/* Dual currency pricing */}
                   <div className="mt-5">
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="font-display text-4xl font-bold text-dark">{tier.priceINR}</span>
-                      <span className="text-dark-light text-sm">{tier.period}</span>
+                      <span className="text-dark/70 text-sm">{tier.period}</span>
                     </div>
-                    <div className="mt-1 flex items-baseline justify-center gap-1 text-dark-light">
+                    <div className="mt-1 flex items-baseline justify-center gap-1 text-dark/70">
                       <span className="text-sm">or</span>
                       <span className="text-lg font-semibold text-dark">{tier.priceUSD}</span>
                       <span className="text-xs">{tier.period}</span>
                     </div>
                   </div>
 
-                  <p className="text-sm text-dark-light mt-4 italic md:min-h-[2.5rem]">{tier.description}</p>
+                  <p className="text-sm text-dark/70 mt-4 italic md:min-h-[2.5rem]">{tier.description}</p>
                 </div>
 
                 {/* Best for */}
-                <div className="bg-accent/8 rounded-xl p-4 mb-6 border border-secondary/20 md:min-h-[9rem]">
-                  <p className="text-xs font-bold text-accent-dark uppercase tracking-wider mb-2">Best for you if</p>
-                  <p className="text-sm text-dark-light leading-relaxed">{tier.bestFor}</p>
+                <div className="bg-accent/8 rounded-xl p-4 mb-6 border border-dark/20 md:min-h-[9rem]">
+                  <p className="text-xs font-bold text-accent uppercase tracking-wider mb-2">Best for you if</p>
+                  <p className="text-sm text-dark/70 leading-relaxed">{tier.bestFor}</p>
                 </div>
 
                 {/* What's included */}
@@ -214,7 +214,7 @@ export function ServicesContent() {
                         <div className="flex-shrink-0 w-4 h-4 rounded-full bg-accent/15 flex items-center justify-center mt-0.5">
                           <Check size={10} className="text-accent stroke-[3]" />
                         </div>
-                        <span className="text-sm text-dark-light leading-snug">{feature}</span>
+                        <span className="text-sm text-dark/70 leading-snug">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -229,7 +229,7 @@ export function ServicesContent() {
                           <p className="text-[13px] font-semibold text-dark mb-1 leading-snug">
                             {tier.addon.title}
                           </p>
-                          <p className="text-[12.5px] text-dark-light leading-relaxed">
+                          <p className="text-[12.5px] text-dark/70 leading-relaxed">
                             {tier.addon.text}
                           </p>
                         </div>
@@ -249,24 +249,24 @@ export function ServicesContent() {
             ))}
           </div>
 
-          <div className="mt-12 max-w-4xl mx-auto bg-warm-bg border border-secondary rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
-            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-earth flex items-center justify-center">
-              <MessageCircleHeart size={24} className="text-secondary" />
+          <div className="mt-12 max-w-4xl mx-auto bg-warm-bg border border-accent/25 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
+            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+              <MessageCircleHeart size={24} className="text-accent" />
             </div>
             <div className="flex-1">
-              <h3 className="font-serif text-xl font-bold text-earth-deep">Just need to talk?</h3>
-              <p className="text-dark-light text-sm sm:text-base mt-1">
+              <h3 className="font-serif text-xl font-bold text-dark">Just need to talk?</h3>
+              <p className="text-dark/70 text-sm sm:text-base mt-1">
                 Not ready for a month-long plan? Book a single psychotherapy session with a qualified psychologist for a vent, a first taste of therapy, or ongoing support at your own pace. Confidential, online, and no plan to sign up for.
               </p>
             </div>
-            <Button href="/contact#contact-details" variant="dark">
+            <Button href="/contact#contact-details" variant="outline">
               Book a session <ArrowRight size={16} className="ml-1" />
             </Button>
           </div>
 
-          <p className="text-center text-base sm:text-lg text-light/85 mt-12 max-w-2xl mx-auto">
+          <p className="text-center text-base sm:text-lg text-dark/70 mt-12 max-w-2xl mx-auto">
             Still unsure which plan fits you? Start with a{" "}
-            <a href="/contact#contact-details" className="text-secondary font-semibold underline underline-offset-4 hover:text-white">
+            <a href="/contact#contact-details" className="text-accent font-semibold hover:underline">
               free discovery call
             </a>{" "}
             and we&apos;ll figure it out together, no pressure.
