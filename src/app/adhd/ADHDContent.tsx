@@ -259,8 +259,8 @@ export function ADHDContent() {
       </section>
 
       {/* Manageable, not reversible */}
-      <section className="py-14 sm:py-20 lg:py-28 bg-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_30%,rgba(255,255,255,0.08),transparent)]" />
+      <section className="py-14 sm:py-20 lg:py-28 bg-accent relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_30%,rgba(255,255,255,0.1),transparent)]" />
 
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -268,21 +268,21 @@ export function ADHDContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Brain size={40} className="text-accent mx-auto mb-6" />
+            <Brain size={40} className="text-white mx-auto mb-6" />
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
               ADHD isn&apos;t something to be{" "}
-              <span className="text-accent">fixed.</span>
+              <span className="text-warm-bg italic">fixed.</span>
             </h2>
-            <p className="text-lg text-white/85 leading-relaxed mb-6">
+            <p className="text-lg text-white/90 leading-relaxed mb-6">
               Your brain is wired differently, and that wiring isn&apos;t going away. And honestly?
               It doesn&apos;t need to. ADHD isn&apos;t a flaw to be corrected.
             </p>
-            <p className="text-lg text-white/85 leading-relaxed mb-6">
+            <p className="text-lg text-white/90 leading-relaxed mb-6">
               But with small, intentional lifestyle changes, the right systems, and proper emotional
               support, you can effectively manage the challenging symptoms while cherishing everything
               that makes your ADHD brain special.
             </p>
-            <p className="font-display text-xl text-accent italic mt-8">
+            <p className="font-display text-xl text-warm-bg italic mt-8">
               The goal isn&apos;t to become neurotypical. It&apos;s to thrive as you are.
             </p>
           </motion.div>

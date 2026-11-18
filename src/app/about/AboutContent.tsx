@@ -183,7 +183,7 @@ export function AboutContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-dark rounded-2xl p-6 shadow-md"
+                  className="bg-accent rounded-2xl p-6 shadow-md"
                 >
                   <div className="flex items-baseline gap-2 mb-3">
                     <span className="font-serif text-3xl font-bold text-white">{item.stat}</span>
@@ -199,7 +199,7 @@ export function AboutContent() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block text-[11px] text-accent hover:text-white underline underline-offset-2 decoration-accent/40 hover:decoration-white leading-snug transition-colors"
+                    className="inline-block text-[11px] text-warm-bg/90 hover:text-white underline underline-offset-2 decoration-warm-bg/40 hover:decoration-white leading-snug transition-colors"
                   >
                     {item.citation}
                   </a>
